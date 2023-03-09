@@ -1,0 +1,1240 @@
+@charset "utf-8";
+
+/*
+color green -light > base > dark
+#439889 > #00695c > #003d33    text color #fff
+color coral -light > base > dark
+#ffffee > #ffccbc > #cb9b8c    text color #141414
+*/
+
+	div.view_mask { overflow: hidden; position: relative; width: 100%; max-width: 1168px; margin: 0 auto; }
+	div.inner_wrap { position: relative; width: 100%; height: 100%; }
+
+	div.rel { position: relative; width: 100%; height: 100%; }
+
+	section { position: relative; overflow: hidden; width: 100%; height: 100vh; }
+
+	footer { overflow: hidden; width: 100%; height: 100vh; position: relative; }
+
+	svg { position: absolute; z-index: 1; width: 100%; height: 100%; }
+
+	svg.top { left: 0; top: 0; fill: #ffccbc; }
+	svg.bottom { right: 0; bottom: 0; fill: #439889; }
+	svg.project01 { fill: #cdc74f; }
+
+	button, a { cursor: pointer; color: #141414; }
+
+	p { font-family: "IBMPlexSansKR-Thin"; color: #141414; }
+	h2 { font-family: "IBMPlexSerif-Light"; color: #141414; }
+	.visual h2 { font-family: "IBMPlexSansKR-Light"; color: #141414; }
+	h2 > span.title { font-size: inherit; 
+	text-shadow: 
+	-0.01em 0.01em #ffffee, 
+	-0.02em 0.02em #ffffee, 
+	-0.03em 0.03em #ffffee, 
+	-0.04em 0.04em #ffffee, 
+	-0.05em 0.05em #ffffee, 
+	-0.06em 0.06em #ffffee; }
+	h2 > span.sub_title { font-family: "IBMPlexSansKR-Thin"; }
+
+	div.title_wrap > h2 { position: relative; width: 100%; height: 100%; }
+
+	div.title_wrap h2::before { position: absolute; left: 20%; top: 10%; z-index: -1; content: ""; display: block; transform: rotateZ(45deg); animation: rotate 30s linear infinite; }
+	div.title_wrap h2::after { position: absolute; left: 20%; top: 10%; z-index: -1; content: ""; display: block; transform: rotateZ(45deg); animation: rotate-revert 50s linear infinite; }
+
+	header nav > ul > li > button { font-family: "IBMPlexSansKR-Thin"; }
+
+	div.deco_box { position: absolute; left: 0%; bottom: 0%; width: 13vw; height: 13vw; border: 1px solid #003d33; transform: rotateZ(45deg); animation: rotate-revert 50s linear infinite; }
+
+	@keyframes fluff {
+		0%{ left: 0%; top: 15%; animation-timing-function: ease-out; }
+		25%{ left: 5%; top: 10%; animation-timing-function: ease-in; }
+		50%{ left: 0%; top: 5%; animation-timing-function: ease-out; }
+		75%{ left: -5%; top: 10%; animation-timing-function: ease-in; }
+		100%{ left: 0%; top: 15%; animation-timing-function: ease-out; }
+	}
+
+	@keyframes fluff_footer {
+		0%{ left: 0%; animation-timing-function: ease-out; }
+		25%{ left: 2%; animation-timing-function: ease-in; }
+		50%{ left: 0%; animation-timing-function: ease-out; }
+		75%{ left: -2%; animation-timing-function: ease-in; }
+		100%{ left: 0%; animation-timing-function: ease-out; }
+	}
+
+	@keyframes rotate {
+		0% { transform: rotateZ(-360deg); -webkit-filter: blur(0); }
+		100% { transform: rotateZ(360deg); -webkit-filter: blur(0); }
+	}
+
+	@keyframes rotate-revert {
+		0% { transform: rotateZ(360deg); -webkit-filter: blur(0); }
+		100% { transform: rotateZ(-360deg); -webkit-filter: blur(0); }
+	}
+
+	@keyframes hover {
+		0% { opacity: 0; scale: 0.9; }
+		50% { opacity: 1; scale: 1.2; }
+		100% { opacity: 0; scale: 0.9; }
+	}
+
+	@keyframes menu_on {
+		0% { transform: rotateZ(45deg); }
+		50% { transform: rotateZ(0deg); height: auto; }
+		100% { transform: rotateZ(0deg); height: auto; }
+	}
+
+	@keyframes move_circle {
+		0% { left: 0px; }
+		50% { left: 0px; width: 100%; }
+		100% { left: calc(100% - 3.5em); width: 3.5em; }
+	}
+
+	@keyframes move_circleM {
+		0% { left: 0px; }
+		50% { left: 0px; width: 100%; }
+		100% { left: calc(100% - 2em); width: 2em; animation-delay: 1s; }
+	}
+
+	@keyframes move_circle_reverse {
+		0% { left: calc(100% - 3.5em); width: 3.5em; }
+		50% { left: 0px; width: 100%; }
+		100% { left: 0px; }
+	}
+
+		/* -webkit- */
+
+	@-webkit-keyframes fluff {
+		0%{ left: 0%; top: 15%; animation-timing-function: ease-out; }
+		25%{ left: 5%; top: 10%; animation-timing-function: ease-in; }
+		50%{ left: 0%; top: 5%; animation-timing-function: ease-out; }
+		75%{ left: -5%; top: 10%; animation-timing-function: ease-in; }
+		100%{ left: 0%; top: 15%; animation-timing-function: ease-out; }
+	}
+
+	@-webkit-keyframes fluff_footer {
+		0%{ left: 0%; animation-timing-function: ease-out; }
+		25%{ left: 2%; animation-timing-function: ease-in; }
+		50%{ left: 0%; animation-timing-function: ease-out; }
+		75%{ left: -2%; animation-timing-function: ease-in; }
+		100%{ left: 0%; animation-timing-function: ease-out; }
+	}
+
+	@-webkit-keyframes rotate {
+		0% { transform: rotateZ(-360deg); -webkit-filter: blur(0); }
+		100% { transform: rotateZ(360deg); -webkit-filter: blur(0); }
+	}
+
+	@-webkit-keyframes rotate-revert {
+		0% { transform: rotateZ(360deg); -webkit-filter: blur(0); }
+		100% { transform: rotateZ(-360deg); -webkit-filter: blur(0); }
+	}
+
+	@-webkit-keyframes hover {
+		0% { opacity: 0; scale: 0.9; }
+		50% { opacity: 1; scale: 1.2; }
+		100% { opacity: 0; scale: 0.9; }
+	}
+
+	@-webkit-keyframes menu_on {
+		0% { transform: rotateZ(45deg); }
+		50% { transform: rotateZ(0deg); height: auto; }
+		100% { transform: rotateZ(0deg); height: auto; }
+	}
+
+	@-webkit-keyframes move_circle {
+		0% { left: 0px; }
+		50% { left: 0px; width: 100%; }
+		100% { left: calc(100% - 3.5em); width: 3.5em; }
+	}
+
+	@-webkit-keyframes move_circleM {
+		0% { left: 0px; }
+		50% { left: 0px; width: 100%; }
+		100% { left: calc(100% - 2em); width: 2em; animation-delay: 1s; }
+	}
+
+	@-webkit-keyframes move_circle_reverse {
+		0% { left: calc(100% - 3.5em); width: 3.5em; }
+		50% { left: 0px; width: 100%; }
+		100% { left: 0; }
+	}
+
+
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*#################### mobile_start ######################*/
+@media screen and (max-width: 767px) {
+/*--------------------------------------------------------*/
+
+svg.displayT { display: none; }
+svg.displayD { display: none; }
+
+h2 > span.title { font-size: 3em; height: 60%; }
+
+div.title_wrap { position: relative; left: 10%; top: 5%; width: 50%; height: 40vw;  }
+
+div.title_wrap h2::before { width: 5em; height: 5em; background: #ffccbc; }
+div.title_wrap h2::after { width: 5em; height: 5em; border: 1px solid #ffccbc;}
+
+div.title_wrap h2 > span { position: absolute; }
+div.title_wrap h2 > span.title { font-family: "IBMPlexSerif-Light"; line-height: 1; }
+div.title_wrap h2 > span:nth-child(2) { font-family: "IBMPlexSerif-Thin"; font-size: 2em; }
+div.title_wrap h2 > span:nth-child(3) { font-size: 2em; }
+div.title_wrap h2 > span.sub_title { font-size: 1.5em; white-space: nowrap; }
+
+br.none { display: block; }
+
+/*#####################################################################
+#################### M #### section_header ############################
+#################### M #### section_header ############################
+#################### M #### section_header ############################
+#####################################################################*/
+
+	header { position: fixed; right: 1em; top: 1em; z-index: 100; width: 30px; height: 30px; }
+
+	header nav { position: relative; width: 30px; height: 30px; z-index: 110; animation-fill-mode: forwards; }
+	header nav::before { position: absolute; left: 5%; top: 0%; z-index: 0; width: 30px; height: 30px; content: ""; background: #141414; transform: rotateZ(45deg); animation: rotate 20s linear infinite; }
+	header nav::after { position: absolute; left: 50%; top: 50%; z-index: 10; content: "!"; font-size: 1em; transform: translate(-50%, -50%); line-height: 1; opacity: 1; transform-origin: 0 0; animation: hover 1s linear infinite; }
+
+	header nav > ul { position: relative; overflow: hidden; z-index: 5; width: 30px; height: 30px; border: 1px solid #141414; background: #fff; transform: rotateZ(45deg); transition: height 0.3s, rotateZ 0.2s 1s; animation: rotate-revert 20s linear infinite; }
+	header nav > ul > li { display: none; text-align: center; }
+	header nav > ul > li > button { position: relative; z-index: 10; font-size: 1em; line-height: 1.2; padding: 20px 0; }
+
+	header.on nav { right: 1em; }
+	header.on nav > ul { width: 50px; animation: menu_on 0.3s; animation-fill-mode: forwards; }
+	header.on nav::before { width: 50px; height: auto; animation: menu 0.3s; animation-fill-mode: forwards; }
+	header.on nav::after { display: none; }
+	header.on nav > ul > li { display: block; }
+
+	header nav > ul > li > button::before { position: absolute; width: 100%; height: 50%; left: 0; top: 50%; z-index: -1; margin: auto; content: ""; background: transparent; transform: translateY(-50%); }
+	header nav > ul > li:hover > button::before { background: #ddd; }
+	header nav > ul > li.active > button::before { background: #9F9FBC; }
+
+/*#####################################################################
+#################### M #### section_header ############################
+#################### M #### section_header ############################
+#################### M #### section_header ############################
+#####################################################################*/
+/*#####################################################################
+#################### M #### section_visual ############################
+#################### M #### section_visual ############################
+#################### M #### section_visual ############################
+#####################################################################*/
+
+	section.visual::before { position: absolute; display: block; left: 50%; top: 50%; content: ""; width: 94%; height: 95%; transform: translate(-50%, -50%); background: #ccc; border-radius: 10px; opacity: 0.3; }
+	section.visual > div.box_wrap { position: absolute; width: 70vw; height: 70vw; left: 50%; top: 10%; transform: translateX(-50%); }
+	section.visual > div.box_wrap div { transform-origin: center; padding: 2.7em; }
+	section.visual > div.box_wrap div > p { width: 100%; font-size: 1.125em; transform: rotateZ(-45deg) translateX(210%); transition: transform 0.5s; text-align: center; white-space: nowrap; }
+
+	section.visual > div.box_wrap div:hover { overflow: visible; }
+	section.visual > div.box_wrap div:hover > p { transform: rotateZ(-45deg) translateX(0%); width: 100%; text-align: center; }
+
+	section.visual > div.box_wrap div.rotateBox { overflow: hidden; position: absolute; width: 50%; height: 50%; transform: rotateZ(45deg); }
+	section.visual > div.box_wrap div.rotateBox[class ~= "meblock"] { left: 0; top: 0; z-index: 4; background: #fff; }
+	section.visual > div.box_wrap div.rotateBox[class ~= "mineblock"] { right: 0; top: 0; z-index: 3; border: 1px solid #010101; }
+	section.visual > div.box_wrap div.rotateBox[class ~= "moreblock"] { left: 0; bottom: 0; z-index: 6; background: mistyrose;}
+	section.visual > div.box_wrap div.rotateBox[class ~= "maybeblock"] { right: 0; bottom: 0; z-index: 7; padding: 1.8em; border: 15px solid #fff; background: rgba(0, 0, 0, 0); }
+
+	section.visual > p.pre_title { position: absolute; left: 50%; top: 29%; font-size: 1em; line-height: 1; transform: translateX(-50%); }
+	section.visual > h2 { position: absolute; top: 35%; left: 10%; font-size: 3em; line-height: 1; }
+	section.visual > p.desc { position: absolute; left: 5%; bottom: 5%; font-size: 3.25em; color: #565656; line-height: 1; }
+
+/*#####################################################################
+#################### M #### section_visual ############################
+#################### M #### section_visual ############################
+#################### M #### section_visual ############################
+#####################################################################*/
+/*#####################################################################
+#################### M #### section_meWrap ############################
+#################### M #### section_meWrap ############################
+#################### M #### section_meWrap ############################
+#####################################################################*/
+
+	section.meWrap { height: 150vh; }
+	section.meWrap div.title_wrap h2::before { background: #cfcfff; }
+	section.meWrap div.title_wrap h2::after { border-color: #cfcfff; }
+
+	section.meWrap > div.deco_box { bottom: 10%; width: 20vw; height: 20vw; }
+
+	section.meWrap > div.inner_wrap { z-index: 5; }
+	section.meWrap > div.inner_wrap > div.title_wrap { left: 10%; top: 2.5%; width: 50%; height: 18%; }
+
+	section.meWrap > div.inner_wrap > div.title_wrap > div.rel::before { display: block; content: ""; position: absolute; left: -30%; top: 30%; width: 200px; height: 200px; border: 1px solid #ccc; transform: rotateZ(45deg) translateY(-50%); }
+	section.meWrap > div.inner_wrap > div.title_wrap > div.rel::after { display: block; content: ""; position: absolute; left: -30%; top: 50%; width: 100px; height: 100px; border: 1px solid #666; transform: translateY(-50%); }
+
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span { position: absolute; z-index: 10; }
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span.title { font-family: "IBMPlexSerif-Thin"; top: 4%; }
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(2) { top: 10%; left: 45%; }
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(3) { top: 35%; left: 40%; font-size: 1.5em; line-height: 1.1; }
+
+
+/*======================================= content ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap { position: absolute; left: 50%; top: 20%; z-index: 10; width: 80vw; transform: translateX(-50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div > div { margin-bottom: 0.5em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div > div:nth-last-child(1) { margin-bottom: 0; }
+
+/*=====================================##### sub_title_wrap #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap::before { content: ""; display: block; position: absolute; z-index: -1; width: 30vw; height: 30vw; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 123456em; box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); animation: fluff 10s infinite ease-in-out; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap > p { font-family: "IBMPlexSerif-Bold"; font-size: 0.825em; text-align: right; color: #fff; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p { font-family: "IBMPlexSansKR-Regular"; margin-bottom: 1em; }
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p > span.title { font-size: 1.5em; text-shadow: 
+	-0.01em 0.01em #12ffa1, 
+	-0.02em 0.02em #12ffa1, 
+	-0.03em 0.03em #12ffa1, 
+	-0.04em 0.04em #12ffa1, 
+	-0.05em 0.05em #12ffa1, 
+	-0.06em 0.06em #12ffa1;}
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap > p { text-align: center; }
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p > span:nth-child(2) { font-size: 1em; }
+
+
+
+/*=====================================##### result01 #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 { position: relative; width: 8em; height: 3em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight { position: absolute; left: 50%; top: 50%; display: block; width: 7em; height: 2em; transform: translate(-50%, -50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 2em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 2em; height: 100%; background: #12ffa1; border-radius: 43254352em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div::after { display: block; position: absolute; right: 0.5em; top: 50%; content: ""; width: 0.875em; height: 0.875em; border-top: 0.4375em solid transparent; border-right: 0.4375em solid transparent; border-bottom: 0.4375em solid transparent; border-left: 0.4375em solid #000; transform: translate(40%, -50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "IBMPlexSansKR-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+/*=====================================##### result01 #####*/
+
+/*=====================================##### result02 #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 { display: inline-block; position: relative; left: 0%; width: 7em; height: 7em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 svg { animation: rotate 50s linear infinite; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 svg > text { fill: #cfcfff; font-size: 1.25em; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div::before { animation: move_circleM 1.5s infinite linear forwards; /* -webkit- */ -webkit-animation: move_circleM 1.5s infinite linear forwards; }
+
+/*=====================================##### result02 #####*/
+
+/*=====================================##### result03 #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 { display: inline-block; position: relative; width: 5em; height: 5em; border-radius: 123456em; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); animation: fluff 5s linear infinite; transform: translate(50%, -30%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu{ position: absolute; top: 50%; left: 50%; display: block; width: 75%; height: 75%; transform: translate(-50%, -50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu::before { position: absolute; display: inline-block; content: ""; left: 5%; top: 20%; width: 90%; height: 4px; transform-origin: center center; transform: rotateZ(0deg); background: #cfcfff; transition: background 0.3s, transform 0.3s; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu::after { position: absolute; display: inline-block; content: ""; right: 5%; bottom: 20%; width: 90%; height: 4px; transform-origin: center center; transform: rotateZ(0deg); background: #cfcfff; transition: background 0.3s, transform 0.3s; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu.on::before { left: 0%; top: 47%; width: 100%; background: #7c7fd9; transform: rotateZ(45deg); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu.on::after { right: 0%; bottom: 46%; width: 100%; background: #7c7fd9; transform: rotateZ(-45deg); }
+
+/*=====================================##### result03 #####*/
+
+/*======================================= content ===========================================*/
+
+/*======================================= skills ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.skills_wrap { position: absolute; left: 50%; top: 50%; width: 80vw; height: 80vw; transform: translateX(-50%); }
+	section.meWrap > div.inner_wrap > div.skills_wrap::before { content: ""; display: block; position: absolute; top: 50%; z-index: -1; border-radius: 123456em; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.3); box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); border: 1px solid rgba(255, 255, 255, 0.8); transform: translateY(-50%); animation: fluff_footer 5s infinite ease-in-out; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills { overflow: hidden; position: relative; display: inline-block; width: 50%; height: 50%; font-family: "IBMPlexSansKR-Bold"; text-align: center; white-space: nowrap; }
+
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span { position: absolute; display: block; padding: 44% 0; width: 100%; height: 100%; line-height: 1; font-size: 1.75em; transition: top 0.2s; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span.skill_index { left: 0%; top: 0%; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span.skill_title { left: 0%; top: 100%; }
+
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills[class ~= "active"] > span.skill_index { left: 0%; top: -100%; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills[class ~= "active"] > span.skill_title { left: 0%; top: 0%; color: #12ffa1; font-size: 1.25em; }
+
+/*======================================= skills ===========================================*/
+
+/*======================================= desc ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.desc_wrap { position: absolute; right: 5vw; bottom: 5vw;}
+
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_01 { position: absolute; right: 0; top: -80%; display: inline; padding: 0.2em 0.5em; font-family: "IBMPlexSansKR-Light"; font-size: 0.825em; text-align: right; line-height: 1.2; color: #fff; border-top: 2px solid #141414; border-bottom: 2px solid #141414; border-radius: 6px; background-repeat: no-repeat; background-image: linear-gradient(180deg, transparent 50%, #141414 0); background-size: 0% 100%; transition: background-size 0.4s ease; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_01:hover { background-size: 100% 100%; }
+
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_02 { display: inline-block; position: relative; left: 10%; margin-bottom: 1em; text-align: center; font-size: 0.825em; line-height: 1; color: #fff; transform: translateY(-90%); }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_02::before { display: block; content: ""; position: absolute; left: -100%; top: -40%; right: 0; bottom: 0; margin: 0 auto; width: 2em; height: 2em; border: 1px solid #fff; transform-origin: center; transform: rotateZ(45deg); animation: rotate-revert 20s linear infinite;}
+
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 { font-size: 1em; color: #000; transform: translateY(10%); text-align: right; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.gray { color: #fff; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.white { display: inline-block; font-family: "IBMPlexSerif-Bold"; color: #fff; transform: translateY(-40%);}
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.mint { color: #12ffa1; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.bold { font-family: "IBMPlexSansKR-Medium"; color: #222; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.lightviolet { color: #cfcfff; }
+
+/*#####################################################################
+#################### M #### section_meWrap ############################
+#################### M #### section_meWrap ############################
+#################### M #### section_meWrap ############################
+#####################################################################*/
+/*#####################################################################
+#################### M #### section_mineWrap ##########################
+#################### M #### section_mineWrap ##########################
+#################### M #### section_mineWrap ##########################
+#####################################################################*/
+
+	section.mineWrap::before { display: block; content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1); }
+	section.mineWrap > div.bg_imgWrap_pjt_01 { position: absolute; z-index: 0; width: 100%; height: 100%; }
+	section.mineWrap > div.bg_imgWrap_pjt_01 img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.1; filter: brightness(300%); }
+
+	section.mineWrap > div.inner_wrap { z-index: 10; }
+
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span.title { top: 0%; left: 0%; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(2) { top: 0%; right: -30%; line-height: 1.2; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(3) { top: 20%; left: 50%; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span.sub_title { bottom: 0%; left: 50%; text-align: right; line-height: 1.2; }
+
+	section.mineWrap > div.inner_wrap > div.title_wrap h2::before { background: #8b8726; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2::after { border-color: #8b8726; }
+
+	section.mineWrap > div.inner_wrap > div.info_wrap { position: absolute; left: 2%; top: 30%; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dt { font-family: "IBMPlexSansKR-Regular"; font-size: 1.75em; color: #141414; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dd { position: relative; font-family: "IBMPlexSansKR-ExtraLight"; font-size: 1.125em; text-indent: 1.125em; color: #141414; line-height: 1.3; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dd::before { position: absolute; left: 5%; top: 50%; content: ""; display: block; width: 0.5em; height: 0.5em; background: #8b8726; transform: rotateZ(-45deg) translateY(-50%); }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap { position: absolute; left: 20%; bottom: 10%; z-index: 10; transform: translateX(-50%);}
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button { position: relative; display: block; z-index: 20; font-family: "IBMPlexSansKR-Light"; font-size: 1.25em; line-height: 2; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button::before { display: block; content: ""; position: absolute; left: 0; top: -20%; width: 0%; height: 100%; background: linear-gradient(0deg, #8b8726 20%, transparent 20%); transition: width 1s; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active::before { width: 100%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(1) { left: 70%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(2) { left: 35%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(3) { left: 0%; }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button > span { position: relative; z-index: 5; display: block; width: 100%; height: 100%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button > span::before { position: absolute; left: -0.6125em; top: 50%; z-index: -1; content: ""; display: block; width: 1.125em; height: 1.125em; border: 1px solid #8b8726; transform: rotateZ(45deg) translate(-20%, -50%); transition: background 0.5s; }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active > span::before { background: #8b8726; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active > span { font-family: "IBMPlexSansKR-Regular"; }
+
+/*=============================================================================================*/
+/*=====================================              ==========================================*/
+/*===================================== CONTENT_WRAP ==========================================*/
+/*=====================================              ==========================================*/
+/*=============================================================================================*/
+
+	section.mineWrap > div.inner_wrap > div.content_wrap { position: absolute; right: 2.5vw; bottom: 15%; width: 30vw; margin-bottom: 20px; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] { width: 40vw; }
+	section.mineWrap > div.inner_wrap > div.content_wrap > div.borderWrap { position: relative; right: 20%; border: 1px solid #8b8726; border-radius: 7px; padding: 5px; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] > div.borderWrap { right: 0; }
+
+	section.mineWrap > div.inner_wrap > div.content_wrap div.imgWrap { overflow: hidden; border-radius: 7px; width: 100%; }
+	section.mineWrap > div.inner_wrap > div.content_wrap div.imgWrap > img { object-fit: cover; width: 100%; }
+
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] div.imgWrap > img#_Tablet, img#_Mobile { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] div.imgWrap > img#_Desktop { display: block;}
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Tablet"] div.imgWrap > img#_Desktop, img#_Mobile { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Tablet"] div.imgWrap > img#_Tablet { display: block;}
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Mobile"] div.imgWrap > img#_Tablet, img#_Desktop { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Mobile"] div.imgWrap > img#_Mobile { display: block;}
+
+
+
+	section.mineWrap > div.inner_wrap > div.a_links_wrap { position: absolute; right: 2.5vw; bottom: 5%; padding-top: 20px; width: 40vw; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a { position: relative; overflow: hidden; display: block; font-family: "IBMPlexSansKR-Bold"; line-height: 2em; text-align: center; border-color: transparent transparent #8b8726 transparent; border-style: solid; border-width: 2px; border-radius: 10px; width: 100%; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a > span { white-space: nowrap; font-size: 0.8125em; }
+
+/*#####################################################################
+#################### M #### section_mineWrap ##########################
+#################### M #### section_mineWrap ##########################
+#################### M #### section_mineWrap ##########################
+#####################################################################*/
+/*#####################################################################
+#################### M #### footer_maybeWrap ##########################
+#################### M #### footer_maybeWrap ##########################
+#################### M #### footer_maybeWrap ##########################
+#####################################################################*/
+
+	footer > div.inner_wrap { z-index: 10; }
+	footer svg.top { transform: scaleY(-1); }
+
+	footer div.title_wrap h2::before { background: #cb9b8c; animation: rotate-revert 30s linear infinite; }
+	footer div.title_wrap h2::after { border-color: #cb9b8c; animation: rotate 30s linear infinite; }
+
+	footer div.title_wrap h2 > span.title { top: 0%; left: 0%; }
+	footer div.title_wrap h2 > span.title > span { margin-left: 1.5em; }
+	footer div.title_wrap h2 > span:nth-child(2) { top: 0%; left: 64%; line-height: 1.2; }
+	footer div.title_wrap h2 > span:nth-child(3) { top: 55%; left: 85%; }
+	footer div.title_wrap h2 > span.sub_title { bottom: -15%; left: 25%; white-space: nowrap; font-size: 1.25em; }
+
+/*======================================= info ===========================================*/
+
+	footer button#footerInfoOn { position: absolute; z-index: 50; margin: auto; width: 5rem; height: 5rem; font-family: "IBMPlexSansKR-Bold"; font-size: 2em; text-align: center; }
+	footer.on button#footerInfoOn { right: 0%; top: 0%; width: 3rem; height: 3rem; font-size: 0.875em; transform: translate(50%, -80%); border: 1px solid #141414; border-radius: 123456em; }
+
+	footer > div.inner_wrap > div.info_wrap { position: relative; display: block; top: 20%; z-index: 15; width: 5em; height: 5em; margin: 0 auto; transition: width 0.2s; }
+	footer.on > div.inner_wrap > div.info_wrap { width: 15em; height: 15em; }
+
+	footer > div.inner_wrap > div.info_wrap::before { position: absolute; top: 50%; content: ""; border: 1px solid #ccc; background: #fff; border-radius: 123456em; width: 120%; height: 120%; box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); transform: translate(-10%, -50%); animation: fluff_footer 3s infinite ease-in-out; }
+
+	footer > div.inner_wrap > div.info_wrap div.center_wrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+
+	footer > div.inner_wrap > div.info_wrap p{ display: none; margin-bottom: 0.5em; font-size: 0.875em; font-family: "IBMPlexSansKR-Medium"; text-align: center; white-space: nowrap; }
+	footer > div.inner_wrap > div.info_wrap p span.strong { font-family: "IBMPlexSansKR-Bold"; }
+	footer.on > div.inner_wrap > div.info_wrap p { display: block; }
+
+	footer > div.inner_wrap > div.info_wrap p.name { font-family: "IBMPlexSansKR-Bold"; font-size: 1em; line-height: 1; }
+	footer > div.inner_wrap > div.info_wrap p.more { margin-bottom: 0; padding-top: 0.7em; font-size: 1em; font-family: "IBMPlexSansKR-Bold"; }
+
+/*======================================= desc ===========================================*/
+
+	footer p.desc { shape-outside: circle(50%); clear: both; float: left; position: absolute; right: 5%; bottom: 2.5%; white-space: nowrap; line-height: 1; text-align: right; }
+
+	footer p.desc span { line-height: 1.4; }
+	footer p.desc span:nth-last-of-type(1) { line-height: 1; }
+
+	footer span.desc_01 { font-family: "IBMPlexSansKR-ExtraLight"; font-size: 1.5em; text-align: center; }
+
+	footer span.desc_02 { font-family: "IBMPlexSansKR-Medium"; font-size: 2.5em; }
+
+	footer span.desc_03 { margin-bottom: 5px; font-family: "IBMPlexSansKR-Light"; font-size: 2em; text-align: center; }
+
+	footer span.desc_04 { font-size: 1.75em; color: #003d33; text-align: center; }
+	footer span.desc_04 > span { font-family: "IBMPlexSansKR-Regular"; color: #141414; }
+
+	footer span.desc_05 { font-family: "IBMPlexSansKR-ExtraBold";font-size: 1em; color: #fff; text-align: left; }
+
+/*#####################################################################
+#################### M #### footer_maybeWrap ##########################
+#################### M #### footer_maybeWrap ##########################
+#################### M #### footer_maybeWrap ##########################
+#####################################################################*/
+
+/*--------------------------------------------------------*/
+}
+/*##################### mobile_end #######################*/
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*##################### tablet_start #####################*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/*--------------------------------------------------------*/
+svg.displayD { display: none; }
+svg.displayM { display: none; }
+
+h2 > span.title { font-size: 5em; }
+
+div.title_wrap { position: absolute; left: 10%; top: 5%; width: 50%; height: 20%;  }
+div.title_wrap h2 { height: 70%; }
+
+div.title_wrap h2::before { width: 13em; height: 13em; background: #cb9b8c; }
+div.title_wrap h2::after { width: 13em; height: 13em; border: 1px solid #cb9b8c; }
+
+div.title_wrap h2 > span { position: absolute; }
+div.title_wrap h2 > span.title { font-family: "IBMPlexSerif-Light"; line-height: 1; }
+div.title_wrap h2 > span:nth-child(2) { font-family: "IBMPlexSerif-Thin"; font-size: 3.75em; }
+div.title_wrap h2 > span:nth-child(3) { font-size: 4.25em; }
+div.title_wrap h2 > span.sub_title { font-size: 2.5em; white-space: nowrap; }
+
+br.none { display: none; }
+
+/*#####################################################################
+#################### T #### section_header ############################
+#################### T #### section_header ############################
+#################### T #### section_header ############################
+#####################################################################*/
+
+	header { position: fixed; right: 2em; top: 2em; z-index: 100; width: 80px; height: 80px; }
+
+	header nav { position: relative; width: 70px; height: 70px; z-index: 110; animation-fill-mode: forwards; }
+	header nav::before { position: absolute; left: 5%; top: 0%; z-index: 0; width: 70px; height: 70px; content: ""; background: #141414; transform: rotateZ(45deg); animation: rotate 20s linear infinite; }
+	header nav::after { position: absolute; left: 50%; top: 50%; z-index: 10; content: "!"; font-size: 3em; transform: translate(-50%, -50%); line-height: 1; opacity: 1; transform-origin: 0 0; animation: hover 1s linear infinite; }
+
+	header nav > ul { position: relative; overflow: hidden; z-index: 5; width: 70px; height: 70px; border: 1px solid #141414; background: #fff; transform: rotateZ(45deg); transition: height 0.3s, rotateZ 0.2s 1s; animation: rotate-revert 20s linear infinite; }
+	header nav > ul > li { display: none; text-align: center; }
+	header nav > ul > li > button { position: relative; z-index: 10; font-size: 1.375em; line-height: 1.2; padding: 20px 0; }
+
+	header.on nav > ul { width: 80px; animation: menu_on 0.3s; animation-fill-mode: forwards; }
+	header.on nav::before { width: 80px; height: auto; animation: menu 0.3s; animation-fill-mode: forwards; }
+	header.on nav::after { display: none; }
+	header.on nav > ul > li { display: block; }
+
+	header nav > ul > li > button::before { position: absolute; width: 100%; height: 50%; left: 0; top: 50%; z-index: -1; margin: auto; content: ""; background: transparent; transform: translateY(-50%); }
+	header nav > ul > li:hover > button::before { background: #ddd; }
+	header nav > ul > li.active > button::before { background: #9F9FBC; }
+
+/*#####################################################################
+#################### T #### section_header ############################
+#################### T #### section_header ############################
+#################### T #### section_header ############################
+#####################################################################*/
+/*#####################################################################
+#################### T #### section_visual ############################
+#################### T #### section_visual ############################
+#################### T #### section_visual ############################
+#####################################################################*/
+
+	section.visual::before { position: absolute; display: block; left: 50%; top: 50%; content: ""; width: 94%; height: 95%; transform: translate(-50%, -50%); background: #ccc; border-radius: 10px; opacity: 0.3; }
+	section.visual > div.box_wrap { position: absolute; width: 70vw; height: 70vw; left: 50%; top: 10%; transform: translateX(-50%); }
+	section.visual > div.box_wrap div { transform-origin: center; padding: 6em; }
+	section.visual > div.box_wrap div > p { font-size: 3em; transform: rotateZ(-45deg) translateX(210%); transition: transform 0.5s; text-align: center; white-space: nowrap; }
+	section.visual > div.box_wrap div:hover { overflow: visible; }
+	section.visual > div.box_wrap div:hover > p { width: 100%; transform: rotateZ(-45deg) translateX(0%); }
+	
+	section.visual > div.box_wrap div:not(.mineblock):hover > p { transform: rotateZ(-45deg) translateX(-80%); }
+
+	section.visual > div.box_wrap div.rotateBox { overflow: hidden; position: absolute; width: 50%; height: 50%; transform: rotateZ(45deg); }
+	section.visual > div.box_wrap div.rotateBox[class ~= "meblock"] { left: 0; top: 0; z-index: 4; background: #fff; }
+	section.visual > div.box_wrap div.rotateBox[class ~= "mineblock"] { right: 0; top: 0; z-index: 3; border: 1px solid #010101; }
+	section.visual > div.box_wrap div.rotateBox[class ~= "moreblock"] { left: 0; bottom: 0; z-index: 6; background: mistyrose;}
+	section.visual > div.box_wrap div.rotateBox[class ~= "maybeblock"] { right: 0; bottom: 0; z-index: 7; padding: 5em; border: 25px solid #fff; background: rgba(0, 0, 0, 0); }
+
+	section.visual > p.pre_title { position: absolute; left: 50%; top: 35%; font-size: 2.125em; line-height: 1; transform: translateX(-50%); }
+	section.visual > h2 { position: absolute; top: 40%; left: 50%; font-size: 5em; line-height: 1; transform: translateX(-50%);}
+	section.visual > p.desc { position: absolute; left: 5%; bottom: 5%; font-size: 7.5em; color: #565656; line-height: 1; }
+
+/*#####################################################################
+#################### T #### section_visual ############################
+#################### T #### section_visual ############################
+#################### T #### section_visual ############################
+#####################################################################*/
+/*#####################################################################
+#################### T #### section_meWrap ############################
+#################### T #### section_meWrap ############################
+#################### T #### section_meWrap ############################
+#####################################################################*/
+
+	section.meWrap { height: 150vh; }
+
+	section.meWrap > div.deco_box { bottom: 10%; width: 17vw; height: 17vw; }
+	section.meWrap div.title_wrap h2::before { background: #cfcfff; }
+	section.meWrap div.title_wrap h2::after { border-color: #cfcfff; }
+
+	section.meWrap > div.inner_wrap { z-index: 5; }
+
+	section.meWrap > div.inner_wrap > div.title_wrap > div.rel::before { display: block; content: ""; position: absolute; left: -30%; top: 30%; width: 200px; height: 200px; border: 1px solid #ccc; transform: rotateZ(45deg) translateY(-50%); }
+	section.meWrap > div.inner_wrap > div.title_wrap > div.rel::after { display: block; content: ""; position: absolute; left: -30%; top: 50%; width: 100px; height: 100px; border: 1px solid #666; transform: translateY(-50%); }
+
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span { position: absolute; z-index: 10; }
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(1) { font-family: "IBMPlexSerif-Thin"; top: 4%; }
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(2) { top: 14%; left: 29%; font-size: 5em;}
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(3) { top: 55%; left: 40%; font-size: 3em; line-height: 1.1; }
+
+/*======================================= content ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap { position: absolute; left: 10%; bottom: 13%; width: 70%; z-index: 10; }
+	section.meWrap > div.inner_wrap > div.content_wrap div > div { margin-bottom: 0.5em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div > div:nth-last-child(1) { margin-bottom: 0; }
+
+/*=====================================##### sub_title_wrap #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap { position: relative; display: inline-block; left: 50%; margin-bottom: 40px; transform: translate(-50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap::before { content: ""; display: block; position: absolute; left: -20%; top: -50%; z-index: -1; width: 30vw; height: 30vw; border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 123456em; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); animation: fluff 3s infinite ease-in-out; transition: left 0.2s, top 0.2s; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap > p { font-family: "IBMPlexSerif-Bold"; font-size: 1.5em; text-align: center; color: #fff; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p { font-family: "IBMPlexSansKR-Regular"; }
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p > span.title { font-size: 2.5em; top: 0%; left: 0%; text-shadow: 
+	-0.01em 0.01em rgba(18, 255, 161, 0.1), 
+	-0.02em 0.02em rgba(18, 255, 161, 0.1), 
+	-0.03em 0.03em rgba(18, 255, 161, 0.1), 
+	-0.04em 0.04em rgba(18, 255, 161, 0.1), 
+	-0.05em 0.05em rgba(18, 255, 161, 0.1), 
+	-0.06em 0.06em rgba(18, 255, 161, 0.1); }
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p > span:nth-child(2) { font-size: 1.5em; }
+
+/*=====================================##### result01 #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 { position: relative; width: 11em; height: 4.5em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight { position: absolute; left: 50%; top: 50%; display: block; width: 10em; height: 3.5em; transform: translate(-50%, -50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3.5em; height: 100%; background: #12ffa1; border-radius: 43254352em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; border-top: 0.4375em solid transparent; border-right: 0.4375em solid transparent; border-bottom: 0.4375em solid transparent; border-left: 0.4375em solid #000; transform: translate(40%, -50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "IBMPlexSansKR-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div::before { animation: move_circle 1.5s infinite ease-in-out forwards; /* -webkit- */ -webkit-animation: move_circle 1.5s infinite ease-in-out forwards; }
+
+/*=====================================##### result01 #####*/
+
+/*=====================================##### result02 #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 { left: 20%; width: 8em; height: 8em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 svg { right: -50%; width: auto; transform-origin: center; animation: rotate 50s linear infinite; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 svg > text { fill: #cfcfff; font-size: 1.25em; }
+
+/*=====================================##### result02 #####*/
+
+/*=====================================##### result03 #####*/
+
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 { position: relative; left: 0%; width: 5em; height: 5em; border-radius: 123456em; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); animation: fluff 5s linear infinite; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu{ position: absolute; left: 50%; top: 50%; width: 80%; height: 80%; transform: translate(-50%, -50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu::before { position: absolute; display: inline-block; content: ""; left: 5%; top: 20%; width: 90%; height: 4px; transform-origin: center center; transform: rotateZ(0deg); background: #cfcfff; transition: background 0.3s, transform 0.3s; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu::after { position: absolute; display: inline-block; content: ""; right: 5%; bottom: 20%; width: 90%; height: 4px; transform-origin: center center; transform: rotateZ(0deg); background: #cfcfff; transition: background 0.3s, transform 0.3s; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu.on::before { left: 0%; top: 49%; width: 100%; background: #7c7fd9; transform: rotateZ(45deg); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu.on::after { right: 0%; bottom: 46%; width: 100%; background: #7c7fd9; transform: rotateZ(-45deg); }
+
+/*=====================================##### result03 #####*/
+
+/*======================================= content ===========================================*/
+
+/*======================================= skills ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.skills_wrap { position: absolute; right: 15%; top: 25%; z-index: 20; width: 50vw; height: 50vw; }
+	section.meWrap > div.inner_wrap > div.skills_wrap::before { content: ""; display: block; position: absolute; top: 50%; z-index: -1; border-radius: 123456em; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.3); box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); border: 1px solid rgba(255, 255, 255, 0.8); transform: translateY(-50%); animation: fluff_footer 7s infinite ease-in-out; }
+
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills { overflow: hidden;  position: relative; display: inline-block; width: 50%; height: 50%; font-family: "IBMPlexSansKR-Bold"; text-align: center; white-space: nowrap; }
+
+section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span { position: absolute; display: block; padding: 44% 0; width: 100%; height: 100%; line-height: 1; font-size: 1.75em; transition: top 0.2s; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span.skill_index { left: 0%; top: 0%; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span.skill_title { left: 0%; top: 100%; }
+
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills[class ~= "active"] > span.skill_index { left: 0%; top: -100%; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills[class ~= "active"] > span.skill_title { left: 0%; top: 0%; color: #12ffa1; }
+
+/*======================================= skills ===========================================*/
+
+/*======================================= desc ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.desc_wrap { position: absolute; right: 2.5vw; bottom: 2.5vw; z-index: 10; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_01 { position: absolute; right: 0; top: -90%; display: inline; padding: 0.2em 0.5em; font-family: "IBMPlexSansKR-Light"; font-size: 1.25em; text-align: right; line-height: 1.2; color: #fff; border-top: 2px solid #141414; border-bottom: 2px solid #141414; border-radius: 6px; background-repeat: no-repeat; background-image: linear-gradient(180deg, transparent 50%, #141414 0); background-size: 0% 100%; transition: background-size 0.4s ease; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_01:hover { background-size: 100% 100%; }
+
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_02 { display: inline-block; position: relative; left: 70%; margin-bottom: 1em; text-align: center; font-size: 1.5em; line-height: 1; color: #fff; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_02::before { display: block; content: ""; position: absolute; left: -100%; top: -40%; right: 0; bottom: 0; margin: 0 auto; width: 2em; height: 2em; border: 1px solid #fff; transform-origin: center; transform: rotateZ(45deg); animation: rotate-revert 20s linear infinite;}
+
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 { font-size: 2.5em; color: #000; transform: translateY(10%); text-align: right; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.gray { color: #fff; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.white { display: inline-block; font-family: "IBMPlexSerif-Bold"; color: #fff; transform: translateY(-40%);}
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.mint { color: #12ffa1; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.bold { font-family: "IBMPlexSansKR-Medium"; color: #222; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.lightviolet { color: #cfcfff; }
+
+/*======================================= desc ===========================================*/
+
+/*#####################################################################
+#################### T #### section_meWrap ############################
+#################### T #### section_meWrap ############################
+#################### T #### section_meWrap ############################
+#####################################################################*/
+/*#####################################################################
+#################### T #### section_mineWrap ##########################
+#################### T #### section_mineWrap ##########################
+#################### T #### section_mineWrap ##########################
+#####################################################################*/
+
+	section.mineWrap::before { display: block; content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1); }
+	section.mineWrap > div.bg_imgWrap_pjt_01 { position: absolute; z-index: 0; width: 100%; height: 100%; }
+	section.mineWrap > div.bg_imgWrap_pjt_01 img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.1; filter: brightness(300%); }
+
+	section.mineWrap > div.inner_wrap { z-index: 10; }
+
+	section.mineWrap > div.inner_wrap > div.title_wrap { position: absolute; left: 20%; top: 10%; width: 50%; height: 30%;  }
+
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span.title { top: 0%; left: 0%; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(2) { top: 0%; left: 64%; line-height: 1.1; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(3) { top: 20%; left: 64%; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span.sub_title { bottom: 0%; left: 50%; }
+
+	section.mineWrap > div.inner_wrap > div.title_wrap h2::before { background: #8b8726; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2::after { border-color: #8b8726; }
+
+	section.mineWrap > div.inner_wrap > div.info_wrap { position: absolute; left: 2%; top: 35%; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dt { font-family: "IBMPlexSansKR-Regular"; font-size: 2.95em; color: #141414; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dd { position: relative; font-family: "IBMPlexSansKR-ExtraLight"; font-size: 2em; text-indent: 1.125em; color: #141414; line-height: 1.3; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dd::before { position: absolute; left: 5%; top: 50%; content: ""; display: block; width: 0.5em; height: 0.5em; background: #8b8726; transform: rotateZ(-45deg) translateY(-50%); }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap { position: absolute; left: 18%; bottom: 15%; transform: translateX(-50%);}
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button { position: relative; display: block; font-family: "IBMPlexSansKR-Light"; font-size: 2.5em; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button::before { display: block; content: ""; position: absolute; left: 0; top: 0; width: 0%; height: 100%; background: linear-gradient(0deg, #8b8726 20%, transparent 20%); transition: width 1s; }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(1) { left: 90%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(2) { left: 45%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(3) { left: 0%; }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button > span { position: relative; z-index: 5; display: block; width: 100%; height: 100%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button > span::before { position: absolute; left: -0.8125em; top: 50%; z-index: -1; content: ""; display: block; width: 1.125em; height: 1.125em; border: 1px solid #8b8726; transform: rotateZ(45deg) translate(-20%, -50%); transition: background 0.5s; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active::before { width: 100%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active > span::before { background: #8b8726; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active > span { font-family: "IBMPlexSansKR-Regular"; }
+	
+/*=============================================================================================*/
+/*=====================================              ==========================================*/
+/*===================================== CONTENT_WRAP ==========================================*/
+/*=====================================              ==========================================*/
+/*=============================================================================================*/
+
+	section.mineWrap > div.inner_wrap > div.content_wrap { position: absolute; right: 5vw; bottom: 20%; width: 30vw; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] { width: 40vw; }
+	section.mineWrap > div.inner_wrap > div.content_wrap > div.borderWrap { position: relative; right: 20%; border: 1px solid #8b8726; border-radius: 7px; padding: 5px; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] > div.borderWrap { right: 0; }
+
+	section.mineWrap > div.inner_wrap > div.content_wrap div.imgWrap { overflow: hidden; border-radius: 7px; width: 100%; }
+	section.mineWrap > div.inner_wrap > div.content_wrap div.imgWrap > img { object-fit: cover; width: 100%; }
+
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] div.imgWrap > img#_Tablet, img#_Mobile { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] div.imgWrap > img#_Desktop { display: block;}
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Tablet"] div.imgWrap > img#_Desktop, img#_Mobile { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Tablet"] div.imgWrap > img#_Tablet { display: block;}
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Mobile"] div.imgWrap > img#_Tablet, img#_Desktop { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Mobile"] div.imgWrap > img#_Mobile { display: block;}
+
+
+
+	section.mineWrap > div.inner_wrap > div.a_links_wrap { position: absolute; right: 5vw; bottom: 10%; padding-top: 20px; width: 40vw; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a { position: relative; overflow: hidden; display: block; font-family: "IBMPlexSansKR-Bold"; line-height: 3em; text-align: center; border-color: transparent transparent #8b8726 transparent; border-style: solid; border-width: 2px; border-radius: 10px; width: 45%; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a:nth-child(1) { float: left; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a:nth-child(2) { float: right; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a > span { white-space: nowrap; }
+
+/*#####################################################################
+#################### T #### section_mineWrap ##########################
+#################### T #### section_mineWrap ##########################
+#################### T #### section_mineWrap ##########################
+#####################################################################*/
+/*#####################################################################
+#################### T #### footer_maybeWrap ##########################
+#################### T #### footer_maybeWrap ##########################
+#################### T #### footer_maybeWrap ##########################
+#####################################################################*/
+
+	button#footerInfoOn { display: none; }
+
+	footer > div.inner_wrap { z-index: 10; }
+	footer svg.top { transform: scaleY(-1); }
+
+
+	footer div.title_wrap h2::before { animation: rotate-revert 30s linear infinite; }
+	footer div.title_wrap h2::after { animation: rotate 30s linear infinite; }
+
+	footer div.title_wrap h2 > span.title { top: 0%; left: 0%; }
+	footer div.title_wrap h2 > span.title > span { margin-left: 1.5em; }
+	footer div.title_wrap h2 > span:nth-child(2) { top: 0%; left: 64%; }
+	footer div.title_wrap h2 > span:nth-child(3) { top: 20%; left: 64%; }
+	footer div.title_wrap h2 > span.sub_title { bottom: -60%; left: 45%; white-space: nowrap; }
+
+/*======================================= info ===========================================*/
+
+	footer > div.inner_wrap > div.info_wrap { position: relative; float: left; display: block; left: 10%; top: 40%; z-index: 10; width: 22em; height: 22em; border-radius: 123456em; }
+	footer > div.inner_wrap > div.info_wrap::before { position: absolute; top: 50%; content: ""; border: 1px solid #ccc; background: #fff; border-radius: 123456em; width: 120%; height: 120%; box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); transform: translate(-10%, -50%); animation: fluff_footer 3s infinite ease-in-out; }
+
+	footer > div.inner_wrap > div.info_wrap div.center_wrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+
+	footer > div.inner_wrap > div.info_wrap p{ margin-bottom: 0.5em; font-size: 1em; font-family: "IBMPlexSansKR-Medium"; text-align: center; white-space: nowrap; }
+		footer > div.inner_wrap > div.info_wrap p span.strong { font-family: "IBMPlexSansKR-Bold"; }
+
+	footer > div.inner_wrap > div.info_wrap p.name { font-size: 2.75em; line-height: 1; }
+	footer > div.inner_wrap > div.info_wrap p.more { margin-bottom: 0; padding-top: 0.7em; font-size: 1.5em; font-family: "IBMPlexSansKR-Medium"; }
+
+/*======================================= desc ===========================================*/
+
+	footer p.desc { shape-outside: circle(50%); clear: both; float: left; position: absolute; right: 5%; bottom: 5%; white-space: nowrap; line-height: 1; text-align: right; }
+
+	footer p.desc > span { line-height: 1.4; }
+	footer p.desc > span:nth-last-of-type(1) { line-height: 1; }
+
+
+	footer span.desc_01 { width: 110%; font-family: "IBMPlexSansKR-ExtraLight"; font-size: 2em; text-indent: -2em; }
+	footer span.desc_02 { font-family: "IBMPlexSansKR-Medium"; font-size: 3.75em; }
+	footer span.desc_03 { font-family: "IBMPlexSansKR-Light"; font-size: 4em; text-align: center; }
+	footer span.desc_04 { font-size: 4em; color: #003d33; }
+	footer span.desc_04 > span { font-family: "IBMPlexSansKR-Regular"; color: #141414; }
+	footer span.desc_05 { width: revert; font-family: "IBMPlexSansKR-ExtraBold";font-size: 1.5em; color: #fff; }
+
+/*#####################################################################
+#################### T #### footer_maybeWrap ##########################
+#################### T #### footer_maybeWrap ##########################
+#################### T #### footer_maybeWrap ##########################
+#####################################################################*/
+/*--------------------------------------------------------*/
+}
+/*##################### tablet_end #######################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*##########################################################
+############################################################
+#####################         ##############################
+#####################  #######  ############################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #######  ############################
+#####################         ##############################
+############################################################
+##########################################################*/
+/*######################desktop_start#####################*/
+@media screen and (min-width: 1025px) {
+/*--------------------------------------------------------*/
+
+svg.displayT { display: none; }
+svg.displayM { display: none; }
+
+h2 > span.title { font-size: 7.5em; }
+
+div.title_wrap { position: absolute; left: 10%; top: 10%; width: 50%; height: 30%;  }
+
+div.title_wrap h2::before { width: 15em; height: 15em; background: #cb9b8c; }
+div.title_wrap h2::after { width: 15em; height: 15em; border: 1px solid #cb9b8c; }
+
+
+div.title_wrap h2 > span { position: absolute; }
+div.title_wrap h2 > span.title { line-height: 1; }
+div.title_wrap h2 > span:nth-child(2) { font-family: "IBMPlexSerif-Thin"; font-size: 3.75em; }
+div.title_wrap h2 > span:nth-child(3) { font-size: 6.25em; }
+div.title_wrap h2 > span.sub_title { font-size: 2.5em; white-space: nowrap; }
+
+br.none { display: none; }
+
+/*#####################################################################
+#################### D #### section_header ############################
+#################### D #### section_header ############################
+#################### D #### section_header ############################
+#####################################################################*/
+
+	header { position: fixed; right: 3em; top: 3em; z-index: 100; width: 100px; height: 100px; }
+
+	header nav { position: relative; width: 70px; height: 70px; z-index: 110; animation: menu_off 0.3s; animation-fill-mode: forwards; }
+	header nav::before { position: absolute; left: 5%; top: 0%; z-index: 0; width: 70px; height: 70px; content: ""; background: #141414; transform: rotateZ(45deg); animation: rotate 20s linear infinite; }
+	header nav::after { position: absolute; left: 50%; top: 50%; z-index: 10; content: "!"; font-size: 3em; transform: translate(-50%, -50%); line-height: 1; opacity: 1; transform-origin: 0 0; }
+
+	header nav > ul { position: relative; overflow: hidden; z-index: 5; width: 70px; height: 70px; border: 1px solid #141414; background: #fff; transform: rotateZ(45deg); transition: height 0.3s, rotateZ 0.2s 1s; animation: rotate-revert 20s linear infinite; }
+	header nav > ul > li { display: none; text-align: center; }
+	header nav > ul > li > button { position: relative; z-index: 10; font-size: 1.375em; line-height: 1.2; padding: 20px 0; }
+
+	header.on nav > ul { width: 80px; animation: menu_on 0.3s; animation-fill-mode: forwards; }
+	header.on nav::before { width: 80px; height: auto; animation: menu 0.3s; animation-fill-mode: forwards; }
+	header.on nav::after { display: none; }
+	header.on nav > ul > li { display: block; }
+
+	header nav > ul > li > button::before { position: absolute; width: 100%; height: 50%; left: 0; top: 50%; z-index: -1; margin: auto; content: ""; background: transparent; transform: translateY(-50%); }
+	header nav > ul > li:hover > button::before { background: #ddd; }
+	header nav > ul > li.active > button::before { background: #9F9FBC; }
+
+	header:hover nav::after { animation: hover 1s linear infinite; }
+
+/*#####################################################################
+#################### D #### section_header ############################
+#################### D #### section_header ############################
+#################### D #### section_header ############################
+#####################################################################*/
+/*#####################################################################
+#################### D #### section_visual ############################
+#################### D #### section_visual ############################
+#################### D #### section_visual ############################
+#####################################################################*/
+
+	section.visual::before { position: absolute; display: block; left: 50%; top: 50%; content: ""; width: 97%; height: 95%; transform: translate(-50%, -50%); background: #ccc; border-radius: 10px; opacity: 0.3; }
+	section.visual > div.box_wrap { position: absolute; width: 45vw; height: 45vw; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+	section.visual > div.box_wrap div { padding: 6em; transform-origin: center; }
+	section.visual > div.box_wrap div > p { width: 100%; font-size: 3em; transform: rotateZ(-45deg) translateX(200%); transition: transform 1s; text-align: center; transform-origin: center; white-space: nowrap;}
+	section.visual > div.box_wrap div:hover { overflow: visible; }
+	section.visual > div.box_wrap div:hover > p { width: 100%; transform: rotateZ(-45deg) translateX(0%); }
+
+	section.visual > div.box_wrap div:not(.mineblock):hover > p { transform: rotateZ(-45deg) translateX(-80%); }
+
+	section.visual > div.box_wrap div.rotateBox { overflow: hidden; position: absolute; width: 50%; height: 50%; transform: rotateZ(45deg); }
+	section.visual > div.box_wrap div.rotateBox[class ~= "meblock"] { left: 0; top: 0; z-index: 4; background: #fff; }
+	section.visual > div.box_wrap div.rotateBox[class ~= "mineblock"] { right: 0; top: 0; z-index: 3; border: 1px solid #010101; }
+	section.visual > div.box_wrap div.rotateBox[class ~= "moreblock"] { left: 0; bottom: 0; z-index: 6; background: mistyrose; }
+	section.visual > div.box_wrap div.rotateBox[class ~= "maybeblock"] { right: 0; bottom: 0; z-index: 7; padding: 5em; border: 25px solid #fff; background: rgba(0, 0, 0, 0); }
+
+	section.visual > p.pre_title { position: absolute; left: 50%; top: 50%; font-size: 2.5em; line-height: 1; transform: translate(-50%, -50%); }
+	section.visual > h2 { position: absolute; top: 50%; right: 10%; font-size: 7.5em; line-height: 1; transform: translateY(-50%); }
+	section.visual > p.desc { position: absolute; left: 5%; bottom: 5%; font-size: 9.0278vw; color: #565656; line-height: 1.1; }
+
+/*#####################################################################
+#################### D #### section_visual ############################
+#################### D #### section_visual ############################
+#################### D #### section_visual ############################
+#####################################################################*/
+/*#####################################################################
+#################### D #### section_meWrap ############################
+#################### D #### section_meWrap ############################
+#################### D #### section_meWrap ############################
+#####################################################################*/
+
+	section.meWrap { height: 150vh; }
+	section.meWrap div.title_wrap h2::before { background: #cfcfff; }
+	section.meWrap div.title_wrap h2::after { border-color: #cfcfff; }
+
+	section.meWrap > div.inner_wrap { z-index: 5; }
+
+	section.meWrap > div.inner_wrap > div.title_wrap { left: 20%; }
+
+	section.meWrap > div.inner_wrap > div.title_wrap > div.rel::before { display: block; content: ""; position: absolute; left: -30%; top: 30%; width: 200px; height: 200px; border: 1px solid #ccc; transform: rotateZ(45deg) translateY(-50%); }
+	section.meWrap > div.inner_wrap > div.title_wrap > div.rel::after { display: block; content: ""; position: absolute; left: -30%; top: 50%; width: 100px; height: 100px; border: 1px solid #666; transform: translateY(-50%); }
+
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span { position: absolute; z-index: 10; }
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(1) { font-family: "IBMPlexSerif-Thin"; top: 4%; }
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(2) { top: 14%; left: 29%; font-size: 7.5em;}
+	section.meWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(3) { top: 55%; left: 40%; font-size: 6.25rem; line-height: 1.1; }
+
+/*======================================= content ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap { position: absolute; left: 10%; bottom: 20%; width: 35vw; z-index: 10; }
+	section.meWrap > div.inner_wrap > div.content_wrap div > div { margin-bottom: 0.5em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div > div:nth-last-child(1) { margin-bottom: 0; }
+
+/*=====================================##### sub_title_wrap #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap { position: relative; left: 20%; top: 10%; }
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap::before { content: ""; display: block; position: absolute; left: -20%; top: -50%; z-index: -1; width: 20vw; height: 20vw; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 123456em; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); animation: fluff 3s infinite ease-in-out; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap > p { font-family: "IBMPlexSerif-Bold"; text-align: right; color: #fff; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p { font-family: "IBMPlexSansKR-Regular"; }
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p > span.title { font-size: 3em; top: 0%; left: 0%; text-shadow: 
+	-0.01em 0.01em #12ffa1, 
+	-0.02em 0.02em #12ffa1, 
+	-0.03em 0.03em #12ffa1, 
+	-0.04em 0.04em #12ffa1, 
+	-0.05em 0.05em #12ffa1, 
+	-0.06em 0.06em #12ffa1; }
+	section.meWrap > div.inner_wrap > div.content_wrap > div.sub_title_wrap p > span:nth-child(2) { font-size: 2em; }
+
+/*=====================================##### result01 #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 { position: relative; width: 11em; height: 4.5em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight { position: absolute; left: 50%; top: 50%; display: block; width: 10em; height: 3.5em; transform: translate(-50%, -50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3.5em; height: 100%; background: #12ffa1; border-radius: 43254352em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; border-top: 0.4375em solid transparent; border-right: 0.4375em solid transparent; border-bottom: 0.4375em solid transparent; border-left: 0.4375em solid #000; transform: translate(40%, -50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "IBMPlexSansKR-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result01 > div.arrowRight:hover > div::before { animation: move_circle 0.4s 1 ease-in-out forwards; /* -webkit- */-webkit-animation: move_circle 0.4s 1 ease-in-out forwards; }
+
+
+/*=====================================##### result01 #####*/
+
+/*=====================================##### result02 #####*/
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 { position: relative; left: 50%; width: 8em; height: 8em; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 svg { animation: rotate 50s linear infinite; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result02 svg > text { fill: #cfcfff; font-size: 1.25em; }
+
+/*=====================================##### result02 #####*/
+
+/*=====================================##### result03 #####*/
+
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 { position: relative; left: 0%; width: 8em; height: 8em; border-radius: 123456em; box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); animation: fluff 5s linear infinite; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu{ position: absolute; left: 50%; top: 50%; width: 75%; height: 75%; transform: translate(-50%, -50%); cursor: pointer}
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu::before { position: absolute; display: inline-block; content: ""; left: 5%; top: 20%; width: 90%; height: 4px; transform-origin: center center; transform: rotateZ(0deg); background: #cfcfff; transition: background 0.3s, transform 0.3s; }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu::after { position: absolute; display: inline-block; content: ""; right: 5%; bottom: 20%; width: 90%; height: 4px; transform-origin: center center; transform: rotateZ(0deg); background: #cfcfff; transition: background 0.3s, transform 0.3s; }
+
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu.on::before { left: 0%; top: 50%; width: 100%; background: #7c7fd9; transform: rotateZ(45deg); }
+	section.meWrap > div.inner_wrap > div.content_wrap div.result03 > div#btn_menu.on::after { right: 0%; bottom: 46%; width: 100%; background: #7c7fd9; transform: rotateZ(-45deg); }
+
+/*=====================================##### result03 #####*/
+
+/*======================================= content ===========================================*/
+
+/*======================================= skills ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.skills_wrap { position: absolute; right: 15%; bottom: 10%; width: 35vw; height: 35vw; }
+	section.meWrap > div.inner_wrap > div.skills_wrap::before { content: ""; display: block; position: absolute; top: 50%; z-index: -1; border-radius: 123456em; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.3); box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); border: 1px solid rgba(255, 255, 255, 0.5); transform: translateY(-50%); animation: fluff_footer 7s infinite ease-in-out; }
+
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills { overflow: hidden; position: relative; display: inline-block; width: 50%; height: 50%; font-family: "IBMPlexSansKR-Bold"; text-align: center; }
+
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span { position: absolute; display: block; padding: 44% 0; width: 100%; height: 100%; line-height: 1; font-size: 2em; transition: top 0.2s; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span.skill_index { left: 0%; top: 0%; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills > span.skill_title { left: 0%; top: 100%; }
+
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills[class ~= "active"] > span.skill_index { left: 0%; top: -100%; }
+	section.meWrap > div.inner_wrap > div.skills_wrap > button.skills[class ~= "active"] > span.skill_title { left: 0%; top: 0%; color: #12ffa1; }
+
+/*======================================= skills ===========================================*/
+
+/*======================================= desc ===========================================*/
+
+	section.meWrap > div.inner_wrap > div.desc_wrap { position: absolute; right: 2.5vw; bottom: 2.5vw; z-index: 10; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_01 { position: absolute; right: 0; top: -90%; display: inline; padding: 0.2em 0.5em; font-family: "IBMPlexSansKR-Light"; font-size: 1.25em; text-align: right; line-height: 1.2; color: #fff; border-top: 2px solid #141414; border-bottom: 2px solid #141414; border-radius: 6px; background-repeat: no-repeat; background-image: linear-gradient(180deg, transparent 50%, #141414 0); background-size: 0% 100%; transition: background-size 0.4s ease; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_01:hover { background-size: 100% 100%; }
+
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_02 { display: inline-block; position: relative; left: 70%; margin-bottom: 1em; text-align: center; font-size: 1.5em; line-height: 1; color: #fff; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_02::before { display: block; content: ""; position: absolute; left: -100%; top: -40%; right: 0; bottom: 0; margin: 0 auto; width: 2em; height: 2em; border: 1px solid #fff; transform-origin: center; transform: rotateZ(45deg); animation: rotate-revert 20s linear infinite;}
+
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 { font-size: 2.5em; color: #000; transform: translateY(10%); }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.gray { color: #fff; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.white { display: inline-block; font-family: "IBMPlexSerif-Bold"; color: #fff; transform: translateY(-40%);}
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.mint { color: #12ffa1; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.bold { font-family: "IBMPlexSansKR-Medium"; color: #222; }
+	section.meWrap > div.inner_wrap > div.desc_wrap p.title_03 span.lightviolet { color: #cfcfff; }
+
+/*======================================= desc ===========================================*/
+
+
+/*#####################################################################
+#################### D #### section_meWrap ############################
+#################### D #### section_meWrap ############################
+#################### D #### section_meWrap ############################
+#####################################################################*/
+/*#####################################################################
+#################### D #### section_mineWrap ##########################
+#################### D #### section_mineWrap ##########################
+#################### D #### section_mineWrap ##########################
+#####################################################################*/
+
+	section.mineWrap::before { display: block; content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1); }
+	section.mineWrap > div.bg_imgWrap_pjt_01 { position: absolute; z-index: 0; width: 100%; height: 100%; }
+	section.mineWrap > div.bg_imgWrap_pjt_01 img { display: block; width: 100%; height: 100%; object-fit: cover; opacity: 0.1; filter: brightness(300%); }
+
+	section.mineWrap > div.inner_wrap { z-index: 10; }
+
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span.title { top: 0%; left: 0%; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(2) { top: 0%; left: 50%; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span:nth-child(3) { top: 20%; left: 50%; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2 > span.sub_title { bottom: 0%; left: 50%; }
+
+	section.mineWrap > div.inner_wrap > div.title_wrap h2::before { background: #8b8726; }
+	section.mineWrap > div.inner_wrap > div.title_wrap h2::after { border-color: #8b8726; }
+
+	section.mineWrap > div.inner_wrap > div.info_wrap { position: absolute; left: 2.5%; bottom: 10%; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dt { font-family: "IBMPlexSansKR-Light"; font-size: 3.75em; color: #141414; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dd { position: relative; font-family: "IBMPlexSansKR-ExtraLight"; font-size: 2em; text-indent: 1.5em; color: #141414; }
+	section.mineWrap > div.inner_wrap > div.info_wrap > dl > dd::before { position: absolute; left: 5%; top: 50%; content: ""; display: block; width: 0.5em; height: 0.5em; background: #8b8726; transform: rotateZ(-45deg) translateY(-50%); }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap { position: absolute; left: 50%; bottom: 15%; transform: translateX(-50%);}
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button { position: relative; display: block; font-family: "IBMPlexSansKR-Light"; font-size: 2.5em; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button::before { display: block; content: ""; position: absolute; left: 0; top: 0; width: 0%; height: 100%; background: linear-gradient(0deg, #8b8726 20%, transparent 20%); transition: width 1s; }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(1) { left: 50%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(2) { left: 0%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button:nth-child(3) { left: -50%; }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button > span { position: relative; z-index: 5; display: block; width: 100%; height: 100%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button > span::before { position: absolute; left: -1.125em; top: 50%; z-index: -1; content: ""; display: block; width: 1.5em; height: 1.5em; border: 1px solid #8b8726; transform: rotateZ(45deg) translate(-20%, -50%); transition: background 0.5s; }
+
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active::before { width: 100%; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active > span::before { background: #8b8726; }
+	section.mineWrap > div.inner_wrap > div.device_btns_wrap button.active > span { font-family: "IBMPlexSansKR-Regular"; }
+
+/*=============================================================================================*/
+/*=====================================              ==========================================*/
+/*===================================== CONTENT_WRAP ==========================================*/
+/*=====================================              ==========================================*/
+/*=============================================================================================*/
+
+	section.mineWrap > div.inner_wrap > div.content_wrap { position: absolute; right: 5vw; bottom: 20%; width: 20vw; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] { width: 30vw; }
+	section.mineWrap > div.inner_wrap > div.content_wrap > div.borderWrap { position: relative; right: 25%; border: 1px solid #8b8726; border-radius: 7px; padding: 5px; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] > div.borderWrap { right: 0; }
+
+	section.mineWrap > div.inner_wrap > div.content_wrap div.imgWrap { overflow: hidden; border-radius: 7px; width: 100%; }
+	section.mineWrap > div.inner_wrap > div.content_wrap div.imgWrap > img { object-fit: cover; width: 100%; }
+
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] div.imgWrap > img#_Tablet, img#_Mobile { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Desktop"] div.imgWrap > img#_Desktop { display: block;}
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Tablet"] div.imgWrap > img#_Desktop, img#_Mobile { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Tablet"] div.imgWrap > img#_Tablet { display: block;}
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Mobile"] div.imgWrap > img#_Tablet, img#_Desktop { display: none; }
+	section.mineWrap > div.inner_wrap > div.content_wrap[class ~= "_Mobile"] div.imgWrap > img#_Mobile { display: block;}
+
+
+
+	section.mineWrap > div.inner_wrap > div.a_links_wrap { position: absolute; right: 5vw; bottom: 10%; padding-top: 20px; width: 30vw; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a { position: relative; overflow: hidden; display: block; font-family: "IBMPlexSansKR-Bold"; line-height: 3em; text-align: center; border-color: transparent transparent #8b8726 transparent; border-style: solid; border-width: 2px; border-radius: 10px; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a:nth-child(1) { float: left; width: 40%; }
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a:nth-child(2) { float: right; width: 40%; }
+
+	section.mineWrap > div.inner_wrap > div.a_links_wrap > a:hover { border-color: #8b8726 transparent transparent transparent; transition: border-color 0.2s; }
+	
+
+/*#####################################################################
+#################### D #### section_mineWrap ##########################
+#################### D #### section_mineWrap ##########################
+#################### D #### section_mineWrap ##########################
+#####################################################################*/
+/*#####################################################################
+#################### D #### footer_maybeWrap ##########################
+#################### D #### footer_maybeWrap ##########################
+#################### D #### footer_maybeWrap ##########################
+#####################################################################*/
+
+	button#footerInfoOn { display: none; }
+
+	footer > div.inner_wrap { z-index: 10; }
+	footer svg.top { transform: scaleY(-1); }
+
+	footer div.title_wrap h2::before { animation: rotate-revert 30s linear infinite; }
+	footer div.title_wrap h2::after { animation: rotate 30s linear infinite; }
+
+	footer div.title_wrap h2 > span.title { top: 0%; left: 0%; }
+	footer div.title_wrap h2 > span.title > span { margin-left: 1.5em; }
+	footer div.title_wrap h2 > span:nth-child(2) { top: 0%; left: 64%; }
+	footer div.title_wrap h2 > span:nth-child(3) { top: 20%; left: 64%; }
+	footer div.title_wrap h2 > span.sub_title { bottom: 0%; left: 64%; }
+
+/*======================================= info ===========================================*/
+
+
+	footer > div.inner_wrap > div.info_wrap { position: relative; float: left; display: block; left: 5%; top: 50%; z-index: 10; width: 22em; height: 22em; }
+	footer > div.inner_wrap > div.info_wrap::before { position: absolute; top: 50%; content: ""; border: 1px solid #ccc; background: #fff; border-radius: 123456em; width: 130%; height: 130%; box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); transform: translate(-10%, -50%); animation: fluff_footer 3s infinite ease-in-out; }
+
+	footer > div.inner_wrap > div.info_wrap div.center_wrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+
+	footer > div.inner_wrap > div.info_wrap p{ margin-bottom: 0.5em; font-size: 1em; font-family: "IBMPlexSansKR-Medium"; text-align: center; white-space: nowrap; }
+	footer > div.inner_wrap > div.info_wrap p span.strong { font-family: "IBMPlexSansKR-Bold"; }
+
+	footer > div.inner_wrap > div.info_wrap p.name { font-size: 2.75em; line-height: 1; }
+	footer > div.inner_wrap > div.info_wrap p.more { margin-bottom: 0; padding-top: 0.7em; font-size: 1.5em; font-family: "IBMPlexSansKR-Medium"; }
+
+/*======================================= desc ===========================================*/
+
+	footer p.desc { shape-outside: circle(50%); clear: both; float: left; position: absolute; right: 5%; bottom: 5%; white-space: nowrap; line-height: 1; text-align: right; }
+
+	footer p.desc > span { line-height: 1.4; }
+	footer p.desc > span:nth-last-of-type(1) { line-height: 1; }
+
+	footer span.desc_01 { font-family: "IBMPlexSansKR-ExtraLight"; font-size: 2.5em; }
+	footer span.desc_02 { font-family: "IBMPlexSansKR-Medium"; font-size: 4.125em; }
+	footer span.desc_03 { font-family: "IBMPlexSansKR-Light"; font-size: 4em; }
+	footer span.desc_04 { font-size: 4em; color: #003d33; }
+	footer span.desc_04 > span { font-family: "IBMPlexSansKR-Regular"; color: #141414; }
+	footer span.desc_05 { display: inline-block; width: revert; font-family: "IBMPlexSansKR-ExtraBold";font-size: 1.5em; color: #fff; }
+
+/*#####################################################################
+#################### D #### footer_maybeWrap ##########################
+#################### D #### footer_maybeWrap ##########################
+#################### D #### footer_maybeWrap ##########################
+#####################################################################*/
+
+
+
+
+/*--------------------------------------------------------*/
+}

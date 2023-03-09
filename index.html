@@ -1,95 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2023 BUCKET LIST</title>
-  <style>
-    /*-------------------------------------------------------------------------------*/
-    @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-    * { font-family: 'Hahmlet'; }
-    /*-------------------------------------------------------------------------------*/
-    html {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    body { 
-      width: 360px;
-      background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bg-grid.png");
-      
-    }
-    .center{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }    
-    .title { 
-      font-weight: 700;
-      color: #fff;
-      background-color: blue;
-      font-size: 24px;
-      padding: 4px 14px;
-      border-radius: 8px;
-    }
-    .msg {
-      font-weight: 800;
-      margin: -10px 0 30px;
-      color: black;
-    }
-    .flex-row {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-    }
-    .bucket {
-      width: 160px;
-      height: 160px;
-      margin: 8px;
-      position: relative;
-      text-align: center;
-      word-break: keep-all;
-    }
-    .done::after {
-      content: "";
-      width: 70%;
-      height: 70%;
-      background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/stamp.png");
-      background-size: cover;
-      background-position: center;
-      position: absolute;
-      top: 20%;
-    }
-    .wrap {
-      flex-wrap: wrap;
-    }
-    .img1 {
-      background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-blue.png");
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-    }
-    .img2 {
-      background-image: url("https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/bucketList/bucket-lightblue.png");
-      background-size: cover;
-      background-position: center;
-    }
-  </style>
+	<meta charset="utf-8">
+	<meta property="og:title" content="PORTFOLIO ★ KIMM">
+	<meta property="og:description" content="PORTFOLIO ★ KIMM">
+	<meta property="og:image" content="http://kimmm.dothome.co.kr/">
+	<title>PORTFOLIO ★ KIMM</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="images/logo/favicon.ico">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/font.css" type="text/css">
+	<link rel="stylesheet" href="css/index.css" type="text/css">
+
+
+	<style>
+	</style>
+
+	<!-- [if lt IE 9]
+		<script src="js/html5shiv"></script>
+	<![endif]-->
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+$(window).ready(function(){
+
+console.log("HEY, THERE! ENJOY TO APPRECIATION!");
+console.log("~~~~~~ kse1021@gmail.com ~~~~~~", "Thank you♥");
+
+});
+	</script>
+
 </head>
-<body class="center">
-  <h1 class="title">2023 신년 계획</h1>
-  <p class="msg">꼭 지키자!</p>
-  <div class="row flex-row wrap">
-    <div class="bucket img1 center done">LIST 01</div>
-    <div class="bucket img2 center">LIST 02</div>
-    <div class="bucket img2 center">LIST 03</div>
-    <div class="bucket img1 center">LIST 04</div>
-    <div class="bucket img1 center">LIST 05</div>
-    <div class="bucket img2 center">LIST 06</div>
-  </div>
+
+<body>
+
+	<header class="">
+		<div class="bg_area"><span class="bg_txt"></span><span class="blind">BG</span></div>
+		<nav>
+			<ul>
+				<li class="active"><button>WEL-<br>COME</button></li>
+				<li><button>ME</button></li>
+				<li><button>MINE</button></li>
+				<li><button>MAY<br>BE--</button></li>
+			</ul>
+		</nav>
+	</header>
+
+	<section class="visual scrollMove">
+		<div class="bg_wrap"></div>
+		<div class="box_wrap">
+			<div class="rel">
+				<div class="rotateBox meblock"><p>PUBLISHING</p></div>
+				<div class="rotateBox mineblock"><p>DESIGN</p></div>
+				<div class="rotateBox moreblock"></div>
+				<div class="rotateBox maybeblock"><p>FOR WEB</p></div>
+			</div>
+		</div>
+		<p class="pre_title">IT'S ME</p>
+		<h2>KIMM</h2>
+		<p class="desc"><span>LOVE</span> <span>IT!</span><br><span>LET</span><span>'S</span><br><span>D</span><span>E</span><span class="repeatV">V</span><span>E</span><span>L</span><span>O</span><span>P</span> <span>I</span><span>T</span><span>!</span></p>
+	</section>
+
+	<section class="meWrap scrollMove">
+		<div class="deco_box"><span class="blind">rect</span></div>
+		<svg class="bottom displayD" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none"><path d="M1366,0S1162.84,427.32,744.77,493.9,17,620.94,0,768H1366Z"></path></svg>
+		<svg class="bottom displayT" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 1024" preserveAspectRatio="none"><path d="M768,.24s11.32,204.48-360.29,552.71C98.81,842.42,17.03,877.18,0,1024.24H768V.24Z"></path></svg>
+		<svg class="bottom displayM" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 568" preserveAspectRatio="none"><path d="M320,0V568H0s28-143,170.65-275.44C298.24,174.09,320,0,320,0Z"></path></svg>
+		<div class="inner_wrap">
+			<div class="title_wrap">
+				<h2><span class="title">ME</span><span class="title">;</span><span>SO, FT<br>CREATOR</span></h2>
+			</div>
+
+			<div class="content_wrap">
+				<div class="sub_title_wrap">
+					<p><span class="title">WHAT</span><span> CAN I DO ?</span></p>
+				</div>
+				<div class="rel">
+					<div class="result01">
+						<div class="arrowRight">
+							<div><span>LOOK!</span></div>
+						</div>
+					</div> <!-- result01 -->
+
+					<div class="result02">
+						<div class="rel">
+							<svg viewBox="0 0 100 100">
+								<defs>
+									<path id="circle" d="M 50, 50 m -32, 0 a 32, 32 0 1,1 64, 0 a 32, 32 0 1,1 -64, 0"></path>
+								</defs>
+								<text>
+									<textPath xlink:href="#circle">
+										welcome KIMM world
+									</textPath>
+								</text>
+							</svg>
+						</div>
+					</div> <!-- result02 -->
+
+					<div class="result03">
+						<div id="btn_menu"><div class="rel"><span class="blind">button</span></div></div>
+					</div> <!-- result03 -->
+				</div> <!-- rel -->
+				<p>so, FUN!</p>
+			</div> <!-- content_wrap -->
+
+			<div class="skills_wrap">
+				<button class="skills">
+					<span id="skill_1" class="skill_index">SKILL &#8544;</span>
+					<span id="title_1" class="skill_title">PHOTOSHOP</span>
+				</button><!-- 
+			 --><button class="skills">
+					<span id="skill_2" class="skill_index">SKILL &#8545;</span>
+					<span id="title_2" class="skill_title">ILLUST<br>-RATION</span>
+				</button><!-- 
+			 --><button class="skills">
+					<span id="skill_3" class="skill_index">SKILL &#8546;</span>
+					<span id="title_3" class="skill_title">JAVA SCRIPT</span>
+				</button><!-- 
+			 --><button class="skills">
+					<span id="skill_4" class="skill_index">SKILL &#8547;</span>
+					<span id="title_4" class="skill_title">JQUREY</span>
+				</button>
+			</div>
+
+			<div class="desc_wrap">
+				<div class="rel">
+					<p class="title_01">A developer with<br>A design</p>
+					<p class="title_02">THAT'S ME !</p>
+					<p class="title_03"><span class="gray">Emotion is the</span> <span class="white">lay</span><span class="gray">out</span>, <span class="mint">color</span>, <span class="bold"><br class="none">and</span> what is created by t<span class="lightviolet">he developer.</span></p>
+				</div>
+			</div> <!-- desc_wrap -->
+
+		</div> <!-- inner_wrap -->
+	</section> <!-- meWrap -->
+
+	<section class="mineWrap scrollMove">
+		<div class="bg_imgWrap_pjt_01">
+			<picture>
+				<source srcset="images/img_index_mineWrap_mobile.JPG" media="(max-width: 767px)">
+				<source srcset="images/img_index_mineWrap_tablet.JPG" media="(min-width: 768px) and (max-width: 1024px)">
+				<source srcset="images/img_index_mineWrap_desktop.JPG" media="(min-width: 1025px)">
+				<img src="images/img_index_mineWrap_desktop.JPG" alt="web site intro page">
+			</picture>
+		</div>
+		<svg class="top displayD project01" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none"><path d="M744.77,493.9C1162.84,427.32,1366,0,1366,0H0V768C17,620.94,326.71,560.48,744.77,493.9Z"></path></svg>
+		<svg class="top displayT project01" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 1024" preserveAspectRatio="none"><path d="M407.71,552.94C779.32,204.71,768,.23,768,.23H0v1024c17.03-147.06,98.81-181.83,407.71-471.29Z"></path></svg>
+		<svg class="top displayM project01" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 568" preserveAspectRatio="none"><path d="M170.65,292.56C298.24,174.09,320,0,320,0H0V568s28-143,170.65-275.44Z"></path></svg>
+
+		<div class="inner_wrap">
+			<div class="title_wrap">
+				<h2 class="clearfix"><span class="title">MINE</span><span>FIRST</span><span>……</span><br><span class="sub_title">PROJECT 1,<br class="none"> We' Ve</span></h2>
+			</div> <!-- title_wrap -->
+			<div class="info_wrap">
+				<dl class="rel">
+					<dt>Concept</dt>
+					<dd>Vegan</dd>
+					<dd>Ecofriendly</dd>
+					<dd>Environmental Protection</dd>
+					<dd>Animal Welfare</dd>
+				</dl>
+			</div> <!-- info_wrap -->
+
+			<div class="device_btns_wrap">
+				<button class="btnDesktop active"><span>Desktop</span></button>
+				<button class="btnTablet"><span>Tablet</span></button>
+				<button class="btnMobile"><span>Mobile</span></button>
+			</div>
+
+			<div id="contentWrap" class="content_wrap _Desktop">
+				<div class="borderWrap">
+					<div class="imgWrap">
+						<img id="_Desktop" src="images/img_index_mineWrap_desktop.JPG" alt="web site intro desktop page">
+						<img id="_Tablet" src="images/img_index_mineWrap_tablet.JPG" alt="web site intro tablet page">
+						<img id="_Mobile" src="images/img_index_mineWrap_mobile.JPG" alt="web site intro mobile page">
+					</div>
+				</div>
+			</div>
+
+			<div class="a_links_wrap clearfix">
+				<a href="sub_pj01.html">
+					<span>DETAIL VIEW</span>
+				</a>
+				<a target="_blank" href="http://kimmm.dothome.co.kr/work01">
+					<span>GO TO SITE</span>
+				</a>
+			</div>
+		</div> <!-- inner_wrap -->
+	</section>
+
+	<footer class="maybeWrap scrollMove">
+		<svg class="top displayD" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366 768" preserveAspectRatio="none"><path d="M744.77,493.9C1162.84,427.32,1366,0,1366,0H0V768C17,620.94,326.71,560.48,744.77,493.9Z"></path></svg>
+		<svg class="top displayT" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 1024" preserveAspectRatio="none"><path d="M407.71,552.94C779.32,204.71,768,.23,768,.23H0v1024c17.03-147.06,98.81-181.83,407.71-471.29Z"></path></svg>
+		<svg class="top displayM" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 568" preserveAspectRatio="none"><path d="M170.65,292.56C298.24,174.09,320,0,320,0H0V568s28-143,170.65-275.44Z"></path></svg>
+
+		<div class="inner_wrap clearfix">
+			<div class="title_wrap">
+				<h2><span class="title">MAY<br><span>BE</span></span><span>MORE</span><span>……</span><br><span class="sub_title">LOOK FORWARD TO IT!</span></h2>
+			</div> <!-- title_wrap -->
+
+			<div id="footerInfoWrap" class="info_wrap">
+				<button id="footerInfoOn">ON</button>
+				<div class="center_wrap">
+					<p class="name">KIM SEONG EI</p>
+					<p>1993.10.21</p>
+					<p><span class="strong">2015, 8</span> 목원대학교 산업디자인과 전공</p>
+					<p><span class="strong">2021, 12</span> Hi-mart Brand Manager(Samsung)</p>
+					<p><span class="strong">2022, 10</span> 연희직업전문학교<br>UI/UX 프론트엔드<br>반응형웹디자인&웹퍼블리셔<br>양성과정 <span class="strong">수료</span></p>
+					<p class="more">010 - 4303 - 5465</p>
+				</div>
+			</div> <!-- info_wrap -->
+
+			<p class="desc"><span class="desc_01">It will be more delicate,</span><br><span class="desc_02">bolder,</span><br><span class="desc_03">and</span><br><span class="desc_04"><span>always</span> seek for effort.</span><br><span class="desc_05">THANK YOU♥</span></p>
+		</div> <!-- inner_wrap -->
+	</footer>
+
 </body>
+
 </html>

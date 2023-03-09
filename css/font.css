@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+/* ibm-plex-sans-kr-100 - latin_korean */
+@font-face {
+  font-family: 'IBMPlexSansKR-Thin';
+  src: url('../font/ibm-plex-sans-kr-v7-latin_korean-100.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-100.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-100.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-100.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-100.svg#IBMPlexSansKR') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-sans-kr-200 - latin_korean */
+@font-face {
+  font-family: 'IBMPlexSansKR-ExtraLight';
+  src: url('../font/ibm-plex-sans-kr-v7-latin_korean-200.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-200.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-200.svg#IBMPlexSansKR') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-sans-kr-300 - latin_korean */
+@font-face {
+  font-family: 'IBMPlexSansKR-Light';
+  src: url('../font/ibm-plex-sans-kr-v7-latin_korean-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-300.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-300.svg#IBMPlexSansKR') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-sans-kr-regular - latin_korean */
+@font-face {
+  font-family: 'IBMPlexSansKR-Regular';
+  src: url('../font/ibm-plex-sans-kr-v7-latin_korean-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-regular.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-regular.svg#IBMPlexSansKR') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-sans-kr-500 - latin_korean */
+@font-face {
+  font-family: 'IBMPlexSansKR-Medium';
+  src: url('../font/ibm-plex-sans-kr-v7-latin_korean-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-500.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-500.svg#IBMPlexSansKR') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-sans-kr-600 - latin_korean */
+@font-face {
+  font-family: 'IBMPlexSansKR-SemiBold';
+  src: url('../font/ibm-plex-sans-kr-v7-latin_korean-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-600.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-600.svg#IBMPlexSansKR') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-sans-kr-700 - latin_korean */
+@font-face {
+  font-family: 'IBMPlexSansKR-Bold';
+  src: url('../font/ibm-plex-sans-kr-v7-latin_korean-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-700.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-sans-kr-v7-latin_korean-700.svg#IBMPlexSansKR') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-100 - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-Thin';
+  src: url('../font/ibm-plex-serif-v15-latin-100.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-100.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-100.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-100.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-100.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-100italic - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-ThinItalic';
+  src: url('../font/ibm-plex-serif-v15-latin-100italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-100italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-100italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-100italic.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-100italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-100italic.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-200italic - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-ExtraLightItalic';
+  src: url('../font/ibm-plex-serif-v15-latin-200italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-200italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-200italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-200italic.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-200italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-200italic.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-200 - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-ExtraLight';
+  src: url('../font/ibm-plex-serif-v15-latin-200.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-200.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-200.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-300 - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-Light';
+  src: url('../font/ibm-plex-serif-v15-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-300.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-300italic - latin */
+@font-face {
+	  font-family: 'IBMPlexSerif-LightItalic';
+  src: url('../font/ibm-plex-serif-v15-latin-300italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-300italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-300italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-300italic.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-300italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-300italic.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-italic - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-RegularItalic';
+  src: url('../font/ibm-plex-serif-v15-latin-italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-italic.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-italic.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-regular - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/ibm-plex-serif-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-regular.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-500 - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-Medium';
+  src: url('../font/ibm-plex-serif-v15-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-500.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-500italic - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-MediumItalic';
+  src: url('../font/ibm-plex-serif-v15-latin-500italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-500italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-500italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-500italic.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-500italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-500italic.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-600 - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-SemiBold';
+  src: url('../font/ibm-plex-serif-v15-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-600.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-600italic - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-SemiBoldItalic';
+  src: url('../font/ibm-plex-serif-v15-latin-600italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-600italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-600italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-600italic.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-600italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-600italic.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-700 - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-Bold';
+  src: url('../font/ibm-plex-serif-v15-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-700.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
+/* ibm-plex-serif-700italic - latin */
+@font-face {
+  font-family: 'IBMPlexSerif-BoldItalic';
+  src: url('../font/ibm-plex-serif-v15-latin-700italic.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/ibm-plex-serif-v15-latin-700italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/ibm-plex-serif-v15-latin-700italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-700italic.woff') format('woff'), /* Modern Browsers */
+       url('../font/ibm-plex-serif-v15-latin-700italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/ibm-plex-serif-v15-latin-700italic.svg#IBMPlexSerif') format('svg'); /* Legacy iOS */
+}
