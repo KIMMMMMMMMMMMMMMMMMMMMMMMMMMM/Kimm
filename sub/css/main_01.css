@@ -1,0 +1,513 @@
+@charset "utf-8";
+
+body { font-family: "NotoSansKR-Regular"; }
+
+@keyframes more_btn_act {
+
+	0% {
+		left: 0px;
+	}
+
+	50% {
+		left: 0px;
+		width: 100%;
+	}
+
+	100% {
+		left: calc(100% - 3.5em);
+		width: 3.5em;
+	}
+
+}
+
+@keyframes more_btn_act_reverse {
+
+	0% {
+		left: calc(100% - 3.5em);
+		width: 3.5em;
+	}
+
+	50% {
+		left: 0px;
+		width: 100%;
+	}
+
+	100% {
+		left: 0px;
+	}
+
+}
+
+/* -webkit- */
+
+@-webkit-keyframes more_btn_act {
+
+	0% {
+		left: 0px;
+	}
+
+	50% {
+		left: 0px;
+		width: 100%;
+	}
+
+	100% {
+		left: calc(100% - 3.5em);
+		width: 3.5em;
+	}
+
+}
+
+@-webkit-keyframes more_btn_act_reverse {
+
+	0% {
+		left: calc(100% - 3.5em);
+		width: 3.5em;
+	}
+
+	50% {
+		left: 0px;
+		width: 100%;
+	}
+
+	100% {
+		left: 0;
+	}
+
+}
+
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*##################mobile_start##################*/
+@media screen and (max-width: 767px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+	div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(205, 199, 79, 1); }
+	div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(233, 111, 148, 1); }
+
+	div.pagination[class ~= "txt_color_0"] > button { color: rgba(205, 199, 79, 0.6); }
+	div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+	div.pagination[class ~= "txt_color_2"] > button { color: rgba(233, 111, 148, 0.6); }
+
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+/*#####################################################################
+########################### section_allergy ###########################
+#####################################################################*/
+
+	section.allergy { overflow: hidden; width: 100%; height: 15.3218vh; }
+	section.allergy::before { position: absolute; left: 0; top: 0; display: block; content:""; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); }
+
+	section.allergy img { width: 100%; height: 100%; object-fit: cover; }
+
+	section.allergy > h2 { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: "NotoSansKR-Bold"; color: #fff; font-size: 1.25em; line-height: 1.2; white-space: nowrap; }
+	section.allergy > h2 > span { color: #cdc74f; }
+
+/*#####################################################################
+########################### section_allergy ###########################
+#####################################################################*/
+
+/*#####################################################################
+############################# section_weekplan ########################
+#####################################################################*/
+
+/************* slides area */
+
+
+	section.weekplan div.content_wrap { width: 100%; height: 85vh; }
+	section.weekplan div.content_wrap div.slides { position: absolute; display: block; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; transition: transform 0.3s; }
+	section.weekplan div.content_wrap div.slides[class ~="prev"] { z-index: 1; transform: translateX(0); }
+	section.weekplan div.content_wrap div.slides[class ~="next"] { z-index: 2; transform: translateX(0); }
+
+/************* img area */
+
+	section.weekplan div.img_wrap { width: 100%; }
+	section.weekplan div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/************* info_box area */
+
+	section.weekplan div.info_wrap { padding: 3.125vw 6.25vw; width: 100%; height: 50%; box-shadow: 0 0 20px rgb(0, 0, 0, 0.2); background: #fff; text-align: left; }
+	section.weekplan div.info_wrap p.title { font-family: "NotoSansKR-Bold"; font-size: 1.25em; color: #222; line-height: 1.2; }
+	section.weekplan div.info_wrap p.title span.txt_point { color: #8b8726; }
+	section.weekplan div.info_wrap p.desc { font-family: "NotoSansKR-Regular"; margin: 20px 0 0 0; font-size: 0.875em; color: #222; }
+	section.weekplan div.slides[class ~="next"] div.info_wrap p.desc > br { display: none; }
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ button area @@@@@@*/
+
+/*		==================== more btn area */
+
+	section.weekplan div.info_wrap a.more { position: absolute; left: 0; bottom: 0; display: block; width: 6em; height: 2em; }
+	section.weekplan div.info_wrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.weekplan div.info_wrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 2em; height: 2em; background: #cdc74f; border-radius: 43254352em; }
+	section.weekplan div.info_wrap a.more > div::after { display: block; position: absolute; right: 1em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.weekplan div.info_wrap a.more > div > span { display: block; position: absolute; left: 15%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+/*		==================== caution btn area */
+
+	section.weekplan div.info_wrap div.caution { display: inline-block; position: absolute; right: 0; bottom: 0; width: 2em; height: 2em; background: url("../images/icons/img_ico_caution.png") no-repeat; background-size: cover; }
+
+	section.weekplan div.info_wrap div.caution p { display: none; position: absolute; right: 40px; bottom: 36px; padding: 10px; border-radius: 5px; border: 1px solid #9f9f9f;  background: rgba(255, 255, 255, 0.8); font-size: 0.8125em; font-weight: bold; color: #222; white-space: nowrap; border-bottom-right-radius: 0; }
+	section.weekplan div.info_wrap div.caution:hover p { display: block; }
+
+/*		==================== prev_next btn area */
+
+	section.weekplan div.content_wrap > button.btn { position: absolute; bottom: 0; display: inline-block; z-index: 10; width: calc(100% / 2); height: 30px; font-size: 0; transition: 0.3s; }
+	section.weekplan div.content_wrap > button[class ~= "prev"] { left: 0; }
+	section.weekplan div.content_wrap > button[class ~= "next"] { right: 0; }
+
+	section.weekplan div.content_wrap > button.btn > span { position: absolute; top: 0; bottom: 0; margin: auto; width: 15px; height: 30px; background-color: #cdc74f; }
+	section.weekplan div.content_wrap > button[class ~= "prev"] > span { right: 20px; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.weekplan div.content_wrap > button[class ~= "next"] > span { left: 20px; clip-path: polygon(0 0, 100% 50%, 0% 100%); }
+
+/*#####################################################################
+############################# section_weekplan ########################
+#####################################################################*/
+
+/*#####################################################################
+############################## section_sale ###########################
+#####################################################################*/
+
+	section.sale { width: 100%; min-height: 200px; }
+	section.sale img { width: 100%; object-fit: cover; }
+
+	section.sale div.inner { position: absolute; margin: 0 calc((100% - 280px) / 2); top: 0; width: 100%; max-width: 280px; height: 100%;  padding: 6.25vw 0; }
+	section.sale div.inner::before { position: absolute; left: -30%; top: 50%; display: block; content: ""; width: 70vw; height: 70vw; border-radius: 50%; background: rgba(229, 225, 162, 0.7); box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); transform: translateY(-50%);}
+
+	section.sale h2 { font-family: "NotoSansKR-Bold"; font-size: 1.875em; color: #222; line-height: 1.2; text-align: left; text-shadow: -2px 2px 0 #fff; }
+
+	section.sale p.desc { position: absolute; left: 0; bottom: 0; font-family: "NotoSansKR-Light"; font-size: 0.875em; line-height: 1.5; text-align: left; }
+	section.sale p.caution { position: absolute; right: 0; bottom: 6.25vw; text-align: right; font-size: 0.8125em; color: #fff; }
+
+
+/*#####################################################################
+############################## section_sale ###########################
+#####################################################################*/
+
+
+
+
+
+
+/*--------------------------------------------------------*/
+}
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*##################mobile_end##################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*##################tablet_start##################*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+	div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(205, 199, 79, 1); }
+	div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(233, 111, 148, 1); }
+
+	div.pagination[class ~= "txt_color_0"] > button { color: rgba(205, 199, 79, 0.6); }
+	div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+	div.pagination[class ~= "txt_color_2"] > button { color: rgba(233, 111, 148, 0.6); }
+
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+/*#####################################################################
+########################### section_allergy ###########################
+#####################################################################*/
+
+	section.allergy { overflow: hidden; width: 100%; height: 15.3218vh; }
+	section.allergy::before { position: absolute; left: 0; top: 0; display: block; content:""; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); }
+
+	section.allergy img { width: 100%; height: 100%; object-fit: cover; }
+
+	section.allergy > h2 { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: "NotoSansKR-Bold"; color: #fff; font-size: 2.5em; line-height: 1.2; }
+	section.allergy > h2 > span { color: #cdc74f; }
+
+/*#####################################################################
+########################### section_allergy ###########################
+#####################################################################*/
+
+/*#####################################################################
+############################# section_weekplan ########################
+#####################################################################*/
+
+/************* slides area */
+
+
+	section.weekplan div.content_wrap { height: 37.5vh; }
+	section.weekplan div.content_wrap div.slides { position: absolute; display: block; left: 0; top: 0; width: 100%; height: 100%; transition: transform 0.3s; }
+	section.weekplan div.content_wrap div.slides[class ~="prev"] { z-index: 2; transform: translateX(0); }
+	section.weekplan div.content_wrap div.slides[class ~="next"] { z-index: 1; transform: translateX(0); }
+
+/************* img area */
+
+	section.weekplan div.img_wrap { width: 75%; height: 100%; }
+	section.weekplan div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/************* info_box area */
+
+	section.weekplan div.info_wrap { position: absolute; top: 50%; right: 0; padding: 20px; width: 54%; height: 80%; box-shadow: 0 0 40px rgb(0, 0, 0, 0.2); background: #fff; text-align: left; transform: translateY(-50%); }
+	section.weekplan div.info_wrap p.title { font-family: "NotoSansKR-Bold"; font-size: 2em; color: #222; line-height: 1.2; }
+	section.weekplan div.info_wrap p.title span.txt_point { color: #8b8726; }
+	section.weekplan div.info_wrap p.desc { font-family: "NotoSansKR-Regular"; margin: 20px 0; font-size: 0.875em; color: #222; }
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ button area @@@@@@*/
+
+/*		==================== more btn area */
+
+	section.weekplan div.info_wrap a.more { position: absolute; left: 0; bottom: 0; display: block; width: 10em; height: 3em; }
+	section.weekplan div.info_wrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.weekplan div.info_wrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3em; height: 3em; background: #cdc74f; border-radius: 43254352em; }
+	section.weekplan div.info_wrap a.more > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.weekplan div.info_wrap a.more > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+/*		==================== caution btn area */
+
+	section.weekplan div.info_wrap div.caution { display: inline-block; position: absolute; right: 0; bottom: 0; width: 3em; height: 3em; background: url("../images/icons/img_ico_caution.png") no-repeat; background-size: cover; }
+
+	section.weekplan div.info_wrap div.caution > p { display: none; position: absolute; right: 54px; bottom: -54px; padding: 10px; border-radius: 5px; border: 1px solid #9f9f9f;  background: rgba(255, 255, 255, 0.8); font-size: 0.875em; font-weight: bold; color: #222; white-space: nowrap; border-top-right-radius: 0; }
+	section.weekplan div.info_wrap div.caution:hover > p { display: block; }
+
+/*		==================== prev_next btn area */
+
+	section.weekplan div.content_wrap > button.btn { position: absolute; top: 0; z-index: 10; width: calc((100% - 668px) / 2); height: 100%; font-size: 0; transition: 0.3s; }
+	section.weekplan div.content_wrap > button[class ~= "prev"] { left: 0; }
+	section.weekplan div.content_wrap > button[class ~= "next"] { right: 0; }
+
+	section.weekplan div.content_wrap > button.btn > span { position: absolute; top: 0; bottom: 0; margin: auto; width: 15px; height: 30px; }
+	section.weekplan div.content_wrap > button[class ~= "prev"] > span { right: 20px; clip-path: polygon(100% 0, 100% 100%, 0 50%); background-color: #fff; }
+	section.weekplan div.content_wrap > button[class ~= "next"] > span { left: 20px; clip-path: polygon(0 0, 100% 50%, 0% 100%); background-color: #cdc74f; }
+
+/*#####################################################################
+############################# section_weekplan ########################
+#####################################################################*/
+
+/*#####################################################################
+############################## section_sale ###########################
+#####################################################################*/
+
+	section.sale { width: 100%; }
+	section.sale img { width: 100%; object-fit: cover; }
+
+	section.sale div.inner { position: absolute; margin: 0 calc((100% - 728px) / 2); top: 0; width: 100%; max-width: 728px; height: 100%;  padding: 20px 20px; }
+	section.sale div.inner::before { position: absolute; left: -30%; top: 50%; display: block; content: ""; width: 70vw; height: 70vw; border-radius: 50%; background: rgba(229, 225, 162, 0.7); box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); transform: translateY(-50%);}
+
+	section.sale h2 { font-family: "NotoSansKR-Bold"; font-size: 2em; color: #222; line-height: 1.2; text-align: left; text-shadow: -2px 2px 0 #fff; }
+
+	section.sale p.desc { position: absolute; left: 0; bottom: 0; font-family: "NotoSansKR-Light"; font-size: 0.875em; line-height: 1.5; text-align: left; }
+	section.sale p.caution { position: absolute; right: 0; bottom: 20px; text-align: right; font-size: 0.875em; color: #fff; }
+
+/*#####################################################################
+############################## section_sale ###########################
+#####################################################################*/
+/*######################### tablet_end ###################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*--------------------------------------------------------*/
+}
+/*####################### tablet_end #####################*/
+/*##########################################################
+############################################################
+#####################         ##############################
+#####################  #######  ############################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #######  ############################
+#####################         ##############################
+############################################################
+##########################################################*/
+/*##################### desktop_start ####################*/
+@media screen and (min-width: 1025px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+	div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(205, 199, 79, 1); }
+	div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(233, 111, 148, 1); }
+
+	div.pagination[class ~= "txt_color_0"] > button { color: rgba(205, 199, 79, 0.6); }
+	div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+	div.pagination[class ~= "txt_color_2"] > button { color: rgba(233, 111, 148, 0.6); }
+
+	div.pagination[class ~= "txt_color_0"] > button:hover { color: rgba(205, 199, 79, 1); }
+	div.pagination[class ~= "txt_color_1"] > button:hover { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button:hover { color: rgba(233, 111, 148, 1); }
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+########################### section_allergy ###########################
+#####################################################################*/
+
+	section.allergy { overflow: hidden; width: 100%; height: 15.3218vh; }
+	section.allergy::before { position: absolute; left: 0; top: 0; display: block; content:""; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); }
+
+	section.allergy img { width: 100%; height: 100%; object-fit: cover; }
+
+	section.allergy > h2 { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: "NotoSansKR-Bold"; color: #fff; font-size: 2.5em; line-height: 1.2; }
+	section.allergy > h2 > span { color: #cdc74f; }
+
+/*#####################################################################
+########################### section_allergy ###########################
+#####################################################################*/
+
+/*#####################################################################
+############################# section_weekplan ########################
+#####################################################################*/
+
+/************* slides area */
+
+
+	section.weekplan div.content_wrap { min-height: 485px; height: 77vh; }
+	/*section.weekplan div.content_wrap div.slides { position: absolute; display: block; left: 0; top: 0; z-index: 1; width: 100%; height: 100%; transition: transform 0.3s; }
+	section.weekplan div.content_wrap div.slides[class ~="prev"] { z-index: 1; transform: translateX(0); }
+	section.weekplan div.content_wrap div.slides[class ~="next"] { z-index: 2; transform: translateX(0); }*/
+
+	section.weekplan div.content_wrap div.slides { display: block; width: 100%; height: 100%; transition: transform 0.3s; }
+	section.weekplan div.content_wrap div.slides[class ~="prev"] { transform: translateX(0); }
+	section.weekplan div.content_wrap div.slides[class ~="next"] { transform: translateX(0); }
+
+/************* img area */
+
+	section.weekplan div.img_wrap { width: 75%; height: 100%; }
+	section.weekplan div.img_wrap > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/************* info_box area */
+
+	section.weekplan div.info_wrap { position: absolute; top: 50%; right: 0; padding: 20px; width: 54%; height: 75%; box-shadow: 0 0 40px rgb(0, 0, 0, 0.2); background: #fff; text-align: left; transform: translateY(-50%); }
+	section.weekplan div.info_wrap p.title { font-family: "NotoSansKR-Bold"; font-size: 2.5em; color: #222; line-height: 1.2; }
+	section.weekplan div.info_wrap p.title span.txt_point { color: #8b8726; }
+	section.weekplan div.info_wrap p.desc { font-family: "NotoSansKR-Regular"; margin: 20px 0; font-size: 1em; color: #222; }
+
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ button area @@@@@@*/
+
+/*		==================== more btn area */
+
+	section.weekplan div.info_wrap a.more { position: absolute; left: 0; bottom: 0; display: block; width: 10em; height: 3.5em; }
+	section.weekplan div.info_wrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.weekplan div.info_wrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3.5em; height: 100%; background: #cdc74f; border-radius: 43254352em; }
+	section.weekplan div.info_wrap a.more > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.weekplan div.info_wrap a.more > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+	section.weekplan div.info_wrap a.more:hover > div::before {
+	animation-name: more_btn_act;
+	animation-duration: 0.4s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+
+		/* -webkit- */
+
+	-webkit-animation-name: more_btn_act;
+	-webkit-animation-duration: 0.4s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease-in-out; }
+
+/*		==================== caution btn area */
+
+	section.weekplan div.info_wrap div.caution { display: inline-block; position: absolute; z-index: 5; left: 65%; bottom: 0; width: 3.5em; height: 3.5em; background: url("../images/icons/img_ico_caution.png") no-repeat; background-size: cover; }
+
+	section.weekplan div.info_wrap div.caution > p { display: none; position: absolute; right: 54px; bottom: -54px; padding: 10px; border-radius: 5px; border: 1px solid #9f9f9f;  background: rgba(255, 255, 255, 0.8); font-size: 0.875em; font-weight: bold; color: #222; white-space: nowrap; border-top-right-radius: 0; }
+	section.weekplan div.info_wrap div.caution:hover > p { display: block; }
+
+/*		==================== prev_next btn area */
+
+	section.weekplan div.content_wrap > button.btn { position: absolute; top: 0; z-index: 10; width: calc((100% - 1168px) / 2); height: 100%; font-size: 0; transition: 0.3s; }
+	section.weekplan div.content_wrap > button[class ~= "prev"] { left: 0; }
+	section.weekplan div.content_wrap > button[class ~= "next"] { right: 0; }
+
+	section.weekplan div.content_wrap > button.btn > span { position: absolute; top: 0; bottom: 0; margin: auto; width: 35px; height: 70px; }
+	section.weekplan div.content_wrap > button[class ~= "prev"] > span { right: 20px; clip-path: polygon(100% 0, 100% 100%, 0 50%); background-color: #fff; }
+	section.weekplan div.content_wrap > button[class ~= "next"] > span { left: 20px; clip-path: polygon(0 0, 0 100%, 100% 50%); background-color: #cdc74f; }
+
+	section.weekplan div.content_wrap > button.btn[class ~= "prev"]:hover { background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), transparent, transparent); }
+	section.weekplan div.content_wrap > button.btn[class ~= "next"]:hover { background: linear-gradient(270deg, rgba(255, 255, 255, 0.5), transparent, transparent); }
+
+/*#####################################################################
+############################# section_weekplan ########################
+#####################################################################*/
+
+/*#####################################################################
+############################## section_sale ###########################
+#####################################################################*/
+
+	section.sale { width: 100%; }
+	section.sale img { width: 100%; object-fit: cover; }
+
+	section.sale div.inner { position: absolute; top: 0;  margin: 0 calc((100% - 1168px) / 2); width: 100%; max-width: 1168px; height: 100%;  padding: 20px 0; }
+	section.sale div.inner::before { position: absolute; left: -60%; top: 50%; display: block; content: ""; width: 70vw; height: 70vw; border-radius: 50%; background: rgba(229, 225, 162, 0.7); box-shadow: 0 0 15px rgba(0, 0, 0, 0.4); transform: translateY(-50%);}
+
+	section.sale h2 { font-family: "NotoSansKR-Bold"; font-size: 3.75em; color: #222; line-height: 1.2; text-align: left; text-shadow: -2px 2px 0 #fff; }
+
+	section.sale p.desc { position: absolute; left: 0; bottom: 0; font-family: "NotoSansKR-Light"; font-size: 1.125em; line-height: 1.5; text-align: left; }
+	section.sale p.caution { position: absolute; right: 0; bottom: 20px; text-align: right; font-size: 0.875em; color: #fff; }
+
+/*#####################################################################
+############################## section_sale ###########################
+#####################################################################*/
+
+
+
+/*--------------------------------------------------------*/
+}

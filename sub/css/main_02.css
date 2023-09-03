@@ -1,0 +1,532 @@
+@charset "utf-8";
+
+
+body { font-family: "NotoSansKR-Regular"; }
+
+@keyframes more_btn_act {
+
+			0% {
+				left: 0px;
+			}
+
+			50% {
+				left: 0px;
+				width: 100%;
+			}
+
+			100% {
+				left: calc(100% - 3.5em);
+				width: 3.5em;
+			}
+
+		}
+
+		@keyframes more_btn_act_reverse {
+
+			0% {
+				left: calc(100% - 3.5em);
+				width: 3.5em;
+			}
+
+			50% {
+				left: 0px;
+				width: 100%;
+			}
+
+			100% {
+				left: 0px;
+			}
+
+		}
+
+		/* -webkit- */
+
+		@-webkit-keyframes more_btn_act {
+
+			0% {
+				left: 0px;
+			}
+
+			50% {
+				left: 0px;
+				width: 100%;
+			}
+
+			100% {
+				left: calc(100% - 3.5em);
+				width: 3.5em;
+			}
+
+		}
+
+		@-webkit-keyframes more_btn_act_reverse {
+
+			0% {
+				left: calc(100% - 3.5em);
+				width: 3.5em;
+			}
+
+			50% {
+				left: 0px;
+				width: 100%;
+			}
+
+			100% {
+				left: 0;
+			}
+
+		}
+
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*##################mobile_start##################*/
+@media screen and (max-width: 767px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+	div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(97, 156, 212, 1); }
+	div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(212, 228, 243, 1); }
+
+	div.pagination[class ~= "txt_color_0"] > button { color: rgba(97, 156, 212, 0.6); }
+	div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+	div.pagination[class ~= "txt_color_2"] > button { color: rgba(212, 228, 243, 0.6); }
+	
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+########################### M section_sizeguide #######################
+#####################################################################*/
+
+section.sizeguide { width: 100%; }
+section.sizeguide > h2 { font-family: "Manrope-Light"; position: relative; z-index: 2;}
+section.sizeguide > h2 > a { display: block; width: 100%; height: 100%; padding: 0.825em 0; font-size: 2em; line-height: 1.2; color: #222; }
+section.sizeguide > h2 > a > span:first-of-type { font-family: "Manrope-Bold"; }
+
+/*#####################################################################
+########################### M section_sizeguide #######################
+#####################################################################*/
+
+/*#####################################################################
+######################### M section_recycle ###########################
+#####################################################################*/
+
+section.recycle > div.inner { padding: 0 6.25vw; width: 100%; }
+section.recycle > div.inner div.img_wrap { width: 100%; }
+section.recycle > div.inner div.img_wrap img { width: 100%; object-fit: cover; }
+
+section.recycle div.info_wrap { position: relative; padding-top: 20px; width: 100%; }
+section.recycle div.info_wrap h3 { position: absolute; right: 0; top: calc((2.4em + 20px) * -1); padding: 10px; font-family: "NotoSansKR-Bold"; margin-bottom: 10px; font-size: 2em; line-height: 1.2; text-align: right; background: rgba(255, 255, 255, 0.6); }
+section.recycle div.info_wrap p { font-family: "NotoSansKR-Regular"; font-size: 0.825em; line-height: 1.5; text-align: left; white-space: nowrap; }
+
+	section.recycle div.info_wrap a.more { float: right; display: block; width: 6em; height: 2em; }
+	section.recycle div.info_wrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 2em; }
+	section.recycle div.info_wrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 2em; height: 100%; background: #619cd4; border-radius: 43254352em; }
+	section.recycle div.info_wrap a.more > div::after { display: block; position: absolute; right: 1em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.recycle div.info_wrap a.more > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+section.recycle > div.pd_list { padding: 0 6.25vw; margin-top: 20px; overflow: hidden; }
+section.recycle > div.pd_list div.view_mask { width: 100%; overflow: hidden; margin: 0 auto; }
+section.recycle > div.pd_list div.info_wrap { width: 100%; margin: 0 auto; height: 100px; padding: 15px 10px; }
+section.recycle > div.pd_list p.title { font-family: "Manrope-Bold", "NotoSansKR-Bold"; margin-bottom: 15px; font-size: 0.8125em; line-height: 1.2; white-space: nowrap; text-overflow: ellipsis; }
+section.recycle > div.pd_list p.desc { font-family: "Manrope-Medium","NotoSansKR-Medium"; font-size: 0.8125em; line-height: 1.2; text-overflow: ellipsis; word-break: break-word; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+section.recycle > div.pd_list ul { width: 300%; }
+section.recycle > div.pd_list ul li { float: left; width: 16.6666%; }
+section.recycle > div.pd_list ul li a { display: block; width: 100%; }
+section.recycle > div.pd_list ul li div.img_wrap { width: 100%; margin-bottom: 20px; }
+section.recycle > div.pd_list ul li img { width: 100%; }
+
+section.recycle br.none { display: block; }
+
+	section.recycle > button.btn { position: relative; display: inline-block; z-index: 10; margin-top: 20px; width: calc(100% / 2); height: 30px; font-size: 0; transition: 0.3s; }
+	section.recycle > button[class ~= "prev"] { float: left; }
+	section.recycle > button[class ~= "next"] { float: right; }
+
+	section.recycle > button.btn > span { position: absolute; top: 0; bottom: 0; margin: auto; width: 15px; height: 30px; background-color: #619cd4; }
+	section.recycle > button[class ~= "prev"] > span { right: 20px; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.recycle > button[class ~= "next"] > span { left: 20px; clip-path: polygon(0 0, 100% 50%, 0% 100%); }
+
+/*#####################################################################
+######################### M section_recycle ###########################
+#####################################################################*/
+
+/*#####################################################################
+############################ M section_ecofriendly ####################
+#####################################################################*/
+
+section.ecofriendly { height: 48vh; }
+section.ecofriendly div.inner { position: relative; width: 100%; height: 100%; }
+
+section.ecofriendly h2 { position: absolute; top: 6.25vw; left: 6.25vw; font-family: "Manrope-ExtraBold"; font-size: 2.5em; line-height: 1.2; text-align: left; text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8); }
+section.ecofriendly p { position: absolute; bottom: 6.25vw; right: 6.25vw; font-family: "NotoSansKR-Regular"; font-size: 0.8125em; color: #fff; line-height: 1.5; text-align: right; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+
+/*#####################################################################
+############################ M section_ecofriendly ####################
+#####################################################################*/
+
+/*#####################################################################
+############################ M section_pickAtag #######################
+#####################################################################*/
+
+section.pickAtag { height: calc(50vw + 50px); min-height: 350px; }
+section.pickAtag div.inner { padding: 0 6.25vw; }
+section.pickAtag p.title_desc { font-family: "NotoSansKR-Medium"; margin: 40px auto 20px auto; font-size: 1em; }
+section.pickAtag div.inner_bg { position: absolute; top: calc(50px + 1.75em); width: 100%; height: calc(100% - 1.75em); }
+section.pickAtag h2 { opacity: 0.5; position: absolute; top: 50px; left: 50%; z-index: 10; font-family: "Manrope-ExtraBold"; font-size: 3.5em; line-height: 1; transform: translateX(-50%); white-space: nowrap; }
+
+section.pickAtag form { margin: 0 auto; width: 100%; line-height: 1em; }
+section.pickAtag form input[type ~= "checkbox"] { display: inline-block; margin-bottom: 10px; width: 3.5rem; height: 1.75rem; border-radius: 123456em; font-size: 1em; color: #0e181e; border: 1px solid #0e181e; transition: background 0.3s; }
+section.pickAtag form input[type ~= "checkbox"]:checked { background: #fff; }
+section.pickAtag form label { text-align: center; cursor: pointer; position: absolute; width: 3.5rem; height: 1.75rem; font-size: 0.875rem; line-height: 2; transform: translateX(-100%); }
+
+section.pickAtag div.sel_check { position: relative; left: -1.5em; width: 80%; height: 2em; margin: 0 auto; border: 1px solid #0e181e; border-radius: 99999px; text-align: left; }
+section.pickAtag div.sel_check > input#go_submit { cursor: pointer; position: absolute; right: -25%; display: inline-block; width: 2em; font-size: 1.5em; line-height: 1; border: 1px solid transparent; border-radius: 9999px; padding-top: 0.1em; transition: border 0.3s; }
+section.pickAtag div.sel_check > input#go_submit:hover { border: 1px solid #0e181e; border-radius: 9999px; }
+section.pickAtag div.sel_check > p { display: inline-block; width: 2em; height: 2em; font-size: 2em; }
+section.pickAtag div.sel_check > span#sel_check { position: absolute; left: 50%; top: 50%; display: block; padding: 0.2em; width: 99%; height: 100%; border-radius: 9999px; transform: translate(-50%, -50%); white-space: nowrap; overflow: hidden; }
+
+section.pickAtag div.sel_check input[type ~= "checkbox"] { display: inline-block; width: 3.5rem; height: 1.5rem; border-radius: 99999px; font-size: 1em; color: #0e181e; border: 1px solid #0e181e; }
+section.pickAtag div.sel_check input[type ~= "checkbox"]:checked { background: #fff; }
+section.pickAtag div.sel_check label[class ~= "label_val"] { cursor: pointer; display: inline-block; margin-right: 0.2em; width: 3.5rem; height: 1.5rem; line-height: 1.8; border: 1px solid #0e181e; border-radius: 9999px; font-size: 0.875rem; text-align: center; }
+
+
+/*#####################################################################
+############################ M section_pickAtag #######################
+#####################################################################*/
+
+
+
+/*--------------------------------------------------------*/
+}
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*##################mobile_end##################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*##################tablet_start##################*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+######################### T section_visual ############################
+#####################################################################*/
+
+	div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(97, 156, 212, 1); }
+	div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(212, 228, 243, 1); }
+
+	div.pagination[class ~= "txt_color_0"] > button { color: rgba(97, 156, 212, 0.6); }
+	div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+	div.pagination[class ~= "txt_color_2"] > button { color: rgba(212, 228, 243, 0.6); }
+
+/*#####################################################################
+######################### T section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+########################### T section_sizeguide #######################
+#####################################################################*/
+
+section.sizeguide { width: 100%; }
+section.sizeguide > h2 { position: relative; z-index: 1; font-family: "Manrope-Light"; }
+section.sizeguide > h2 > a { display: block; width: 100%; height: 100%; padding: 1.1em 0; font-size: 3.125em; line-height: 1.2; color: #222; }
+section.sizeguide > h2 > a > span:first-of-type { font-family: "Manrope-Bold"; }
+
+/*#####################################################################
+########################### T section_sizeguide #######################
+#####################################################################*/
+
+/*#####################################################################
+######################### T section_recycle ###########################
+#####################################################################*/
+
+section.recycle > div.inner { padding: 0 2.6041vw; width: 100%; }
+section.recycle > div.inner div.img_wrap { float: left; width: 50%; }
+section.recycle > div.inner div.img_wrap img { width: 100%; object-fit: cover; }
+
+section.recycle div.info_wrap { float: right; width: 50%; padding-left: 30px; }
+section.recycle div.info_wrap h3 { font-family: "NotoSansKR-Bold"; margin-bottom: 20px; font-size: 3em; line-height: 1.2; text-align: left; }
+section.recycle div.info_wrap p { font-family: "NotoSansKR-Regular"; font-size: 1em; line-height: 1.5; text-align: left; }
+
+	section.recycle div.info_wrap a.more { position: absolute; right: 0; bottom: 30px; display: block; width: 10em; height: 3.5em; }
+	section.recycle div.info_wrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.recycle div.info_wrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3.5em; height: 100%; background: #619cd4; border-radius: 43254352em; }
+	section.recycle div.info_wrap a.more > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.recycle div.info_wrap a.more > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+section.recycle > div.pd_list { overflow: hidden; padding: 0 2.6041vw; }
+section.recycle > div.pd_list div.view_mask { width: 100%; }
+
+section.recycle > div.pd_list div.info_wrap { width: 100%; height: 100px; margin: 0 auto; padding: 15px 10px 15px 20px; }
+section.recycle > div.pd_list p.title { font-family: "Manrope-Bold", "NotoSansKR-Bold"; margin-bottom: 15px; font-size: 0.875em; line-height: 1.2; }
+section.recycle > div.pd_list p.desc { font-family: "Manrope-Medium","NotoSansKR-Medium"; font-size: 0.875em; line-height: 1.2; }
+
+section.recycle > div.pd_list ul { width: 200%; }
+section.recycle > div.pd_list ul li { float: left; width: 16.6666%; }
+section.recycle > div.pd_list ul li a { display: block; width: 100%; }
+section.recycle > div.pd_list ul li div.img_wrap { width: 100%; }
+section.recycle > div.pd_list ul li img { width: 100%; }
+
+section.recycle br.none { display: block; }
+
+	section.recycle > button.btn { position: relative; display: inline-block; z-index: 10; margin-top: 20px; width: calc(100% / 2); height: 30px; font-size: 0; transition: 0.3s; }
+	section.recycle > button[class ~= "prev"] { float: left; }
+	section.recycle > button[class ~= "next"] { float: right; }
+
+	section.recycle > button.btn > span { position: absolute; top: 0; bottom: 0; margin: auto; width: 15px; height: 30px; background-color: #619cd4; }
+	section.recycle > button[class ~= "prev"] > span { right: 40px; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.recycle > button[class ~= "next"] > span { left: 40px; clip-path: polygon(0 0, 100% 50%, 0% 100%); }
+
+
+/*#####################################################################
+######################### T section_recycle ###########################
+#####################################################################*/
+
+/*#####################################################################
+############################ T section_ecofriendly ####################
+#####################################################################*/
+
+section.ecofriendly { height: 48vh; }
+section.ecofriendly div.inner { height: 100%; }
+
+section.ecofriendly h2 { position: absolute; left: 2.6041vw; top: 50%; font-family: "Manrope-ExtraBold"; font-size: 4em; line-height: 1.2; text-align: left; text-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3); transform: translateY(-50%); }
+section.ecofriendly p { position: absolute; right: 2.6041vw; top: 50%; font-family: "NotoSansKR-Regular"; font-size: 1em; color: #fff; line-height: 1.5; text-align: right; transform: translateY(-50%); text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+
+/*#####################################################################
+############################ T section_ecofriendly ####################
+#####################################################################*/
+/*#####################################################################
+############################ T section_pickAtag #######################
+#####################################################################*/
+
+section.pickAtag { height: calc(45vw + 100px); min-height: 400px; }
+section.pickAtag div.inner { padding: 0 2.6041vw; }
+section.pickAtag p.title_desc { font-family: "NotoSansKR-Medium"; margin-top: 70px; font-size: 1em; }
+section.pickAtag div.inner_bg { position: absolute; top: calc(100px + 3em); width: 100%; height: calc(100% - 3em); }
+section.pickAtag h2 { opacity: 0.5; position: absolute; top: 100px; left: 50%; z-index: 10; font-family: "Manrope-ExtraBold"; font-size: 6em; line-height: 1; transform: translateX(-50%); white-space: nowrap; }
+
+section.pickAtag form { margin: 0 auto 20px auto; width: 60%; line-height: 1em; }
+section.pickAtag form input[type ~= "checkbox"] { display: inline-block; margin-bottom: 5px; width: 5em; height: 2em; border-radius: 123456em; font-size: 1em; color: #0e181e; border: 1px solid #0e181e; transition: background 0.3s; }
+section.pickAtag form input[type ~= "checkbox"]:checked { background: #fff; }
+section.pickAtag form label { cursor: pointer; position: absolute; width: 5em; height: 2em; line-height: 2em; transform: translateX(-100%); }
+
+section.pickAtag div.sel_check { position: relative; left: -2em; width: 40%; height: 2.5em; margin: 0 auto; border: 1px solid #0e181e; border-radius: 99999px; text-align: left; }
+section.pickAtag div.sel_check > input#go_submit { cursor: pointer; position: absolute; right: -25%; display: inline-block; width: 2em; font-size: 2em; line-height: 1; border: 1px solid transparent; border-radius: 9999px; padding-top: 0.1em; transition: border 0.3s; }
+section.pickAtag div.sel_check > input#go_submit:hover { border: 1px solid #0e181e; border-radius: 9999px; }
+section.pickAtag div.sel_check > p { display: inline-block; width: 2em; height: 2em; font-size: 2em; }
+section.pickAtag div.sel_check > span#sel_check { position: absolute; left: 50%; top: 50%; display: block; padding: 0.2em 0; width: 99%; height: 100%; border-radius: 9999px; transform: translate(-50%, -50%); white-space: nowrap; overflow: hidden; }
+
+section.pickAtag div.sel_check input[type ~= "checkbox"] { display: inline-block; width: 5em ;height: 2em; border-radius: 99999px; font-size: 1em; color: #0e181e; border: 1px solid #0e181e; }
+section.pickAtag div.sel_check input[type ~= "checkbox"]:checked { background: #fff; }
+section.pickAtag div.sel_check label[class ~= "label_val"] { cursor: pointer; display: inline-block; margin-right: 0.2em; width: 5em; height: 2em; line-height: 2em; border: 1px solid #0e181e; border-radius: 9999px; text-align: center; }
+
+
+/*#####################################################################
+############################ T section_pickAtag #######################
+#####################################################################*/
+/*######################### tablet_end ###################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*--------------------------------------------------------*/
+}
+/*####################### tablet_end #####################*/
+/*##########################################################
+############################################################
+#####################         ##############################
+#####################  #######  ############################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #######  ############################
+#####################         ##############################
+############################################################
+##########################################################*/
+/*##################### desktop_start ####################*/
+@media screen and (min-width: 1025px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+######################### D section_visual ############################
+#####################################################################*/
+
+	div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(97, 156, 212, 1); }
+	div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(212, 228, 243, 1); }
+
+	div.pagination[class ~= "txt_color_0"] > button { color: rgba(97, 156, 212, 0.6); }
+	div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+	div.pagination[class ~= "txt_color_2"] > button { color: rgba(212, 228, 243, 0.6); }
+
+	div.pagination[class ~= "txt_color_0"] > button:hover { color: rgba(97, 156, 212, 1); }
+	div.pagination[class ~= "txt_color_1"] > button:hover { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button:hover { color: rgba(212, 228, 243, 1); }
+
+/*#####################################################################
+######################### D section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+########################### D section_sizeguide #######################
+#####################################################################*/
+
+section.sizeguide { width: 100%; background: url("../images/img_D_fash_main_size.jpg")no-repeat; background-size: cover; }
+section.sizeguide > h2 { font-family: "Manrope-Light"; }
+section.sizeguide > h2 > a { display: block; width: 100%; height: 100%; padding: 1.1em 0; font-size: 4em; line-height: 1.2; color: #222; }
+section.sizeguide > h2 > a > span:first-of-type { font-family: "Manrope-Bold"; }
+
+/*#####################################################################
+########################### D section_sizeguide #######################
+#####################################################################*/
+
+/*#####################################################################
+######################### D section_recycle ###########################
+#####################################################################*/
+
+section.recycle > div.inner div.img_wrap { float: left; width: 50%; }
+section.recycle > div.inner div.img_wrap img { width: 100%; object-fit: cover; }
+
+section.recycle div.info_wrap { float: right; width: 50%; padding-left: 30px; }
+section.recycle div.info_wrap h3 { font-family: "NotoSansKR-Bold"; margin-bottom: 20px; font-size: 3em; line-height: 1.2; text-align: left; }
+section.recycle div.info_wrap p { font-family: "NotoSansKR-Regular"; font-size: 1em; line-height: 1.5; text-align: left; }
+
+	section.recycle div.info_wrap a.more { position: absolute; right: 0; bottom: 30px; display: block; width: 10em; height: 3.5em; }
+	section.recycle div.info_wrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.recycle div.info_wrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3.5em; height: 100%; background: #619cd4; border-radius: 43254352em; }
+	section.recycle div.info_wrap a.more > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.recycle div.info_wrap a.more > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+	section.recycle div.info_wrap a.more:hover > div::before { 
+	animation-name: more_btn_act;
+	animation-duration: 0.4s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in-out;
+
+		/* -webkit- */
+
+	-webkit-animation-name: more_btn_act;
+	-webkit-animation-duration: 0.4s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-timing-function: ease-in-out; }
+
+		
+
+section.recycle > div.pd_list div.info_wrap { width: 100%; height: 100px; margin: 0 auto; padding: 15px 10px 15px 20px; }
+section.recycle > div.pd_list div.info_wrap > p.title { font-family: "Manrope-Bold", "NotoSansKR-Bold"; margin-bottom: 15px; font-size: 0.875em; line-height: 1.2; }
+section.recycle > div.pd_list div.info_wrap > p.desc { font-family: "Manrope-Medium","NotoSansKR-Medium"; font-size: 0.875em; line-height: 1; }
+section.recycle > div.pd_list ul { width: 150%; }
+section.recycle > div.pd_list ul li { float: left; width: 16.6666%;   }
+section.recycle > div.pd_list ul li a { display: block; width: 100%; }
+section.recycle > div.pd_list ul li div.img_wrap { width: 100%; overflow: hidden;  }
+section.recycle > div.pd_list ul li img { width: 100%; }
+
+section.recycle > div.pd_list ul li:hover img { transform: scale(1.06); transition: transform 0.6s; }
+
+	section.recycle > button.btn { position: relative; display: inline-block; z-index: 10; margin-top: 20px; width: calc(100% / 2); height: 30px; font-size: 0; transition: 0.3s; }
+	section.recycle > button[class ~= "prev"] { float: left; }
+	section.recycle > button[class ~= "next"] { float: right; }
+
+	section.recycle > button.btn > span { position: absolute; top: 0; bottom: 0; margin: auto; width: 15px; height: 30px; background-color: #619cd4; }
+	section.recycle > button[class ~= "prev"] > span { right: 30%; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.recycle > button[class ~= "next"] > span { left: 30%; clip-path: polygon(0 0, 100% 50%, 0% 100%); }
+
+br.none { display: none; }
+
+/*#####################################################################
+######################### D section_recycle ###########################
+#####################################################################*/
+
+/*#####################################################################
+############################ D section_ecofriendly ####################
+#####################################################################*/
+
+section.ecofriendly { height: 48vh; background: url("../images/img_D_fash_main_eco.jpg")no-repeat; background-size: cover;  background-attachment: fixed; }
+section.ecofriendly div.inner { height: 100%; }
+
+section.ecofriendly h2 { float: left; font-family: "Manrope-ExtraBold"; font-size: 4em; line-height: 1.2; text-align: left; transform: translateY(50%); }
+section.ecofriendly p { position: absolute; right: 0; top: 50%; font-family: "NotoSansKR-Regular"; font-size: 1.125em; color: #fff; line-height: 1.5; text-align: right; transform: translateY(-50%); text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+
+/*#####################################################################
+############################ D section_ecofriendly ####################
+#####################################################################*/
+
+/*#####################################################################
+############################ D section_pickAtag #######################
+#####################################################################*/
+
+section.pickAtag { height: 25vw; min-height: 300px; }
+section.pickAtag p.title_desc { font-family: "NotoSansKR-Medium"; margin-top: 70px; font-size: 1em; }
+section.pickAtag div.inner_bg { position: absolute; bottom: 0; margin-top: 4em; width: 100%; height: calc(100% - 3em); }
+section.pickAtag h2 { opacity: 0.5; position: absolute; top: 0; left: 50%; z-index: 10; font-family: "Manrope-ExtraBold"; font-size: 6em; line-height: 1; transform: translateX(-50%); white-space: nowrap; }
+
+section.pickAtag form { line-height: 1em; margin-bottom: 20px; }
+section.pickAtag form input[type ~= "checkbox"] { display: inline-block; width: 5em; height: 2em; border-radius: 123456em; font-size: 1em; color: #0e181e; border: 1px solid #0e181e; transition: background-color 0.3s; }
+section.pickAtag form input[type ~= "checkbox"]:checked { background: #fff; }
+section.pickAtag form input[type ~= "checkbox"]:hover { background: rgba(255, 255, 255, 0.5); }
+section.pickAtag form label { cursor: pointer; position: absolute; width: 5em; height: 2em; line-height: 2em; transform: translateX(-100%); }
+
+section.pickAtag div.sel_check { position: relative; left: -2em; width: 40%; height: 2.5em; margin: 0 auto; border: 1px solid #0e181e; border-radius: 99999px; text-align: left; }
+section.pickAtag div.sel_check > input#go_submit { cursor: pointer; position: absolute; right: -16%; display: inline-block; width: 2em; font-size: 2em; line-height: 1; border: 1px solid transparent; border-radius: 9999px; padding-top: 0.1em; transition: border 0.3s; }
+section.pickAtag div.sel_check > input#go_submit:hover { border: 1px solid #0e181e; border-radius: 9999px; }
+section.pickAtag div.sel_check > p { display: inline-block; width: 2em; height: 2em; font-size: 2em; }
+section.pickAtag div.sel_check > span#sel_check { position: absolute; left: 50%; top: 50%; display: block; padding: 0.2em 0; width: 99%; height: 100%; border-radius: 9999px; transform: translate(-50%, -50%); white-space: nowrap; overflow: hidden; }
+
+section.pickAtag div.sel_check input[type ~= "checkbox"] { display: inline-block; width: 5em ;height: 2em; border-radius: 99999px; font-size: 1em; color: #0e181e; border: 1px solid #0e181e; }
+section.pickAtag div.sel_check input[type ~= "checkbox"]:checked { background: #fff; }
+section.pickAtag div.sel_check label[class ~= "label_val"] { cursor: pointer; display: inline-block; margin-right: 0.2em; width: 5em; height: 2em; line-height: 2em; border: 1px solid #0e181e; border-radius: 9999px; text-align: center; }
+
+/*#####################################################################
+############################ D section_pickAtag #######################
+#####################################################################*/
+
+/*--------------------------------------------------------*/
+}

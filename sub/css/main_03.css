@@ -1,0 +1,682 @@
+@charset "utf-8";
+
+
+body { font-family: "NotoSansKR-Regular"; }
+section.visual { margin-top: 0; }
+
+@keyframes more_btn_act {
+
+	0% {
+		left: 0px;
+	}
+
+	50% {
+		left: 0px;
+		width: 100%;
+	}
+
+	100% {
+		left: calc(100% - 3.5em);
+		width: 3.5em;
+	}
+
+}
+
+@keyframes more_btn_act_reverse {
+
+	0% {
+		left: calc(100% - 3.5em);
+		width: 3.5em;
+	}
+
+	50% {
+		left: 0px;
+		width: 100%;
+	}
+
+	100% {
+		left: 0px;
+	}
+
+}
+
+/* -webkit- */
+
+@-webkit-keyframes more_btn_act {
+
+	0% {
+		left: 0px;
+	}
+
+	50% {
+		left: 0px;
+		width: 100%;
+	}
+
+	100% {
+		left: calc(100% - 3.5em);
+		width: 3.5em;
+	}
+
+}
+
+@-webkit-keyframes more_btn_act_reverse {
+
+	0% {
+		left: calc(100% - 3.5em);
+		width: 3.5em;
+	}
+
+	50% {
+		left: 0px;
+		width: 100%;
+	}
+
+	100% {
+		left: 0;
+	}
+
+}
+
+@keyframes opacity_spot {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+@-webkit-keyframes opacity_spot {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*##################mobile_start##################*/
+@media screen and (max-width: 767px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+	div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(193, 135, 73, 1); }
+	div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(233, 111, 148, 1); }
+
+	div.pagination[class ~= "txt_color_0"] > button { color: rgba(193, 135, 73, 0.6); }
+	div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+	div.pagination[class ~= "txt_color_2"] > button { color: rgba(233, 111, 148, 0.6); }
+
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+########################### section_typeBy ############################
+#####################################################################*/
+
+section.typeBy { height: 100vh; }
+section.typeBy > p { position: absolute; left: 0; right: 0; margin: auto; top: 50%; width: 70%; height: 3.6em; padding: 0.6em 0; transform: translateY(-50%); line-height: 1.2; background: #fff; border-radius: 100000em; }
+section.typeBy > div { width: 100%; height: 50%; }
+section.typeBy > div > a { display: block; position: relative; width: 100%; height: 100%; }
+section.typeBy > div > a > div.pos_wrap {  position: absolute; top: 50%; transform: translateY(-50%); }
+
+section.typeBy > div h2 { font-family: "Manrope-ExtraBold"; margin-bottom: 15px; font-size: 1.75em; line-height: 1.1; }
+section.typeBy > div p { font-size: 0.8125em; line-height: 1; }
+
+section.typeBy > div.oily { background: url("../images/img_M_cos_main_SkinType_01.jpg")no-repeat center; background-size: cover; }
+section.typeBy > div.oily div.pos_wrap { left: 6.25vw; }
+section.typeBy > div.oily h2 { text-align: left; }
+section.typeBy > div.oily p { text-align: left; }
+
+section.typeBy > div.dry { background: url("../images/img_M_cos_main_SkinType_02.jpg")no-repeat center; background-size: cover; }
+section.typeBy > div.dry div.pos_wrap { right: 6.25vw; }
+section.typeBy > div.dry h2 { text-align: right; color: #e7d6c2; }
+section.typeBy > div.dry p { text-align: right; }
+
+/*#####################################################################
+########################### section_typeBy ############################
+#####################################################################*/
+
+/*#####################################################################
+############################## section_spotcare #######################
+#####################################################################*/
+
+section.spotcare { height: 20vh; margin-top: 0; background:radial-gradient(circle at 50%, #fff 20%, rgba(231, 214, 194, 0.5)); }
+
+section.spotcare h2 { padding: 1.3em 0; height: 100%; font-size: 1.5em; line-height: 1.2; }
+section.spotcare h2 > span { font-family: "NotoSansKR-Bold"; }
+
+section.spotcare div.spot_wrap { padding: 0 3.125vw; width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
+section.spotcare div.spot_wrap div.inner { height: 100%; }
+section.spotcare div.spot_wrap div.inner > a { display: block; position: relative; width: 30%; height: 100%;}
+section.spotcare div.spot_wrap div.inner > a::after { animation: opacity_spot 2.5s infinite; content: ""; display: block; position: absolute; top: 14%; width: 100%; height: 100%; }
+
+section.spotcare div.spot_wrap div.inner > a > span.keyword { display: inline-block; position: absolute; bottom: 5%; width: 80%; font-family: "NotoSansKR-Bold"; font-size: 1em; line-height: 1.3; background-color: #fff; border-radius: 10px; border: 1px solid #7e5d32; text-align: center; white-space: nowrap; }
+section.spotcare div.spot_wrap div.inner > a > span.key_left { left: 3.125vw; }
+
+section.spotcare div.spot_wrap div.inner > a.left { text-align: right; }
+section.spotcare div.spot_wrap div.inner > a.left::after { left: 8%; background: center 30% / cover no-repeat url(../images/img_cos_main_spotcare_01_01.png); }
+section.spotcare div.spot_wrap div.inner > a.right { text-align: left; }
+section.spotcare div.spot_wrap div.inner > a.right::after { right: 8%; background: center 30% / cover no-repeat url(../images/img_cos_main_spotcare_02_01.png); }
+section.spotcare div.spot_wrap div.inner > a.right > img { position: absolute; right: 0; }
+
+section.spotcare div.spot_wrap div.inner > a.right > span.key_right { right: 3.125vw; }
+section.spotcare div.spot_wrap div.inner > a > img { display: inline-block; height: 130%; }
+
+section.spotcare div.spot_wrap a.left { float: left; }
+section.spotcare div.spot_wrap a.right { float: right; }
+
+/*#####################################################################
+############################## section_spotcare #######################
+#####################################################################*/
+/*#####################################################################
+############################# section_kit #############################
+#####################################################################*/
+
+section.kit { height: 80vh; }
+section.kit div.productWrap { width: 100%; height: 65%; margin-top: 50px; position: absolute; bottom: 10%; }
+section.kit div.divBase { position: relative; width: 100%; height: 50%; }
+section.kit div.divBase img { display: block; position: absolute; object-fit: cover; width: 20vh; z-index: 5; max-width: 90px; transition: transform 0.3s; }
+
+
+section.kit div.borderbox { position: absolute; width: 100%; text-align: center; height: 100%; }
+section.kit div.borderbox::before { position: absolute; left: 0; top: 0; display: block; content: ""; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.3); }
+section.kit div.bor_box01 { left: 0; border-top-right-radius: 100px; background: url("../images/img_cos_main_kit_01.jpg") no-repeat; background-position-y: 50%; background-size: cover; }
+section.kit div.bor_box01 img { left: 6.25vw; bottom: 5%; filter: drop-shadow(-10px 1px 5px rgba(0, 0, 0, 0.4)); transform: translateX(-0%); }
+section.kit div.bor_box02 { right: 0; border-bottom-left-radius: 100px; background: url("../images/img_cos_main_kit_02.jpg") no-repeat; background-position-y: 50%; background-size: cover; }
+section.kit div.bor_box02 img { top: 5%; right: 6.25vw; filter: drop-shadow(10px 1px 5px rgba(0, 0, 0, 0.4)); transform: translateX(0%); }
+
+section.kit div.infoWrap { position: absolute; top: 50%; height: 100%; padding: 5% 0; transform: translateY(-50%); }
+section.kit div.infoWrap p { font-family: "Manrope-ExtraBold"; font-size: 1.75em; white-space: nowrap;}
+
+section.kit div.infoSkin { right: 10%; }
+section.kit div.infoSkin p { margin-bottom: 20px; }
+section.kit div.infoHair { left: 10%; }
+section.kit div.infoHair a { margin-bottom: 20px; }
+
+section.kit div.infoWrap a.more { display: inline-block; width: 10em; height: 3.5em; }
+	section.kit div.infoWrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.kit div.infoWrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3.5em; height: 100%; border-radius: 43254352em; animation: more_btn_act 2s infinite ease-in-out;
+		/* -webkit- */ -webkit-animation: more_btn_act 2s infinite ease-in-out; }
+	section.kit div.infoWrap a.more > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.kit div.infoWrap a.more > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+section.kit div.infoSkin a.more > div::before { background-color: #e7d6c2; }
+section.kit div.infoHair a.more > div::before { background-color: #7e5d32; }
+
+/*#####################################################################
+############################# section_kit #############################
+#####################################################################*/
+
+/*#####################################################################
+############################# section_material ########################
+#####################################################################*/
+
+section.material { width: 100%; background: url("../images/img_D_cos_main_material.jpg")no-repeat 50% center; background-size: cover; }
+section.material::before { content: ""; position: absolute; z-index: 0; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); }
+section.material > h2 { position: relative; z-index: 1; font-family: "Manrope-Light", "NotoSansKR-Light"; }
+section.material > h2 > a { display: block; width: 100%; height: 100%; padding: 1.1em 0; font-size: 1.75em; line-height: 1.2; color: #fff; }
+section.material > h2 > a > span { font-family: "Manrope-Bold", "NotoSansKR-Bold"; }
+
+/*#####################################################################
+############################# section_material ########################
+#####################################################################*/
+
+/*#####################################################################
+########################## section_upcycle ############################
+#####################################################################*/
+
+	section.upcycle { padding-top: 50px; height: 75vh; background: rgba(231, 214, 194, 0.3); }
+
+	section.upcycle div.inner { position: absolute; padding: 0 6.25vw 30px; bottom: 30px; height: 60%; }
+
+	section.upcycle div.inner div.view_mask { width: 100%; height: 100%; }
+	section.upcycle ul { height: 100%; }
+
+	section.upcycle ul > li { float: left; position: relative; width: 100%; height: 100%; }
+
+	section.upcycle ul > li > a { display: flex; width: 100%; height: 100%; }
+
+	section.upcycle ul > li > a > div.img_wrap { margin-right: 15px; width: 60%; overflow: hidden; border-radius: 123456em; border: 2px solid #c18749; transition: border 0.3s; }
+	section.upcycle ul > li > a > div.img_wrap > img { display: block; height: 100%; object-fit: cover; transform: translateX(-15%); }
+
+	section.upcycle ul > li > a > div.info { display: flex; flex-direction: column; padding: 50px 0; width: 40%; } 
+	section.upcycle ul > li > a > div.info > p { display: flex; align-items: flex-end; font-size: 1em; overflow: hidden; flex-basis: 50%; align-items: center; }
+	section.upcycle ul > li > a > div.info > p.titleWrap { position: relative; text-overflow: ellipsis; height: 20px; white-space: nowrap; }
+	section.upcycle ul > li > a > div.info > p.titleWrap > span.title { flex-grow: 1; font-family: "NotoSansKR-Regular"; }
+	section.upcycle ul > li > a > div.info > p.titleWrap::before { flex-shrink: 0; content: "UC"; display: inline-block; margin-right: 5px; width: 25px; height: 20px; font-family: "NotoSansKR-Medium"; color:#c18749; font-size: 0.8125em; border: 1px solid #c18749; border-radius: 5px; vertical-align: middle;}
+
+	section.upcycle ul > li > a > div.info > p.descWrap > span.count { text-align: left; flex-grow: 1; font-weight: bold;}
+	section.upcycle ul > li > a > div.info > p.descWrap > span.dc { flex-shrink: 0; }
+	section.upcycle ul > li > a > div.info > p.descWrap::after { flex-shrink: 0; content: "↓"; display: inline-block; margin-left: 5px; width: 20px; height: 20px; font-weight: bold; color: #c18749; border-radius: 123456%; background: #e7d6c2; line-height: 1.2; }
+
+	section.upcycle button.btn { display: inline-block; position: relative; margin-top: 20px; width: calc(100% / 2); height: 30px; }
+	section.upcycle button[class ~= "prev"] { float: left; }
+	section.upcycle button[class ~= "next"] { float: right; }
+
+	section.upcycle button.btn > span { display: block; position: absolute; top: 0; bottom: 0; margin: auto; width: 18px; height: 32px; }
+	section.upcycle button[class ~= "prev"] > span { right: 20%; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.upcycle button[class ~= "next"] > span { left: 20%; clip-path: polygon(0 0, 0 100%, 100% 50%); }
+/*--------------------------------------------------------*/
+}
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*##################mobile_end##################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*##################tablet_start##################*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(231, 214, 194, 1); }
+div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(193, 135, 73, 1); }
+
+div.pagination[class ~= "txt_color_0"] > button { color: rgba(231, 214, 194, 0.6); }
+div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+div.pagination[class ~= "txt_color_2"] > button { color: rgba(193, 135, 73, 0.6); }
+
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+########################### section_typeBy ############################
+#####################################################################*/
+
+section.typeBy { height: 50vh; background: url("../images/img_cos_main_SkinType.jpg")no-repeat center; background-size: cover; }
+section.typeBy > p { position: absolute; left: 0; right: 0; margin: auto; top: 5%; width: 35%; height: 3.6em; padding: 0.6em 0; background: #fff; border-radius: 100000em; line-height: 1.2; }
+section.typeBy > div { width: calc(100% / 2); height: 100%; transition: box-shadow 0.2s; }
+section.typeBy > div > a { display: block; position: relative; width: 100%; height: 100%; }
+section.typeBy > div > a > div.pos_wrap {  position: absolute; top: 50%; transform: translateY(-50%); }
+
+section.typeBy > div h2 { font-family: "Manrope-ExtraBold"; margin-bottom: 15px; font-size: 2.5em; line-height: 1.1; }
+section.typeBy > div p { line-height: 1; }
+
+section.typeBy > div.oily { float: left; }
+section.typeBy > div.oily div.pos_wrap { left: 2.6041vw; }
+section.typeBy > div.oily h2 { text-align: left; }
+section.typeBy > div.oily p { text-align: left; }
+
+section.typeBy > div.dry { float: right; }
+section.typeBy > div.dry div.pos_wrap { right: 2.6041vw; }
+section.typeBy > div.dry h2 { text-align: right; color: #e7d6c2; }
+section.typeBy > div.dry p { text-align: right; }
+
+/*#####################################################################
+########################### section_typeBy ############################
+#####################################################################*/
+
+/*#####################################################################
+############################## section_spotcare #######################
+#####################################################################*/
+
+section.spotcare { height: 20vh; margin-top: 0; background:radial-gradient(circle at 50%, #fff 20%, rgba(231, 214, 194, 0.5)); }
+
+section.spotcare h2 { padding: 40px 0; height: 100%; font-size: 3em; line-height: 1.2; }
+section.spotcare h2 > span { font-family: "NotoSansKR-Bold"; }
+
+section.spotcare div.spot_wrap { width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
+section.spotcare div.spot_wrap div.inner { height: 100%; }
+section.spotcare div.spot_wrap div.inner > a { display: block; position: relative; width: 30%; height: 100%;}
+section.spotcare div.spot_wrap div.inner > a::after { animation: opacity_spot 2.5s infinite; content: ""; display: block; position: absolute; top: 10%; width: 80%; height: 100%; }
+
+section.spotcare div.spot_wrap div.inner > a > span.keyword { display: inline-block; position: absolute; bottom: 5%; width: 60%; font-family: "NotoSansKR-Bold"; font-size: 2em; line-height: 1.3; background-color: #fff; border-radius: 10px; border: 1px solid #7e5d32; text-align: center; white-space: nowrap; }
+section.spotcare div.spot_wrap div.inner > a > span.key_left { left: 30%; }
+
+section.spotcare div.spot_wrap div.inner > a.left { text-align: right; }
+section.spotcare div.spot_wrap div.inner > a.left::after { left: 20%; background: center 30% / cover no-repeat url(../images/img_cos_main_spotcare_01_01.png); }
+section.spotcare div.spot_wrap div.inner > a.right { text-align: left; }
+section.spotcare div.spot_wrap div.inner > a.right::after { right: 20%; background: center 30% / cover no-repeat url(../images/img_cos_main_spotcare_02_01.png); }
+section.spotcare div.spot_wrap div.inner > a.right > span.key_right { right: 30%; }
+section.spotcare div.spot_wrap div.inner > a > img { display: inline-block; height: 130%; }
+
+section.spotcare div.spot_wrap a.left { float: left; }
+section.spotcare div.spot_wrap a.right { float: right; }
+
+/*#####################################################################
+############################## section_spotcare #######################
+#####################################################################*/
+/*#####################################################################
+############################# section_kit #############################
+#####################################################################*/
+
+section.kit { height: 70vh; }
+section.kit div.productWrap { width: 100%; height: 80%; position: absolute; bottom: 0; }
+section.kit div.divBase { position: relative; width: 100%; height: 50%; }
+section.kit div.divBase img { display: block; position: absolute; object-fit: cover; width: 25vw; z-index: 5; max-width: 250px; transition: transform 0.3s;}
+
+
+section.kit div.borderbox { position: absolute; width: 75%; text-align: center; height: 100%; }
+section.kit div.borderbox::before { position: absolute; left: 0; top: 0; display: block; content: ""; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.3); }
+section.kit div.bor_box01 { left: 0; border-top-right-radius: 200px; background: url("../images/img_cos_main_kit_01.jpg") no-repeat; background-position-y: 50%; background-size: cover; }
+section.kit div.bor_box01 img { left: 2.0461vw; top: 5%; filter: drop-shadow(-10px 1px 10px rgba(0, 0, 0, 0.4)); transform: translateX(-150%); }
+section.kit div.bor_box02 { right: 0; border-bottom-left-radius: 200px; background: url("../images/img_cos_main_kit_02.jpg") no-repeat; background-position-y: 50%; background-size: cover; }
+section.kit div.bor_box02 img { bottom: 5%; right: 2.0461vw; filter: drop-shadow(10px 1px 10px rgba(0, 0, 0, 0.4)); transform: translateX(150%); }
+
+section.kit div.infoWrap { position: absolute; top: 50%; height: 100%; padding: 10% 0; transform: translateY(-50%); }
+section.kit div.infoWrap p { font-family: "Manrope-ExtraBold"; font-size: 2.5em; white-space: nowrap;}
+
+section.kit div.infoSkin { right: 10%; }
+section.kit div.infoSkin p { margin-bottom: 20px; }
+section.kit div.infoHair { left: 10%; }
+section.kit div.infoHair a { margin-bottom: 20px; }
+
+section.kit div.infoWrap a.more { display: inline-block; width: 10em; height: 3.5em; }
+	section.kit div.infoWrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.kit div.infoWrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3.5em; height: 100%; border-radius: 43254352em; animation: more_btn_act 2s infinite ease-in-out;
+		/* -webkit- */ -webkit-animation: more_btn_act 2s infinite ease-in-out; }
+	section.kit div.infoWrap a.more > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.kit div.infoWrap a.more > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+section.kit div.infoSkin a.more > div::before { background-color: #e7d6c2; }
+section.kit div.infoHair a.more > div::before { background-color: #7e5d32; }
+
+/*#####################################################################
+############################# section_kit #############################
+#####################################################################*/
+
+/*#####################################################################
+############################# section_material ########################
+#####################################################################*/
+
+section.material { width: 100%; background: url("../images/img_D_cos_main_material.jpg")no-repeat; background-size: cover; }
+section.material::before { content: ""; position: absolute; z-index: 0; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); }
+section.material > h2 { position: relative; z-index: 1; font-family: "Manrope-Light", "NotoSansKR-Light"; }
+section.material > h2 > a { display: block; width: 100%; height: 100%; padding: 1.1em 0; font-size: 2.5em; line-height: 1.2; color: #fff; }
+section.material > h2 > a > span { font-family: "Manrope-Bold", "NotoSansKR-Bold"; }
+
+/*#####################################################################
+############################# section_material ########################
+#####################################################################*/
+
+/*#####################################################################
+########################## section_upcycle ############################
+#####################################################################*/
+
+	section.upcycle { padding-top: 50px; height: 60vh; background: rgba(231, 214, 194, 0.3); }
+
+	section.upcycle div.inner { position: absolute; padding: 0 2.4061vw 30px; bottom: 30px; height: 60%; }
+
+	section.upcycle div.inner div.view_mask { width: 100%; height: 100%; }
+	section.upcycle ul { height: 100%; }
+
+	section.upcycle ul > li { float: left; position: relative; padding-right: 20px; width: 50%; height: 100%; }
+
+	section.upcycle ul > li > a { display: flex; width: 100%; height: 100%; }
+
+	section.upcycle ul > li > a > div.img_wrap { margin-right: 15px; width: 60%; overflow: hidden; border-radius: 123456em; border: 2px solid transparent; transition: border 0.3s; }
+	section.upcycle ul > li > a > div.img_wrap > img { display: block; height: 100%; object-fit: cover; transform: translateX(-28%); transition: transform 0.3s, filter 0.6s; }
+
+		section.upcycle ul > li > a > div.img_wrap:hover { border: 2px solid #c18749; }
+		section.upcycle ul > li > a > div.img_wrap:hover > img { filter: grayscale(80%); transform: scale(1.06) translateX(-28%); }
+
+	section.upcycle ul > li > a > div.info { display: flex; flex-direction: column; padding: 50px 0; width: 40%; } 
+	section.upcycle ul > li > a > div.info > p { display: flex; align-items: flex-end; font-size: 1em; overflow: hidden; flex-basis: 50%; align-items: center; }
+	section.upcycle ul > li > a > div.info > p.titleWrap { position: relative; text-overflow: ellipsis; height: 20px; white-space: nowrap; }
+	section.upcycle ul > li > a > div.info > p.titleWrap > span.title { flex-grow: 1; font-family: "NotoSansKR-Regular"; }
+	section.upcycle ul > li > a > div.info > p.titleWrap::before { flex-shrink: 0; content: "UC"; display: inline-block; margin-right: 5px; width: 25px; height: 20px; font-family: "NotoSansKR-Medium"; color:#c18749; font-size: 0.8125em; border: 1px solid #c18749; border-radius: 5px; vertical-align: middle;}
+
+	section.upcycle ul > li > a > div.info > p.descWrap > span.count { text-align: left; flex-grow: 1; }
+	section.upcycle ul > li > a > div.info > p.descWrap > span.dc { flex-shrink: 0; }
+	section.upcycle ul > li > a > div.info > p.descWrap::after { flex-shrink: 0; content: "↓"; display: inline-block; margin-left: 5px; width: 20px; height: 20px; font-weight: bold; color: #c18749; border-radius: 123456%; background: #e7d6c2; line-height: 1.2; }
+
+	section.upcycle button.btn { display: inline-block; position: relative; margin-top: 20px; width: calc(100% / 2); height: 30px; }
+	section.upcycle button[class ~= "prev"] { float: left; }
+	section.upcycle button[class ~= "next"] { float: right; }
+
+	section.upcycle button.btn > span { display: block; position: absolute; top: 0; bottom: 0; margin: auto; width: 18px; height: 32px; }
+	section.upcycle button[class ~= "prev"] > span { right: 20%; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.upcycle button[class ~= "next"] > span { left: 20%; clip-path: polygon(0 0, 0 100%, 100% 50%); }
+
+/*#####################################################################
+########################## section_upcycle ############################
+#####################################################################*/
+/*######################### tablet_end ###################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*--------------------------------------------------------*/
+}
+/*####################### tablet_end #####################*/
+/*##########################################################
+############################################################
+#####################         ##############################
+#####################  #######  ############################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #######  ############################
+#####################         ##############################
+############################################################
+##########################################################*/
+/*##################### desktop_start ####################*/
+@media screen and (min-width: 1025px) {
+/*--------------------------------------------------------*/
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+	div.pagination[class ~= "txt_color_0"] > button.active { color: rgba(231, 214, 194, 1); }
+	div.pagination[class ~= "txt_color_1"] > button.active { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button.active { color: rgba(193, 135, 73, 1); }
+
+	div.pagination[class ~= "txt_color_0"] > button { color: rgba(231, 214, 194, 0.6); }
+	div.pagination[class ~= "txt_color_1"] > button { color: rgba(255, 255, 255, 0.6); }
+	div.pagination[class ~= "txt_color_2"] > button { color: rgba(193, 135, 73, 0.6); }
+
+	div.pagination[class ~= "txt_color_0"] > button:hover { color: rgba(231, 214, 194, 1); }
+	div.pagination[class ~= "txt_color_1"] > button:hover { color: rgba(255, 255, 255, 1); }
+	div.pagination[class ~= "txt_color_2"] > button:hover { color: rgba(193, 135, 73, 1); }
+
+/*#####################################################################
+########################### section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+########################### section_typeBy ############################
+#####################################################################*/
+
+section.typeBy { height: 77vh; background: url("../images/img_cos_main_SkinType.jpg")no-repeat center center; background-size: cover; }
+section.typeBy > p { position: absolute; top: 5%; left: 50%; font-size: 1.5em; transform: translate(-50%); width: 30%; height: 3.6em; padding: 0.6em 0; background: #fff; border-radius: 100000em; line-height: 1.2; }
+section.typeBy > div { width: calc(100% / 2); height: 100%; transition: box-shadow 0.2s; }
+section.typeBy > div > a { display: block; position: relative; width: 100%; height: 100%; }
+section.typeBy > div > a > div.pos_wrap {  position: absolute; top: 50%; transform: translateY(-50%);}
+
+section.typeBy > div h2 { font-family: "Manrope-ExtraBold"; margin-bottom: 15px; font-size: 3em; line-height: 1.1; }
+section.typeBy > div p { line-height: 1; }
+
+section.typeBy > div.oily { float: left; }
+section.typeBy > div.oily div.pos_wrap { left: 15%; }
+section.typeBy > div.oily h2 { text-align: left; }
+section.typeBy > div.oily p { text-align: left; }
+
+section.typeBy > div.dry { float: right; }
+section.typeBy > div.dry div.pos_wrap { right: 15%; }
+section.typeBy > div.dry h2 { text-align: right; color: #e7d6c2; }
+section.typeBy > div.dry p { text-align: right; }
+
+section.typeBy > div.oily:hover { box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); }
+section.typeBy > div.dry:hover { box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); }
+
+/*#####################################################################
+########################### section_typeBy ############################
+#####################################################################*/
+
+/*#####################################################################
+############################## section_spotcare #######################
+#####################################################################*/
+
+section.spotcare { height: 23vh; margin-top: 0; background:radial-gradient(circle at 50%, #fff 30%, rgba(231, 214, 194, 0.5)) ;}
+
+section.spotcare h2 { padding: 20px 0; height: 100%; font-size: 4em; line-height: 1.2; }
+section.spotcare h2 > span { font-family: "NotoSansKR-Bold"; }
+
+section.spotcare div.spot_wrap { width: 100%; height: 100%; position: absolute; left: 0; top: 0; }
+section.spotcare div.spot_wrap div.inner { height: 100%; }
+section.spotcare div.spot_wrap div.inner > a { display: block; position: relative; width: 40%; height: 100%; transition: width 0.3s; }
+section.spotcare div.spot_wrap div.inner > a::after { animation: opacity_spot 2.5s infinite; content: ""; display: block; position: absolute; top: 0%; width: 15%; height: 100%; }
+section.spotcare div.spot_wrap div.inner > a:hover::after { animation: opacity_spot 2.5s infinite; content: ""; display: block; position: absolute; top: 0%; width: 10%; height: 100%; }
+	section.spotcare div.spot_wrap div.inner > a:hover { width: 60%; }
+section.spotcare div.spot_wrap div.inner > a > span.keyword { display: inline-block; position: absolute; height: 100%; font-family: "NotoSansKR-Bold"; font-size: 3em; line-height: 4; opacity: 0; transition: opacity 0.3s; }
+section.spotcare div.spot_wrap div.inner > a > span.key_left { left: 10%; }
+section.spotcare div.spot_wrap div.inner > a.right > span.key_right { right: 10%; }
+	section.spotcare div.spot_wrap div.inner > a:hover > span.keyword { opacity: 1; }
+
+section.spotcare div.spot_wrap div.inner > a > img { height: 100%; }
+
+section.spotcare div.spot_wrap a.left { float: left; }
+section.spotcare div.spot_wrap a.left::after { left: 42.5%; background: center 30% / cover no-repeat url(../images/img_cos_main_spotcare_01_01.png); }
+	section.spotcare div.spot_wrap a.left:hover::after { left: 45%; background: center 30% / cover no-repeat url(../images/img_cos_main_spotcare_01_01.png); }
+section.spotcare div.spot_wrap a.right { float: right; }
+section.spotcare div.spot_wrap a.right::after { left: 42.5%; background: center 30% / cover no-repeat url(../images/img_cos_main_spotcare_02_01.png); }
+	section.spotcare div.spot_wrap a.right:hover::after { left: 45%; background: center 30% / cover no-repeat url(../images/img_cos_main_spotcare_02_01.png); }
+
+/*#####################################################################
+############################## section_spotcare #######################
+#####################################################################*/
+
+/*#####################################################################
+############################# section_kit #############################
+#####################################################################*/
+
+section.kit { height: 100vh; }
+section.kit div.productWrap { width: 100%; height: 60%; margin-top: 10%; }
+section.kit div.divBase { position: relative; width: 100%; height: 50%; }
+section.kit div.divBase img { display: block; position: absolute; object-fit: cover; width: 20vw; max-width: 250px; transition: transform 0.4s;}
+
+
+section.kit div.borderbox { position: absolute; width: 70%; text-align: center; height: 100%; }
+section.kit div.borderbox::before { position: absolute; left: 0; top: 0; display: block; content: ""; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.3); }
+section.kit div.bor_box01 { left: 0; border-top-right-radius: 200px; background: url("../images/img_cos_main_kit_01.jpg") no-repeat; background-position-y: 50%; background-size: cover; }
+section.kit div.bor_box01 img { left: 10%; top: 5%; filter: drop-shadow(-10px 1px 10px rgba(0, 0, 0, 0.4)); transform: translateX(-150%); }
+section.kit div.bor_box02 { right: 0; border-bottom-left-radius: 200px; background: url("../images/img_cos_main_kit_02.jpg") no-repeat; background-position-y: 50%; background-size: cover; }
+section.kit div.bor_box02 img { bottom: 5%; right: 10%; filter: drop-shadow(10px 1px 10px rgba(0, 0, 0, 0.4)); transform: translateX(150%); }
+
+section.kit div.infoWrap { width: 40%; position: absolute; height: 100%; padding: 7%; }
+section.kit div.infoWrap p { font-family: "Manrope-ExtraBold"; font-size: 3em; white-space: nowrap;}
+
+section.kit div.infoSkin { right: 10%; }
+section.kit div.infoSkin p { margin-bottom: 20px; }
+section.kit div.infoHair { left: 10%; }
+section.kit div.infoHair a { margin-bottom: 20px; }
+
+section.kit div.infoWrap a.more { display: inline-block; width: 10em; height: 3.5em; }
+	section.kit div.infoWrap a.more > div { position: relative; width: 100%; height: 100%; vertical-align: middle; padding-right: 3.5em; }
+	section.kit div.infoWrap a.more > div::before { display: block; position: absolute; left: 0; top: 0; content: ""; width: 3.5em; height: 100%; border-radius: 43254352em; }
+	section.kit div.infoWrap a.more > div::after { display: block; position: absolute; right: 1.3em; top: 50%; content: ""; width: 0.875em; height: 0.875em; background: url("../images/icons/img_ico_moreArrow.png") no-repeat center center; background-size: cover; transform: translateY(-50%); }
+	section.kit div.infoWrap a.more > div > span { display: block; position: absolute; left: 25%; top: 50%; font-family: "Manrope-Bold"; font-weight: bold; font-size: 0.875em; color: #222; transform: translateY(-50%); }
+
+section.kit div.infoSkin a.more > div::before { background-color: #e7d6c2; }
+section.kit div.infoHair a.more > div::before { background-color: #7e5d32; }
+
+section.kit div.infoWrap a.more:hover > div::before {
+	animation: more_btn_act 0.4s 1 ease-in-out forwards;
+	/* -webkit- */ -webkit-animation: more_btn_act 0.4s 1 ease-in-out forwards; }
+
+/*#####################################################################
+############################# section_kit #############################
+#####################################################################*/
+
+/*#####################################################################
+############################# section_material ########################
+#####################################################################*/
+
+section.material { width: 100%; background: url("../images/img_D_cos_main_material.jpg")no-repeat; background-size: cover; }
+section.material::before { content: ""; position: absolute; z-index: 0; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); }
+section.material > h2 { position: relative; z-index: 1; font-family: "Manrope-Light", "NotoSansKR-Light"; }
+section.material > h2 > a { display: block; width: 100%; height: 100%; padding: 1.1em 0; font-size: 3em; line-height: 1.2; color: #fff; }
+section.material > h2 > a > span { font-family: "Manrope-Bold", "NotoSansKR-Bold"; }
+
+/*#####################################################################
+############################# section_material ########################
+#####################################################################*/
+
+/*#####################################################################
+########################## section_upcycle ############################
+#####################################################################*/
+
+	section.upcycle { padding-top: 50px; height: 100vh; background: rgba(231, 214, 194, 0.3); }
+
+	section.upcycle div.inner { position: absolute; left: 50%; bottom: 0; padding-bottom: 30px; height: 75%; transform: translateX(-50%); }
+
+	section.upcycle div.inner div.view_mask { height: 100%; }
+	section.upcycle ul { height: 100%; }
+
+	section.upcycle ul > li { float: left; position: relative; width: 27%; height: calc((100% - 20px) / 2); margin: 0 30px 20px 0; }
+	section.upcycle ul > li.tr_bottom { left: 10%; }
+
+	section.upcycle ul > li > a { display: flex; width: 100%; height: 100%; }
+
+	section.upcycle ul > li > a > div.img_wrap { margin-right: 15px; width: 60%; overflow: hidden; border-radius: 123456em; border: 2px solid transparent; transition: border 0.3s; }
+	section.upcycle ul > li > a > div.img_wrap > img { display: block; height: 100%; object-fit: cover; transform: translateX(-20%); transition: transform 0.3s, filter 0.6s; }
+
+		section.upcycle ul > li > a > div.img_wrap:hover { border: 2px solid #c18749; }
+		section.upcycle ul > li > a > div.img_wrap:hover > img { filter: grayscale(80%); transform: scale(1.06) translateX(-20%); }
+
+	section.upcycle ul > li > a > div.info { display: flex; flex-direction: column; padding: 50px 0; width: 40%; } 
+	section.upcycle ul > li > a > div.info > p { display: flex; font-size: 1em; overflow: hidden; flex-basis: 50%; align-items: center; }
+	section.upcycle ul > li > a > div.info > p > span { color: #222; }
+	section.upcycle ul > li > a > div.info > p.titleWrap { position: relative; height: 20px; white-space: nowrap; }
+	section.upcycle ul > li > a > div.info > p.titleWrap > span.title { flex-grow: 1; font-family: "NotoSansKR-Regular"; }
+	section.upcycle ul > li > a > div.info > p.titleWrap::before { flex-shrink: 0; content: "UC"; display: inline-block; margin-right: 5px; width: 25px; height: 20px; font-family: "NotoSansKR-Medium"; color:#c18749; font-size: 0.8125em; border: 1px solid #c18749; border-radius: 5px; vertical-align: middle;}
+
+	section.upcycle ul > li > a > div.info > p.descWrap > span.count { text-align: left; flex-grow: 1; color: #7e5d32; font-weight: bold; }
+	section.upcycle ul > li > a > div.info > p.descWrap > span.dc { flex-shrink: 0; }
+	section.upcycle ul > li > a > div.info > p.descWrap::after { flex-shrink: 0; content: "↓"; display: inline-block; margin-left: 5px; width: 20px; height: 20px; font-weight: bold; color: #c18749; border-radius: 123456%; background: #e7d6c2; line-height: 1.2; }
+
+
+	section.upcycle button { display: none; }
+/*#####################################################################
+########################## section_upcycle ############################
+#####################################################################*/
+/*--------------------------------------------------------*/
+}

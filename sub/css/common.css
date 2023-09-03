@@ -1,0 +1,1655 @@
+@charset "utf-8";
+
+
+	div.inner { position: relative; width: 100%; max-width: 1168px; margin: 0 auto; }
+
+	div.view_mask { overflow: hidden; position: relative; width: 100%; max-width: 1168px; margin: 0 auto; }
+
+	div.rel { position: relative; width: 100%; height: 100%; }
+	span.rel { position: relative; display: inline-block; width: 100%; height: 100%; }
+
+	div.content_wrap { position: relative; width: 100% }
+
+	section { overflow: hidden; position: relative; }
+
+	h2.title { display: inline-block; position: relative; font-family: "Manrope-ExtraBold", "NotoSansKR-Bold"; line-height: 1; color: #222; }
+	h2.title::before { content: ""; display: inline-block; position: absolute; left: 0; width: 100%; }
+	h2.title[class ~= "food"]::before { background: #e5e1a2; }
+	h2.title[class ~= "fash"]::before { background: #d4e4f3; }
+	h2.title[class ~= "cosm"]::before { background: #e7d6c2; }
+
+	p.title_desc { font-family: "Manrope-ExtraLight", "NotoSansKR-Light"; text-align: center; line-height: 1.25; }
+
+	header.on > div.header_wrap[class ~= "food"] { background-color: #e5e1a2; }
+	header.on > div.header_wrap[class ~= "fash"] { background-color: #d4e4f3; }
+	header.on > div.header_wrap[class ~= "cosm"] { background-color: #e7d6c2; }
+
+	section h2 { font-weight: normal; }
+
+	input { appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: none;
+	outline: none;
+	background: none; }
+
+/*
+	color_01_ food
+	color_02_ fashion
+	color_03_ cosmetic
+*/
+
+	.bgColor_01 { background-color: #e5e1a2; }
+	.bgColor_02 { background-color: #d4e4f3; }
+	.bgColor_03 { background-color: #e7d6c2; }
+
+	.btnColor_01 { background-color: #cdc74f; }
+	.btnColor_02 { background-color: #619cd4; }
+	.btnColor_03 { background-color: #c18749; }
+
+	.borderColor_01 { background-color: #242005; }
+	.borderColor_02 { background-color: #0e181e; }
+	.borderColor_03 { background-color: #231806; }
+
+	.txtColor_01 { color: #242005; }
+	.txtColor_02 { color: #0e181e; }
+	.txtColor_03 { color: #231806; }
+
+	.pointColor_01 { color: #8b8726; }
+	.pointColor_02 { color: #2d6ba6; }
+	.pointColor_03 { color: #7e5d32; }
+
+	input#search { cursor: text; }
+	input#submit { cursor: pointer; }
+	::placeholder { font-family: "NotoSansKR-Thin"; color: #242005; font-style: italic; opacity: 1; }
+	::-moz-input-placeholder, ::-moz-textarea-placeholder { color: #242005; }
+	::-webkit-input-placeholder, ::-webkit-textarea-placeholder { color: #242005; }
+	:-ms-input-placeholder, :-ms-textarea-placeholder { color: #242005; }
+	::-ms-input-placeholder, ::-ms-textarea-placeholder { color: #242005; }
+	::-o-input-placeholder, ::-o-textarea-placeholder { color: #242005; }
+
+	header.bg_01[class ~= "on"] { background: #e5e1a2; }
+	header.bg_02[class ~= "on"] { background: #d4e4f3; }
+	header.bg_03[class ~= "on"] { background: #e7d6c2; }
+
+
+
+
+
+
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*#################### mobile_start ######################*/
+@media screen and (max-width: 767px) {
+/*--------------------------------------------------------*/
+
+	section { position: relative; margin-top: 50px; width: 100%; text-align: center; }
+
+	h2.title { font-size: 1.375em; margin-top: 10px; }
+	h2.title::before { top: -10px; height: 2px; }
+
+	p.title_desc { margin: 20px auto 50px auto; font-size: 0.875em; }
+
+/*#####################################################################
+##################### M ##### header ##################################
+##################### M ##### header ##################################
+##################### M ##### header ##################################
+######################################################################*/
+
+/*		********* header logo */
+
+	header { overflow: hidden; position: fixed; top: 0; z-index: 100; width: 100%; height: 50px; }
+	header > h1 { position: absolute; top: 50%; left: 6.25vw; z-index: 120; width: 39px; height: 34px; transform: translateY(-50%); }
+	header > h1.logo > a { display: block; width: 100%; height: 100%; }
+	header > h1[class ~= "food"] > a { background: url("../images/logo/img_M_logo_food_normal.png") no-repeat center center; background-size: cover; }
+	header > h1[class ~= "fash"] > a { background: url("../images/logo/img_M_logo_fashion_normal.png") no-repeat center center; background-size: cover; }
+	header > h1[class ~= "cosm"] > a { background: url("../images/logo/img_M_logo_cosmetic_normal.png") no-repeat center center; background-size: cover; }
+
+	header.on > h1[class ~= "food"] > a { background: url("../images/logo/img_M_logo_food_menu_on.png") no-repeat center center; background-size: cover; }
+	header.on > h1[class ~= "fash"] > a { background: url("../images/logo/img_M_logo_fashion_menu_on.png") no-repeat center center; background-size: cover; }
+	header.on > h1[class ~= "cosm"] > a { background: url("../images/logo/img_M_logo_cosmetic_menu_on.png") no-repeat center center; background-size: cover; }
+
+	header.down { box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); }
+
+/*		********* header menu_icon */
+
+	header > button { position: absolute; top: 50%; right: 6.25vw; z-index: 120; display: block; width: 28px; height: 28px; transform: translateY(-50%); }
+	header > button::before { position: absolute; display: inline-block; content: ""; left: 5%; top: 20%; width: 90%; height: 2px; transform-origin: center center; transform: rotateZ(0deg); transition: background 0.3s, transform 0.3s; }
+	header > button.food::before { background: #cdc74f; }
+	header > button.fash::before { background: #619cd4; }
+	header > button.cosm::before { background: #c18749; }
+
+	header > button::after { position: absolute; display: inline-block; content: ""; right: 5%; bottom: 20%; width: 90%; height: 2px; transform-origin: center center; transform: rotateZ(0deg); transition: background 0.3s, transform 0.3s; }
+	header > button.food::after { background: #cdc74f; }
+	header > button.fash::after { background: #619cd4; }
+	header > button.cosm::after { background: #c18749; }
+
+	header.on > button::before { left: 1%; top: 45%; width: 100%; transform: rotateZ(45deg); }
+	header.on > button.food::before { background: #242005; }
+	header.on > button.fash::before { background: #0e181e; }
+	header.on > button.cosm::before { background: #231806; }
+
+	header.on > button::after { right: -1%; bottom: 45%; width: 100%; transform: rotateZ(-45deg); }
+	header.on > button.food::after { background: #242005; }
+	header.on > button.fash::after { background: #0e181e; }
+	header.on > button.cosm::after { background: #231806; }
+
+/*		********* header menu_icon */
+
+
+/*		******** header_wrap_bg */
+
+	header > div.header_wrap { overflow: hidden; position: fixed; left: 100%; z-index: 101; padding: 50px 6.25vw 0 6.25vw; width: 100%; height: 100vh; transform: translateX(0%); transition: transform 0.2s; }
+	header.on > div.header_wrap { transform: translateX(-100%); }
+
+/*		******** header_info */
+
+/*		******** header_info */
+
+/***************************************************
+************** header 메뉴 열었을 때 ***************
+****************************************************/
+
+/*		============== header_form */
+
+	header > form { opacity: 0; position: absolute; top: 50%; right: 54px; z-index: 120; height: 28px; transform: translateY(-50%); vertical-align: middle; transition: opacity 0.4s; }
+	header > form > input#search { width: calc(100% - 34px); padding-top: 10px; }
+	header[class ~= "food"] > form > input#search { border-bottom: 1px solid #242005; }
+	header[class ~= "fash"] > form > input#search { border-bottom: 1px solid #0e181e; }
+	header[class ~= "cosm"] > form > input#search { border-bottom: 1px solid #231806; }
+
+	header > form > input#submit { position: absolute; right: 0; bottom: 2px; width: 24px; height: 24px; background: url("../images/icons/img_ico_serch.png")no-repeat center center; background-size: cover; }
+
+	header.on > form { opacity: 1; z-index: 110; }
+
+/*		******** header_inner */
+
+	header > div.header_wrap div.inner { position: relative; top: 40px; width: 100%; height: calc((100% - 6.25vw) - 40px); margin: 0 auto; }
+	header > div.header_wrap div.inner > div.my_page { position: relative; width: 100%; }
+	header > div.header_wrap div.inner > div.my_page::after { display: inline-block; content: ""; width: 100%; height: 1px; }
+	header[class ~= "food"] > div.header_wrap div.inner > div.my_page::after { background: rgba(36, 32, 5, 0.2); }
+	header[class ~= "fash"] > div.header_wrap div.inner > div.my_page::after { background: rgba(14, 24, 30, 0.2); }
+	header[class ~= "cosm"] > div.header_wrap div.inner > div.my_page::after { background: rgba(35, 24, 6, 0.2); }
+
+/*		============== header_info --my */
+
+
+	header > div.header_wrap div.inner div.my_page > a { display: inline-block; margin-right: 25.7%; width: 16px; height: 16px; font-size: 0; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(1) { background: url("../images/icons/img_ico_info_food_recent.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(2) { background: url("../images/icons/img_ico_info_food_heart.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(3) { background: url("../images/icons/img_ico_info_food_cart.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(4) { background: url("../images/icons/img_ico_info_food_my.png") no-repeat center center; background-size: contain; margin-right: 0; }
+
+/*		============== info  */
+
+	header > div.header_wrap div.inner div.info { position: absolute; width: 100%; height: 15%; left: 0; bottom: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div { position: absolute; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(1) { left: 0; top: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(2) { right: 0; top: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(3) { left: 0; bottom: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(4) { right: 0; bottom: 0; }
+
+	header > div.header_wrap div.inner div.info > div.rel::before { display: block; position: absolute; left: 0; top: -6.25vw; content: ""; width: 100%; height: 1px; }
+	header[class ~= "food"] > div.header_wrap div.inner div.info > div.rel::before { background: rgba(36, 32, 5, 0.2); }
+	header[class ~= "fash"] > div.header_wrap div.inner div.info > div.rel::before { background: rgba(14, 24, 30, 0.2); }
+	header[class ~= "cosm"] > div.header_wrap div.inner div.info > div.rel::before { background: rgba(35, 24, 6, 0.2); }
+
+/*		============== info --num */
+
+	header > div.header_wrap div.inner div.num p.title { font-family: "NotoSansKR-Regular"; font-size: 0.75em; }
+	header > div.header_wrap div.inner div.num p.desc { font-family: "NotoSansKR-Bold"; font-size: 0.75em; }
+
+/*		============== info --time */
+
+	header > div.header_wrap div.inner div.time p.title { font-family: "NotoSansKR-Regular"; font-size: 0.75em; }
+	header > div.header_wrap div.inner div.time p.desc { font-family: "NotoSansKR-Bold"; font-size: 0.75em; }
+
+/*		============== info --qna */
+
+	header > div.header_wrap div.inner div.qna p { font-family: "NotoSansKR-Bold"; font-size: 0.75em; }
+
+/*		============== info --sns */
+
+	header > div.header_wrap div.inner div.sns > a { display: inline-block; margin-left: 5px; width: 22px; height: 22px; background: url("../images/icons/img_ico_sns_20.png") no-repeat; background-size: cover; font-size: 0; vertical-align: bottom; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(1) { background-position: 0 0; margin-left: 0; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(2) { background-position: -22px 0; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(3) { background-position: -44px 0; }
+
+/*=================================
+=============== nav ===============
+=================================*/
+
+	header > div.header_wrap div.inner > nav { position: absolute; overflow: hidden; right: 0; top: 14%; width: 100%; height: 53.6vh; }
+	header > div.header_wrap div.inner > nav > ul.main { overflow-y: scroll; height: 100%; }
+	header > div.header_wrap div.inner > nav > ul.main > li { font-family: 'Manrope-Bold', "NotoSansKR-Medium"; }
+	header > div.header_wrap div.inner > nav > ul.main > li:last-child::before { display: none; }
+
+	header > div.header_wrap div.inner > nav > ul.main > li > a { display: block; width: 100%; height: 100%; font-family: "Manrope-Bold", "NotoSansKR-Medium"; font-size: 1em; line-height: 3.5; }
+
+	header > div.header_wrap div.inner > nav > ul.main > li > button { position: relative; width: 100%; height: 100%; font-size: 1em; line-height: 3.5; }
+	header > div.header_wrap div.inner > nav > ul.main > li > button::before { display: block; position: absolute; content: ""; top: 50%; right: 6.25vw; width: 20px; height: 10px; clip-path: polygon(0% 0%, 10% 0%, 50% 80%, 90% 0%, 100% 0%, 50% 100%); transform: rotate(0deg) translateY(-60%); transition: transform 0.2s; }
+	header[class ~= "food"] > div.header_wrap div.inner > nav > ul.main > li > button::before { background: #8b8726; }
+	header[class ~= "fash"] > div.header_wrap div.inner > nav > ul.main > li > button::before { background: #2d6ba6; }
+	header[class ~= "cosm"] > div.header_wrap div.inner > nav > ul.main > li > button::before { background: #7e5d32; }
+	header > div.header_wrap div.inner > nav > ul.main > li.active > button::before { transform: translateY(-50%) rotate(180deg); }
+
+	header[class ~= "food"] > div.header_wrap div.inner > nav > ul.main > li.active > button { color: #8b8726; }
+	header[class ~= "fash"] > div.header_wrap div.inner > nav > ul.main > li.active > button { color: #2d6ba6; }
+	header[class ~= "cosm"] > div.header_wrap div.inner > nav > ul.main > li.active > button { color: #7e5d32; }
+
+	header > div.header_wrap div.inner > nav ul.sub { overflow: hidden; width: 100%; height: 0; transition: height 0.2s; }
+
+	header > div.header_wrap div.inner > nav ul.sub > li { display: block; float: right; width: 100%; }
+	header > div.header_wrap div.inner > nav ul.sub > li > a { text-indent: 3em; display: block; font-family: "NotoSansKR-Regular"; width: 100%; font-size: 0.875em; line-height: 3; }
+
+	header > div.header_wrap div.inner > nav ul.sub > li > a br { display: none; }
+
+	header > div.header_wrap div.inner > nav ul.sub > li.active > a { font-weight: bold; }
+	header[class ~= "food"] > div.header_wrap div.inner > nav ul.sub > li.active > a { color: #8b8726; opacity: 0.6; }
+	header[class ~= "fash"] > div.header_wrap div.inner > nav ul.sub > li.active > a { color: #2d6ba6; opacity: 0.6; }
+	header[class ~= "cosm"] > div.header_wrap div.inner > nav ul.sub > li.active > a { color: #7e5d32; opacity: 0.6; }
+
+/*####################################################################
+##################### M ##### header #################################
+##################### M ##### header #################################
+##################### M ##### header #################################
+####################################################################*/
+
+/*#####################################################################
+##################### M ### section_visual ############################
+##################### M ### section_visual ############################
+##################### M ### section_visual ############################
+#####################################################################*/
+
+/* visual *********/
+
+	section.visual { overflow: hidden; position: relative; top: 0; left: 0; margin-top: 0; width: 100%; height: 100vh; }
+	section.visual > div.visual_img { position: absolute; width: 100%; height: 100%; }
+
+	section.visual > div[class ~= "bg_with"] { background: url("../images/img_food_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_lead"] { background: url("../images/img_fash_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_make"] { background: url("../images/img_TM_cos_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_ours"] { opacity: 0; background: url("../images/img_main_visual_bg_02.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_new"] { opacity: 0; background: url("../images/img_T_food_main_visual_03.jpg") no-repeat; background-position-y: 70%; }
+	section.visual > div[class ~= "bg_again"] { opacity: 0; background: url("../images/img_cos_main_visual_bg_03.jpg") no-repeat; background-position-y: 70%; }
+	section.visual > div[class ~= "bg_zero"] { opacity: 0; background: url("../images/img_fash_main_visual_bg_03.jpg") no-repeat; background-size: cover; }
+
+	section.visual > div.visual_img img { position: absolute; object-fit: cover; }
+	section.visual > div.visual_img.bg_with img { left: 0%; top: 0; width: 100%; height: auto; }
+	section.visual > div.visual_img.bg_lead img { left: -50%; bottom: 0; height: 70%; object-fit: cover; }
+	section.visual > div.visual_img.bg_make img { left: -20%; bottom: 0; width: auto; height: 100%; }
+	section.visual > div.visual_img.bg_ours img { left: 0%; top: 0; width: 100%; height: 100%; }
+	section.visual > div.visual_img.bg_new img { left: 0%; right: 0; margin: 0 auto; bottom: 10%; width: 90%; height: auto; }
+	section.visual > div.visual_img.bg_again img { left: 0; top: 0; width: 100%; height: 100%; }
+	section.visual > div.visual_img.bg_zero img { left: 0%; top: 15%; width: auto; height: 45%; }
+
+/* section_inner_visual *********/
+
+	section.visual div.inner_visual { position: absolute; top: 55%; left: 50%; transform: translate(-50%, -10%); text-align: center; }
+
+	section.visual div.inner_visual h2 { position: relative; font-family: 'Manrope-ExtraLight', 'NotoSansKR-Thin'; margin-bottom: 30px; font-size: 2em; color: #fff; line-height: 1.2em; }
+	section.visual div.inner_visual.with h2 { color: #cdc74f;}
+	section.visual div.inner_visual.new h2 { color: #e96f94;}
+	section.visual div.inner_visual.lead h2 { color: #619cd4;}
+	section.visual div.inner_visual.zero h2 { color: #d4e4f3;}
+	section.visual div.inner_visual.again h2 { color: #c18749;}
+
+	section.visual div.inner_visual h2::before { position: absolute; left: 0; bottom: -13%; display: block; content: ""; width: 100%; height: 1px; background: rgba(255, 255, 255, 1); }
+	section.visual div.inner_visual.with h2::before { background: rgba(205, 199, 79, 1); }
+	section.visual div.inner_visual.new h2::before { background: rgba(233, 111, 148, 1); }
+	section.visual div.inner_visual.lead h2::before { background: rgba(97, 156, 212, 1); }
+	section.visual div.inner_visual.zero h2::before { background: rgba(212, 228, 243, 1); }
+	section.visual div.inner_visual.again h2::before { background: rgba(193, 135, 73, 1); }
+
+	section.visual div.inner_visual h2 > span { font-family: 'Manrope-Bold', 'NotoSansKR-Bold'; }
+
+	section.visual div.inner_visual > p { position: relative; font-family: 'Manrope-Regular', 'NotoSansKR-Light'; display: inline-block; padding-left: 0.5em; font-size: 0.875em; color: #fff; line-height: 1.75; white-space: nowrap; }
+	section.visual div.inner_visual > p::before { position: absolute; left: 50%; top: 20%; z-index: -1; display: block; content: ""; width: 60vw; height: 60vw; border-radius: 123456em; transform: translate(-50%, -50%); }
+
+	section.visual div.inner_visual[class ~= "ours"] > p::before { background: radial-gradient(rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.3) 50%, transparent 70%); }
+	section.visual div.inner_visual[class ~= "lead"] > p::before { background: radial-gradient(rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.6) 40%, transparent 70%); }
+	section.visual div.inner_visual[class ~= "new"] > p::before { background: radial-gradient(rgba(255, 255, 255, 0.8) 30%, rgba(255, 255, 255, 0.6) 50%, transparent 80%); }
+
+	section.visual div.inner_visual[class ~= "with"] > p { color: #cdc74f; }
+	section.visual div.inner_visual[class ~= "new"] > p { color: #e96f94; }
+	section.visual div.inner_visual[class ~= "lead"] > p { color: #619cd4; }
+	section.visual div.inner_visual[class ~= "zero"] > p { color: #d4e4f3; }
+	section.visual div.inner_visual[class ~= "again"] > p { color: #c18749; }
+
+/* section_visual_pagination_btn *********/
+
+	div.pagination { position: absolute; z-index: 20; left: 50%; bottom: 0; margin: 0 auto; padding: 3.125vw 6.25vw; width: 100%; transform: translateX(-50%); }
+
+	div.pagination > button { position: relative; font-family: 'Manrope-ExtraBold', "NotoSansKR-Bold"; display: inline-block; font-size: 1.25em; white-space: nowrap; }
+	div.pagination > button.pn_btn { width: 30%; padding-right: 50px; }
+	div.pagination > button.btn_pause { width: 10%; height: 100%; }
+
+/*#####################################################################
+#################### M #### section_visual ############################
+#################### M #### section_visual ############################
+#################### M #### section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+#################### M #### section_best ##############################
+#################### M #### section_best ##############################
+#################### M #### section_best ##############################
+#####################################################################*/
+
+	section.best div.wrap_100 { position: relative; width: 100%; }
+	section.best div.inner { width: 100%; padding: 0 6.25vw; margin: 0 auto; }
+	section.best div.view_mask { overflow: hidden; position: relative; width: 100%; }
+
+	section.best ul { width: 600%; }
+	section.best ul > li { float: left; position: relative; width: 16.6666%; padding: 0 10px; }
+	section.best ul > li > a { display: block; width: 100%; padding: 0 10px; }
+
+	section.best li > a > div.img_wrap { position: relative; width: 100%; margin: 0 auto; }
+	section.best li > a > div.img_wrap > img { display: block; width: 100%; }
+
+/* section_best_pd_hover_area *********/
+
+	section.best ul > li > div.pd_hover { position: absolute; overflow: hidden; left: 50%; bottom: 100px; z-index: 3; margin: 0 auto; width: calc(100% - 40px); height: 44px; background: rgba(0, 0, 0, 0.1); transform: translateX(-50%); }
+	section.best ul > li > div.pd_hover > input.check { display: block; height: 24px; }
+	section.best ul > li > div.pd_hover > input.check_like { float: left; width: 26px; margin: 10px 0 10px 10px; background: url("../images/icons/img_ico_pd_heart.png") no-repeat center center; background-size: cover; }
+	section.best ul > li > div.pd_hover > input.check_cart { float: right; width: 24px; margin: 10px 10px 10px 0; background: url("../images/icons/img_ico_pd_cart.png") no-repeat center center; background-size: cover; }
+
+/* section_best_title_area *********/
+
+	section.best ul > li > a > div.info_wrap { width: 100%; height: 100px; padding: 12px 10px; }
+	section.best ul > li > a > div.info_wrap > p.title { font-family: "Manrope-Bold", "NotoSansKR-Bold"; margin-bottom: 10px; height: 2.4em; font-size: 0.875em; color: #222; line-height: 1.2; }
+	section.best ul > li > a > div.info_wrap > p.desc { font-family: "Manrope-Medium", "NotoSansKR-Medium"; height: 2em; font-size: 0.875em; color: #242005; line-height: 1; }
+	section.best ul > li > a.active > div.info_wrap > p.title { font-weight: bold; }
+	section.best ul > li > a.active > div.info_wrap > p.desc { font-weight: bold; }
+
+/* section_best_button_area *********/
+
+	section.best div.wrap_100 > button.btn { position: absolute; top: 0; width: calc((100% - 85vw) / 2); height: 100%; }
+	section.best div.wrap_100 > button[class ~= "prev"] { left: 0; }
+	section.best div.wrap_100 > button[class ~= "next"] { right: 0; }
+
+	section.best div.wrap_100 > button.btn > span { display: block; position: absolute; top: -30%; bottom: 0; margin: auto; width: 18px; height: 32px; }
+	section.best div.wrap_100 > button[class ~= "prev"] > span { right: 0; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.best div.wrap_100 > button[class ~= "next"] > span { left: 0; clip-path: polygon(0 0, 0 100%, 100% 50%); }
+
+/*#####################################################################
+#################### M #### section_best ##############################
+#################### M #### section_best ##############################
+#################### M #### section_best ##############################
+#####################################################################*/
+
+/*#####################################################################
+#################### M ### section_campain ############################
+#################### M ### section_campain ############################
+#################### M ### section_campain ############################
+#####################################################################*/
+
+	section.campain div.inner div.view_mask { overflow: hidden; width: 75vw; height: 75vw; margin: 0 auto; }
+
+	section.campain ul {  position: absolute; left: -200%; width: 500%; height: 100%; }
+	section.campain ul > li { float: left; width: 20%; height: 100%; }
+
+	section.campain ul > li > a { display: block; position: relative; width: 100%; height: 100%; }
+	section.campain ul > li > a::before { position: absolute; display: block; content: ""; left: 0; bottom: 0; width: 100%; height: 40%; background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent); }
+
+	section.campain ul > li > a > img { width: 100%; height: 100%; object-fit: cover; }
+	section.campain ul > li > a > div.info_side { position: absolute; right: 10px; bottom: 10px; z-index: 1; text-align: right; }
+	section.campain ul > li > a > div.info_side > p.desc { position: relative; font-family: "Manrope-Regular"; font-size: 0.875em; line-height: 1; }
+	section.campain ul a > div.info_side > p.food { color: #e5e1a2; }
+	section.campain ul a > div.info_side > p.fash { color: #d4e4f3; }
+	section.campain ul a > div.info_side > p.cosm { color: #e7d6c2; }
+
+	section.campain ul > li > a > div.info_side > h3 { font-family: "Manrope-Regular"; padding-top: 10px; font-size: 1.625em; font-weight: normal; color: #fff; line-height: 1; white-space: nowrap; }
+	section.campain ul > li > a > div.info_side > h3::before { position: absolute; right: 0; top: 15px; content: ""; width: 100%; height: 1px; }
+	section.campain ul a > div.info_side > h3.food::before { background: #e5e1a2; }
+	section.campain ul a > div.info_side > h3.fash::before { background: #d4e4f3; }
+	section.campain ul a > div.info_side > h3.cosm::before { background: #e7d6c2; }
+
+	section.campain ul > li > a > div.info_center { position: absolute; right: 10px; bottom: 10px; z-index: 1; text-align: right; }
+	section.campain ul > li > a > div.info_center > h3 { position: relative; font-family: "Manrope-Bold"; padding-bottom: 20px; font-size: 1.5em; color: #fff; line-height: 1.2; }
+	section.campain ul > li > a > div.info_center > h3::before { position: absolute; right: 0; bottom: 0; content: ""; width: 100%; height: 1px; }
+	section.campain ul a > div.info_center > h3.food::before { background: #e5e1a2; }
+	section.campain ul a > div.info_center > h3.fash::before { background: #d4e4f3; }
+	section.campain ul a > div.info_center > h3.cosm::before { background: #e7d6c2; }
+
+	section.campain ul > li > a > div.info_center > p { font-family: "Manrope-ExtraLight"; font-size: 0.875em; line-height: 1.5; margin-top: 20px; }
+	section.campain ul a > div.info_center > p.food { color: #e5e1a2; }
+	section.campain ul a > div.info_center > p.fash { color: #d4e4f3; }
+	section.campain ul a > div.info_center > p.cosm { color: #e7d6c2; }
+
+	section.campain button.btn { display: inline-block; position: relative; margin-top: 20px; width: calc(100% / 2); height: 30px; }
+	section.campain button[class ~= "prev"] { float: left; }
+	section.campain button[class ~= "next"] { float: right; }
+
+	section.campain button.btn > span { display: block; position: absolute; top: 0; bottom: 0; margin: auto; width: 18px; height: 32px; }
+	section.campain button[class ~= "prev"] > span { right: 20%; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.campain button[class ~= "next"] > span { left: 20%; clip-path: polygon(0 0, 0 100%, 100% 50%); }
+
+/*#####################################################################
+#################### M ### section_campain ############################
+#################### M ### section_campain ############################
+#################### M ### section_campain ############################
+#####################################################################*/
+
+/*#####################################################################
+##################### M ### section_slogan ############################
+##################### M ### section_slogan ############################
+##################### M ### section_slogan ############################
+#####################################################################*/
+
+	section.slogan { background: url("../images/img_M_main_slogan.jpg") no-repeat center center; background-size: cover; }
+	section.slogan::before { content: ""; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+	section.slogan h2 { font-family: "Manrope-Regular"; position: relative; padding: 1em 0; font-size: 1.25em; color: #fff; line-height: 1.2; }
+
+/*#####################################################################
+##################### M ### section_slogan ############################
+##################### M ### section_slogan ############################
+##################### M ### section_slogan ############################
+#####################################################################*/
+
+/*#####################################################################
+##################### M ### section_location ##########################
+##################### M ### section_location ##########################
+##################### M ### section_location ##########################
+#####################################################################*/
+
+	section.location div.inner { width: 87.5vw; margin: 0 auto; }
+
+	section.location div.select_wrap { overflow: hidden; position: relative; height: 3em; width: 100%; }
+	section.location div.select_wrap div.select_location { display: none; width: 100%; height: 3em; }
+	section.location div.select_wrap div.select_location > button { position: relative; padding: 0.75em 1em; width: 100%; height: 3em; font-family: "Manrope-ExtraLight"; font-size: 1em; white-space: nowrap; color: #242005; line-height: 1.5; text-align: left; }
+	section.location div.select_wrap div.select_location > button::before { position: absolute; top: 50%; right: 1em; display: block; content: ""; width: 16px; height: 8px; clip-path: polygon(0% 0%, 100% 0%, 50% 100%); transform: translateY(-50%) rotate(180deg); }
+	section.location div.select_wrap div.select_location[class ~= "bgColor_01"] > button::before { background: #cdc74f; }
+	section.location div.select_wrap div.select_location[class ~= "bgColor_02"] > button::before { background: #619cd4; }
+	section.location div.select_wrap div.select_location[class ~= "bgColor_03"] > button::before { background: #c18749; }
+
+
+		/*---------------------- first ----------------------*/
+
+	section.location div.inner ul { position: absolute; top: -100%; z-index: 2; overflow-y: scroll; width: 100%; height: 9em; }
+	/* select_location active하면 ul display: none; -> block */
+	section.location div.inner ul > li { position: relative;  width: 100%; }
+	section.location div.inner[class ~= "food"] ul > li { background: #e5e1a2; }
+	section.location div.inner[class ~= "fash"] ul > li { background: #d4e4f3; }
+	section.location div.inner[class ~= "cosm"] ul > li { background: #e7d6c2; }
+
+	section.location div.inner ul > li > button { padding: 0.75em 1em; width: 100%; height: 3em; font-family: "Manrope-ExtraLight"; font-size: 1em; white-space: nowrap; line-height: 1.5; text-align: left; }
+	section.location div.inner[class ~= "food"] ul > li > button { color: #242005; }
+	section.location div.inner[class ~= "fash"] ul > li > button { color: #0e181e; }
+	section.location div.inner[class ~= "cosm"] ul > li > button { color: #231806; }
+
+	section.location div.inner ul > li.active > button { font-family: "Manrope-ExtraBold"; color: #fff; }
+	section.location div.inner[class ~= "food"] ul > li.active > button { background: #8b8726; }
+	section.location div.inner[class ~= "fash"] ul > li.active > button { background: #2d6ba6; }
+	section.location div.inner[class ~= "cosm"] ul > li.active > button { background: #7e5d32; }
+
+		/*---------------------- second ----------------------*/
+
+	section.location div.inner div.info { position: relative; margin: 30px auto 0 auto; width: 100%; height: 87.5vw; }
+	section.location div.inner[class ~= "food"] div.info { border: 1px solid #8b8726; }
+	section.location div.inner[class ~= "fash"] div.info { border: 1px solid #2d6ba6; }
+	section.location div.inner[class ~= "cosm"] div.info { border: 1px solid #7e5d32; }
+
+		/*====================== on info ======================*/
+
+	section.location div.inner div.info div.on_info { position: absolute; left: 0; top: 0; z-index: 3; width: 100%; height: 100%; }
+
+	section.location div.inner div.info div.on_info > div.info_wrap { position: absolute; left: 50%; top: 50%; padding: 0 3.125vw; width: 100%; transform: translate(-50%, -53%); }
+	section.location div.inner div.info div.on_info h3 { float: left; width: 40%; margin: 35% 0; font-family: "NotoSansKR-Light"; font-size: 1.25em; line-height: 1.2; white-space: nowrap; }
+
+	section.location div.inner div.info div.on_info p { line-height: 1; display: inline-block; width: 60%; white-space: nowrap; }
+	section.location div.inner div.info div.on_info p.title { font-family: "NotoSansKR-Medium"; font-size: 1em; }
+	section.location div.inner div.info div.on_info p.desc { margin-bottom: 1.5em; font-family: "NotoSansKR-Regular"; font-size: 0.875em; line-height: 1.2; }
+	section.location div.inner div.info div.on_info p:last-child { margin-bottom: 0; }
+
+		/*====================== on map ======================*/
+
+	section.location div.inner div.on_map { position: absolute; left: 0; top: 0; z-index: 0; width: 100%; height: 100%; }
+	section.location div.inner div.on_map > img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 0 35%; }
+	section.location div.inner div.on_map > svg { position: absolute; top: 29.3%; right: 16%; width: 13.8%; }
+
+	section.location div.inner div.on_map > h3 { position: absolute; left: 10px; top: 10px; padding: 0 0.25em 0.1em; font-family: "NotoSansKR-Light"; font-size: 1.25em; font-weight: normal; line-height: 1.2; }
+	section.location div.inner.food div.on_map > h3 { border: 1px solid #242005; background: #e5e1a2; }
+	section.location div.inner.fash div.on_map > h3 { border: 1px solid #0e181e; background: #d4e4f3; }
+	section.location div.inner.cosm div.on_map > h3 { border: 1px solid #231806; background: #e7d6c2; }
+
+	section.location div.inner div.on_map > div.map_bbl { position: absolute; right: 30%; bottom: 30%; width: 40%; height: 25%;  border-radius: 10px 0 10px 10px; }
+	section.location div.inner.food div.on_map > div.map_bbl { background: url("../images/logo/img_logo_food_menu_on.png")no-repeat center center; background-color: #fff; background-size: 80%; border: 1px solid #242005; }
+	section.location div.inner.fash div.on_map > div.map_bbl { background: url("../images/logo/img_logo_fashion_menu_on.png")no-repeat center center; background-color: #fff; background-size: 80%; border: 1px solid #0e181e; }
+	section.location div.inner.cosm div.on_map > div.map_bbl { background: url("../images/logo/img_logo_cosmetic_menu_on.png")no-repeat center center; background-color: #fff; background-size: 80%; border: 1px solid #231806; }
+
+		/*====================== map on button ======================*/
+
+		button.btn_ofl_switch { position: absolute; right: 15px; bottom: 15px; z-index: 10; width: 42px; height: 22px; border-radius: 2431432143px; transition: transform 0.2s; }
+		section.location div.inner.food button.btn_ofl_switch { border: 1px solid #242005; }
+		section.location div.inner.fash button.btn_ofl_switch { border: 1px solid #0e181e; }
+		section.location div.inner.cosm button.btn_ofl_switch { border: 1px solid #231806; }
+
+		button.btn_ofl_switch > span.circle { display: inline-block; width: 18px; height: 18px; border-radius: 3243241134%; transform: translate(6%, 0); transition: transform 0.2s; }
+
+		section.location div.inner.food button.btn_ofl_switch > span.circle { background: #242005; }
+		section.location div.inner.fash button.btn_ofl_switch > span.circle { background: #0e181e; }
+		section.location div.inner.cosm button.btn_ofl_switch > span.circle { background: #231806; }
+
+		section.location div.inner button.btn_ofl_switch[class ~= "active"] > span.circle { transform: translate(116%, 2%); }
+
+/*#####################################################################
+#################### M #### section_location ##########################
+#################### M #### section_location ##########################
+#################### M #### section_location ##########################
+#####################################################################*/
+
+/*#####################################################################
+#################### M #### section_footer#############################
+#################### M #### section_footer#############################
+#################### M #### section_footer#############################
+#####################################################################*/
+
+	footer { clear: both; overflow: hidden; margin-top: 50px; width: 100%; height: 40vh; }
+	footer[class ~= "food"] { background: #242005; }
+	footer[class ~= "fash"] { background: #0e181e; }
+	footer[class ~= "cosm"] { background: #231806; }
+
+	footer div.inner { width: 87.5vw; padding: 20px 0; height: 100%; }
+
+	footer div.img { position: relative; height: 50%; margin-bottom: 20px;}
+	footer div.img::after { position: absolute; left: 0; bottom: -10px; content: ""; width: 100%; height: 1px; background: rgba(82, 80, 23, 0.9); }
+	footer[class ~= "food"] div.img::after { background: rgba(205, 199, 79, 0.1); }
+	footer[class ~= "fash"] div.img::after { background: #619cd4; }
+	footer[class ~= "cosm"] div.img::after { background: rgba(231, 214, 194, 0.1); }
+
+	footer div.img > img { display: block; width: 20%; }
+	footer div.img > img:first-child { float: left; }
+	footer div.img > img:nth-child(2) { position: absolute; left: 50%; transform: translateX(-50%); }
+	footer div.img > img:last-child { float: right; }
+
+	footer div.footer_wrap { clear: both; text-align: center; margin-top: 40px; height: 50%; }
+	footer div.footer_wrap > h1 > a { font-family: "Manrope-ExtraBold"; margin-bottom: 20px; font-size: 2em; line-height: 1; }
+	footer[class ~= "food"] div.footer_wrap > h1 > a { color: #e5e1a2; }
+	footer[class ~= "fash"] div.footer_wrap > h1 > a { color: #d4e4f3; }
+	footer[class ~= "cosm"] div.footer_wrap > h1 > a { color: #e7d6c2; }
+
+	footer div.footer_wrap > p { display: none; font-family: "NotoSansKR-Light"; font-size: 0.8125em; color: #8b8726; }
+
+/*#####################################################################
+#################### M #### section_footer#############################
+#################### M #### section_footer#############################
+#################### M #### section_footer#############################
+#####################################################################*/
+
+
+
+
+/*--------------------------------------------------------*/
+}
+/*##################### mobile_end #######################*/
+/*##########################################################
+############################################################
+#################  ##############  #########################
+#################    ##########    #########################
+#################  ##  ######  ##  #########################
+#################  ####  ##  ####  #########################
+#################  ######  ######  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+#################  ##############  #########################
+############################################################
+##########################################################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*##################### tablet_start #####################*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/*--------------------------------------------------------*/
+
+	section:not(.visual) { position: relative; margin-top: 100px; width: 100%; text-align: center; }
+
+	h2.title { font-size: 1.628em; margin-top: 10px; }
+	h2.title::before { top: -10px; height: 3px; }
+
+	p.title_desc { margin: 20px auto 50px auto; font-size: 0.875em; }
+
+	.none { display: none; }
+
+/*#####################################################################
+##################### T ##### header ##################################
+##################### T ##### header ##################################
+##################### T ##### header ##################################
+######################################################################*/
+
+/*		********* header logo */
+
+	header { overflow: hidden; position: fixed; top: 0; z-index: 110; width: 100%; height: 80px; }
+	header > h1 { position: absolute; top: 50%; left: 20px; z-index: 110; width: 122px; height: 48px; transform: translateY(-50%); }
+	header > h1.logo > a { display: block; width: 100%; height: 100%; }
+	header > h1[class ~= "food"] > a { background: url("../images/logo/img_logo_food_normal.png") no-repeat center center; background-size: cover; }
+	header > h1[class ~= "fash"] > a { background: url("../images/logo/img_logo_fashion_normal.png") no-repeat center center; background-size: cover; }
+	header > h1[class ~= "cosm"] > a { background: url("../images/logo/img_logo_cosmetic_normal.png") no-repeat center center; background-size: cover; }
+
+	header.on > h1[class ~= "food"] > a { background: url("../images/logo/img_logo_food_menu_on.png") no-repeat center center; background-size: cover; }
+	header.on > h1[class ~= "fash"] > a { background: url("../images/logo/img_logo_fashion_menu_on.png") no-repeat center center; background-size: cover; }
+	header.on > h1[class ~= "cosm"] > a { background: url("../images/logo/img_logo_cosmetic_menu_on.png") no-repeat center center; background-size: cover; }
+
+	header.down { box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); }
+
+/*		********* header menu_icon */
+
+	header > button { position: absolute; top: 50%; right: 20px; z-index: 110; display: block; width: 40px; height: 40px; transform: translateY(-50%); }
+	header > button::before { position: absolute; display: inline-block; content: ""; left: 5%; top: 20%; width: 90%; height: 2px; transform-origin: center center; transform: rotateZ(0deg); transition: background-color 0.3s, transform 0.3s; }
+	header > button.food::before { background: #cdc74f; }
+	header > button.fash::before { background: #619cd4; }
+	header > button.cosm::before { background: #c18749; }
+
+	header > button::after { position: absolute; display: inline-block; content: ""; right: 5%; bottom: 20%; width: 90%; height: 2px; transform-origin: center center; transform: rotateZ(0deg); transition: background-color 0.3s, transform 0.3s; }
+	header > button.food::after { background: #cdc74f; }
+	header > button.fash::after { background: #619cd4; }
+	header > button.cosm::after { background: #c18749; }
+
+	header.on > button::before { left: 1%; top: 48%; width: 100%; transform: rotateZ(45deg); }
+	header.on > button.food::before { background: #242005; }
+	header.on > button.fash::before { background: #0e181e; }
+	header.on > button.cosm::before { background: #231806; }
+
+
+	header.on > button::after { right: -1%; bottom: 48%; width: 100%; transform: rotateZ(-45deg); }
+	header.on > button.food::after { background: #242005; }
+	header.on > button.fash::after { background: #0e181e; }
+	header.on > button.cosm::after { background: #231806; }
+
+/*		********* header menu_icon */
+
+
+/*		******** header_wrap_bg */
+
+	header > div.header_wrap { overflow: hidden; position: fixed; top: 0; left: 100%; z-index: 101; padding: 80px 6.5104vw 0; width: 100%; height: 100%; transform: translateX(0%); transition: transform 0.2s; }
+	header.on > div.header_wrap { transform: translate(-100%); }
+
+/*		******** header_info */
+
+/*		******** header_info */
+
+/***************************************************
+************** header 메뉴 열었을 때 ***************
+***************************************************/
+
+/*		============== header_form */
+
+	header > form { opacity: 0; position: absolute; top: 50%; right: 72px; z-index: 110; height: 38px; transform: translateY(-50%); vertical-align: middle; transition: opacity 0.4s; }
+
+	header > form > input#search { padding-top: 20px; width: calc(100% - 44px); }
+	header[class ~= "food"] > form > input#search { border-bottom: 1px solid #242005; }
+	header[class ~= "fash"] > form > input#search { border-bottom: 1px solid #0e181e; }
+	header[class ~= "cosm"] > form > input#search { border-bottom: 1px solid #231806; }
+
+	header > form > input#submit { position: absolute; right: 0; bottom: 2px; width: 34px; height: 34px; background: url("../images/icons/img_ico_serch.png")no-repeat center center; background-size: cover; }
+
+	header.on > form { opacity: 1; z-index: 110; }
+
+/*		******** header_inner */
+
+	header > div.header_wrap div.inner { position: relative; top: 40px; width: 100%; height: calc(100% - 5.2083vw); margin: 0 auto; }
+	header > div.header_wrap div.inner > div.my_page { position: relative; width: 100%; margin-bottom: 5.2083vw; }
+	header > div.header_wrap div.inner > div.my_page::after { display: inline-block; content: ""; width: 100%; height: 1px; }
+	header[class ~= "food"] > div.header_wrap div.inner > div.my_page::after { background: rgba(36, 32, 5, 0.2); }
+	header[class ~= "fash"] > div.header_wrap div.inner > div.my_page::after { background: rgba(14, 24, 30, 0.2); }
+	header[class ~= "cosm"] > div.header_wrap div.inner > div.my_page::after { background: rgba(35, 24, 6, 0.2); }
+
+/*		============== header_info --my */
+
+
+	header > div.header_wrap div.inner div.my_page > a { display: inline-block; margin-right: 28%; width: 24px; height: 24px; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(1) { background: url("../images/icons/img_ico_info_food_recent.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(2) { background: url("../images/icons/img_ico_info_food_heart.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(3) { background: url("../images/icons/img_ico_info_food_cart.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(4) { background: url("../images/icons/img_ico_info_food_my.png") no-repeat center center; background-size: contain; margin-right: 0; }
+
+/*		============== info  */
+
+	header > div.header_wrap div.inner div.info { position: absolute; width: 100%; height: 15%; left: 0; bottom: 5.2083vw; }
+	header > div.header_wrap div.inner div.info > div.rel > div { position: absolute; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(1) { left: 0; top: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(2) { right: 0; top: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(3) { left: 0; bottom: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(4) { right: 0; bottom: 0; }
+	header > div.header_wrap div.inner div.info > div.rel::before { display: block; position: absolute; left: 0; top: -5.2083vw; content: ""; width: 100%; height: 1px; background: rgba(36, 32, 5, 0.2); }
+
+/*		============== info --num */
+
+	header > div.header_wrap div.inner div.num p.title { font-family: "NotoSansKR-Regular"; font-size: 0.75em; }
+	header > div.header_wrap div.inner div.num p.desc { font-family: "NotoSansKR-Bold"; font-size: 0.75em; }
+
+/*		============== info --time */
+
+	header > div.header_wrap div.inner div.time p.title { font-family: "NotoSansKR-Regular"; font-size: 0.75em; }
+	header > div.header_wrap div.inner div.time p.desc { font-family: "NotoSansKR-Bold"; font-size: 0.75em; }
+
+/*		============== info --qna */
+
+	header > div.header_wrap div.inner div.qna p { font-family: "NotoSansKR-Bold"; font-size: 0.75em;  }
+
+/*		============== info --sns */
+
+	header > div.header_wrap div.inner div.sns > a { display: inline-block; margin-left: 10px; width: 30px; height: 30px; background: url("../images/icons/img_ico_sns_20.png") no-repeat; background-size: cover; font-size: 0; vertical-align: bottom; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(1) { background-position: 0 0; margin-left: 0; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(2) { background-position: -30px 0; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(3) { background-position: -60px 0; }
+
+/*=================================
+=============== nav ===============
+=================================*/
+
+	header > div.header_wrap div.inner > nav { position: absolute; right: 0; top: 10%; width: 100%; }
+	header > div.header_wrap div.inner > nav > ul.main { overflow: hidden; width: 100%; }
+	header > div.header_wrap div.inner > nav > ul.main > li { display: block; font-family: 'Manrope-ExtraBold', 'NotoSansKR-Bold'; position: relative; float: left; width: 50%; height: 180px; }
+	header > div.header_wrap div.inner > nav > ul.main > li > button { display: block; float: left; margin-bottom: 30px; width: 50%; font-size: 1em; line-height: 1; }
+	header > div.header_wrap div.inner > nav > ul.main > li:last-child { margin-bottom: 0; }
+	header > div.header_wrap div.inner > nav > ul.main > li > a { font-family: "NotoSansKR-Bold", "Manrope-ExtraBold"; color: inherit; line-height: 1; }
+
+	header > div.header_wrap div.inner > nav ul.sub { float: left; width: 50%; }
+	header > div.header_wrap div.inner > nav ul.sub > li { display: block; float: right; width: 100%; }
+	header > div.header_wrap div.inner > nav ul.sub > li > a { display: block; font-family: "Manrope-Regular", 'NotoSansKR-Regular'; width: 100%; font-size: 0.875em; line-height: 1; padding-bottom: 1em; }
+
+/*####################################################################
+##################### T ##### header #################################
+##################### T ##### header #################################
+##################### T ##### header #################################
+####################################################################*/
+
+/*#####################################################################
+##################### T ### section_visual ############################
+##################### T ### section_visual ############################
+##################### T ### section_visual ############################
+#####################################################################*/
+
+/* visual *********/
+
+	section.visual { overflow: hidden; position: relative; top: 0; left: 0; width: 100%; height: 100vh; }
+	section.visual > div.visual_img { position: absolute; width: 100%; height: 100%; }
+
+	section.visual > div[class ~= "bg_with"] { background: url("../images/img_food_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_lead"] { background: url("../images/img_fash_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_make"] { background: url("../images/img_TM_cos_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_ours"] { opacity: 0; background: url("../images/img_main_visual_bg_02.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_new"] { opacity: 0; background: url("../images/img_T_food_main_visual_03.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_again"] { opacity: 0; background: url("../images/img_cos_main_visual_bg_03.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_zero"] { opacity: 0; background: url("../images/img_fash_main_visual_bg_03.jpg") no-repeat; background-size: cover; }
+
+	section.visual > div.visual_img img { position: absolute; object-fit: cover; }
+	section.visual > div.visual_img.bg_with img { left: 0%; top: 0; width: 100%; height: auto; }
+	section.visual > div.visual_img.bg_lead img { left: -32%; bottom: 0; height: 80%; object-fit: cover; }
+	section.visual > div.visual_img.bg_make img { left: 0%; bottom: 0; width: auto; height: 80%; }
+	section.visual > div.visual_img.bg_ours img { left: 0%; top: 0; width: 100%; height: 100%; }
+	section.visual > div.visual_img.bg_new img { left: 0%; right: 0; bottom: 28%; width: 80%; margin: 0 auto; }
+	section.visual > div.visual_img.bg_again img { left: 0; top: 0; width: 100%; height: 100%; }
+	section.visual > div.visual_img.bg_zero img { left: 0%; top: 16%; width: auto; height: 45%; }
+
+/* section_inner_visual *********/
+
+	section.visual div.inner_visual { position: absolute; top: 50%; left: 50%; transform: translateX(-50%); text-align: center; }
+
+	section.visual div.inner_visual h2 { position: relative; font-family: 'Manrope-ExtraLight', 'NotoSansKR-Thin'; margin-bottom: 30px; font-size: 3.75em; color: #fff; line-height: 1.2em; }
+	section.visual div.inner_visual.make > h2 { color: #e7d6c2;}
+	section.visual div.inner_visual.with > h2 { color: #cdc74f;}
+	section.visual div.inner_visual.new > h2 { color: #e96f94;}
+	section.visual div.inner_visual.lead > h2 { color: #619cd4;}
+	section.visual div.inner_visual.zero > h2 { color: #d4e4f3;}
+	section.visual div.inner_visual.again > h2 { color: #c18749;}
+
+	section.visual div.inner_visual h2::before { position: absolute; left: 0; right: 0; bottom: -0.3em; margin: auto; display: block; content: ""; width: 90%; height: 1px; background: rgba(255, 255, 255, 1); }
+	section.visual div.inner_visual.make h2::before { background: rgba(231, 214, 194, 1); }
+	section.visual div.inner_visual.with h2::before { background: rgba(205, 199, 79, 1); }
+	section.visual div.inner_visual.new h2::before { background: rgba(233, 111, 148, 1); }
+	section.visual div.inner_visual.lead h2::before { background: rgba(97, 156, 212, 1); }
+	section.visual div.inner_visual.zero h2::before { background: rgba(212, 228, 243, 1); }
+	section.visual div.inner_visual.again h2::before { background: rgba(193, 135, 73, 1); }
+
+	section.visual div.inner_visual h2 > span { font-family: 'Manrope-ExtraBold', 'NotoSansKR-Bold'; }
+
+	section.visual div.inner_visual > p { position: relative; font-family: 'Manrope-Regular', 'NotoSansKR-Regular'; display: inline-block; font-size: 1.5em; color: #fff; line-height: 1.75; }
+	section.visual div.inner_visual.lead > p::before { position: absolute; left: 50%; top: 5%; z-index: -1; display: block; content: ""; width: 50vw; height: 50vw; background: radial-gradient(rgba(255, 255, 255, 0.8) 30%, transparent 70%); border-radius: 123456em; transform: translate(-50%, -50%); }
+	section.visual div.inner_visual.new > p::before { position: absolute; left: 50%; top: 5%; z-index: -1; display: block; content: ""; width: 50vw; height: 50vw; background: radial-gradient(rgba(255, 255, 255, 0.8) 30%, transparent 70%); border-radius: 123456em; transform: translate(-50%, -50%); }
+	section.visual div.inner_visual.ours > p::before { position: absolute; left: 50%; top: 5%; z-index: -1; display: block; content: ""; width: 50vw; height: 50vw; background: radial-gradient(rgba(0, 0, 0, 0.6) 30%, transparent 70%); border-radius: 123456em; transform: translate(-50%, -50%); }
+	section.visual div.inner_visual.make > p::before { position: absolute; left: 50%; top: 5%; z-index: -1; display: block; content: ""; width: 50vw; height: 50vw; background: radial-gradient(rgba(35, 24, 6, 0.6) 30%, transparent 70%); border-radius: 123456em; transform: translate(-50%, -50%); }
+
+	section.visual div.inner_visual.make > p { color: #e7d6c2; }
+	section.visual div.inner_visual.with > p { color: #cdc74f; }
+	section.visual div.inner_visual.new > p { color: #e96f94; }
+	section.visual div.inner_visual.lead > p { color: #619cd4; }
+	section.visual div.inner_visual.zero > p { color: #d4e4f3; }
+	section.visual div.inner_visual.again > p { color: #c18749; }
+
+/* section_visual_pagination_btn *********/
+
+	div.pagination { position: absolute; z-index: 20; left: 50%; bottom: 2.6041vw; width: 70%; text-align: center; transform: translateX(-50%); }
+	div.pagination > button { position: relative; font-family: 'Manrope-ExtraBold'; display: inline-block; font-size: 2em; white-space: nowrap; }
+	div.pagination > button.pn_btn { width: 30%; padding-right: 50px; }
+	div.pagination > button.btn_pause { width: 10%; height: 100%; }
+
+/*#####################################################################
+#################### T #### section_visual ############################
+#################### T #### section_visual ############################
+#################### T #### section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+#################### T #### section_best ##############################
+#################### T #### section_best ##############################
+#################### T #### section_best ##############################
+#####################################################################*/
+
+	section.best div.wrap_100 { position: relative; width: 100%; }
+	section.best div.inner { padding: 0 2.6041vw; width: 100%; margin: 0 auto; }
+	section.best div.view_mask { overflow: hidden; position: relative; width: 100%; }
+
+	section.best ul { width: 200%; }
+	section.best ul > li { float: left; position: relative; width: 16.6666%; padding: 0 10px; }
+	section.best ul > li > a { display: block; width: 100%; padding: 0 5px; }
+
+	section.best li > a > div.img_wrap { position: relative; width: 100%; margin: 0 auto; }
+	section.best li > a > div.img_wrap > img { display: block; width: 100%; }
+
+/* section_best_pd_hover_area *********/
+
+	section.best ul > li > div.pd_hover { position: absolute; overflow: hidden; left: 50%;  bottom: 100px; z-index: 3; margin: 0 auto; width: calc(100% - 30px); height: 44px; background: rgba(0, 0, 0, 0.1); transform: translateX(-50%); }
+	section.best ul > li > div.pd_hover > input.check { display: block; height: 24px; }
+	section.best ul > li > div.pd_hover > input.check_like { float: left; width: 26px; margin: 10px 0 10px 10px; background: url("../images/icons/img_ico_pd_heart.png") no-repeat center center; background-size: cover; }
+	section.best ul > li > div.pd_hover > input.check_cart { float: right; width: 24px; margin: 10px 10px 10px 0; background: url("../images/icons/img_ico_pd_cart.png") no-repeat center center; background-size: cover; }
+
+
+/* section_best_title_area *********/
+
+	section.best ul > li > a > div.info_wrap { width: 100%; height: 100px; padding: 12px 10px; }
+	section.best ul > li > a > div.info_wrap > p.title { font-family: "Manrope-bold", "NotoSansKR-Bold"; margin-bottom: 15px; height: 2em; font-size: 0.875em; color: #222; line-height: 1.2; }
+	section.best ul > li > a > div.info_wrap > p.desc { font-family:"Manrope-Medium", "NotoSansKR-Medium"; height: 2em; font-size: 0.875em; line-height: 1.2; }
+	section.best ul > li > a.active > div.info_wrap > p.title { font-weight: bold; }
+	section.best ul > li > a.active > div.info_wrap > p.desc { font-weight: bold; }
+
+/* section_best_button_area *********/
+
+	section.best div.wrap_100 > button.btn { position: absolute; top: 0; width: calc((100% - 92vw) / 2); height: 100%; }
+	section.best div.wrap_100 > button[class ~= "prev"] { left: 0; }
+	section.best div.wrap_100 > button[class ~= "next"] { right: 0; }
+
+	section.best div.wrap_100 > button.btn > span { display: block; position: absolute; top: -30%; bottom: 0; margin: auto; width: 18px; height: 32px; }
+	section.best div.wrap_100 > button[class ~= "prev"] > span { right: 0; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.best div.wrap_100 > button[class ~= "next"] > span { left: 0; clip-path: polygon(0 0, 0 100%, 100% 50%); }
+
+	section.best br.none { display: block; }
+
+/*#####################################################################
+#################### T #### section_best ##############################
+#################### T #### section_best ##############################
+#################### T #### section_best ##############################
+#####################################################################*/
+
+/*#####################################################################
+#################### T ### section_campain ############################
+#################### T ### section_campain ############################
+#################### T ### section_campain ############################
+#####################################################################*/
+
+	section.campain div.inner { width: calc(100% - 40px); }
+	section.campain div.inner ul {
+		width: 100%; height: 100%;
+		display: grid;
+		grid-template-columns: 28.767% 42.466% 28.767%;
+		grid-template-rows: 50% 50%;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		grid-template-areas: "sns_01 brand glo_01" "sns_02 brand glo_02";
+
+		}
+
+	section.campain ul > li.grid_area_01 { grid-area: sns_01; }
+	section.campain ul > li.grid_area_02 { grid-area: sns_02; }
+	section.campain ul > li.grid_area_03 { grid-area: brand; }
+	section.campain ul > li.grid_area_04 { grid-area: glo_01; }
+	section.campain ul > li.grid_area_05 { grid-area: glo_02; }
+
+	section.campain ul a { display: block; position: relative; width: 100%; }
+	section.campain ul a::before { position: absolute; display: block; content: ""; left: 0; bottom: 0; width: 100%; height: 40%; background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); }
+
+	section.campain ul a > img { width: 100%; height: 100%; object-fit: cover; }
+	section.campain ul a > div.info_side { position: absolute; right: 10px; bottom: 10px; z-index: 1; text-align: right; }
+	section.campain ul a > div.info_side > p.desc { position: relative; font-family: "Manrope-Regular"; font-size: 0.875em; line-height: 1; }
+	section.campain ul a > div.info_side > p.food { color: #e5e1a2; }
+	section.campain ul a > div.info_side > p.fash { color: #d4e4f3; }
+	section.campain ul a > div.info_side > p.cosm { color: #e7d6c2; }
+
+	section.campain ul a > div.info_side > h3 { font-family: "Manrope-Regular"; padding-top: 10px; font-size: 1.5em; font-weight: normal; color: #fff; line-height: 1; white-space: nowrap; }
+	section.campain ul a > div.info_side > h3::before { position: absolute; right: 0; top: 15px; content: ""; width: 100%; height: 1px; }
+	section.campain ul a > div.info_side > h3.food::before { background: #e5e1a2; }
+	section.campain ul a > div.info_side > h3.fash::before { background: #d4e4f3; }
+	section.campain ul a > div.info_side > h3.cosm::before { background: #e7d6c2; }
+
+	section.campain ul a > div.info_center { position: absolute; right: 10px; bottom: 10px; z-index: 1; text-align: right; }
+	section.campain ul a > div.info_center > h3 { position: relative; font-family: "Manrope-ExtraBold"; padding-bottom: 20px; font-size: 2.5em; color: #fff; line-height: 1.2; }
+	section.campain ul a > div.info_center > h3::before { position: absolute; right: 0; bottom: 0; content: ""; width: 100%; height: 1px; }
+	section.campain ul a > div.info_center > h3.food::before { background: #e5e1a2; }
+	section.campain ul a > div.info_center > h3.fash::before { background: #d4e4f3; }
+	section.campain ul a > div.info_center > h3.cosm::before { background: #e7d6c2; }
+
+	section.campain ul a > div.info_center > p { font-family: "Manrope-ExtraLight"; font-size: 0.875em; line-height: 1.5; margin-top: 20px; }
+	section.campain ul a > div.info_center > p.food { color: #e5e1a2; }
+	section.campain ul a > div.info_center > p.fash { color: #d4e4f3; }
+	section.campain ul a > div.info_center > p.cosm { color: #e7d6c2; }
+
+	section.campain button.c_btn { display: none; }
+
+/*#####################################################################
+#################### T ### section_campain ############################
+#################### T ### section_campain ############################
+#################### T ### section_campain ############################
+#####################################################################*/
+
+/*#####################################################################
+##################### T ### section_slogan ############################
+##################### T ### section_slogan ############################
+##################### T ### section_slogan ############################
+#####################################################################*/
+
+	section.slogan { background: url("../images/img_D_main_slogan.jpg") no-repeat center center; background-size: cover; }
+	section.slogan::before { content: ""; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+	section.slogan > h2 { font-family: "Manrope-Regular"; position: relative; padding: 1em 0; font-size: 2.5em; color: #fff; line-height: 1.2; }
+
+/*#####################################################################
+##################### T ### section_slogan ############################
+##################### T ### section_slogan ############################
+##################### T ### section_slogan ############################
+#####################################################################*/
+
+/*#####################################################################
+##################### T ### section_location ##########################
+##################### T ### section_location ##########################
+##################### T ### section_location ##########################
+#####################################################################*/
+
+	section.location div.inner { width: 728px; margin: 0 auto; }
+	section.location div.select_location { display: none; }
+
+		/*---------------------- left ----------------------*/
+
+	section.location div.inner ul { width: 100%; }
+	section.location div.inner ul > li { float: left; margin: 0 -1px -1px 0; width: calc(12.5% + 1px); }
+	section.location div.inner.food ul > li { border: 1px solid #8b8726; }
+	section.location div.inner.fash ul > li { border: 1px solid #2d6ba6; }
+	section.location div.inner.cosm ul > li { border: 1px solid #7e5d32; }
+
+	section.location div.inner ul > li > button { width: 100%; height: 3em; font-family: "Manrope-ExtraLight"; font-size: 1em; white-space: nowrap; line-height: 2; text-align: center; }
+	section.location div.inner.food ul > li > button { color: #8b8726; }
+	section.location div.inner.fash ul > li > button { color: #2d6ba6; }
+	section.location div.inner.cosm ul > li > button { color: #7e5d32; }
+
+	section.location div.inner ul > li.active > button { font-family: "Manrope-ExtraBold"; color: #fff; }
+	section.location div.inner.food ul > li.active > button { background: #8b8726; }
+	section.location div.inner.fash ul > li.active > button { background: #2d6ba6; }
+	section.location div.inner.cosm ul > li.active > button { background: #7e5d32; }
+
+		/*---------------------- right ----------------------*/
+
+	section.location div.inner div.info { position: relative; margin: 40px auto 0 auto; width: 100%; height: 30vh; }
+	section.location div.inner.food div.info { border: 1px solid #8b8726; }
+	section.location div.inner.fash div.info { border: 1px solid #2d6ba6; }
+	section.location div.inner.cosm div.info { border: 1px solid #7e5d32; }
+
+		/*====================== on info ======================*/
+
+	section.location div.inner div.info div.on_info { position: absolute; left: 0; top: 0; z-index: 3; width: 100%; height: 100%; }
+	section.location div.inner.food div.info div.on_info { background: #e5e1a2; }
+	section.location div.inner.fash div.info div.on_info { background: #d4e4f3; }
+	section.location div.inner.cosm div.info div.on_info { background: #e7d6c2; }
+
+	section.location div.inner div.info div.on_info > div.info_wrap { position: absolute; left: 50%; top: 50%; padding: 0 10.4167vw; width: 100%; transform: translate(-50%, -50%); }
+	section.location div.inner div.info div.on_info h3 { float: left; width: 50%; margin: 20% 0; font-family: "Manrope-Regular"; font-size: 1.875em; line-height: 1; }
+
+	section.location div.inner div.info div.on_info p { line-height: 1; display: inline-block; width: 50%; }
+	section.location div.inner div.info div.on_info p.title { margin-bottom: 0.625em; font-family: "NotoSansKR-Medium"; font-size: 1.125em; }
+	section.location div.inner div.info div.on_info p.desc { margin-bottom: 3.125em; font-family: "NotoSansKR-Regular"; font-size: 1em; }
+	section.location div.inner div.info div.on_info p:last-child { margin-bottom: 0; }
+
+		/*====================== on map ======================*/
+
+	section.location div.inner div.on_map { position: absolute; left: 0; top: 0; z-index: 0; width: 100%; height: 100%; }
+	section.location div.inner div.on_map > img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 0 35%; }
+	section.location div.inner div.on_map > svg { position: absolute; top: 20.3%; right: 16%; width: 13.8%; }
+
+	section.location div.inner div.on_map > h3 { position: absolute; left: 10px; top: 10px; padding: 0 0.25em 0.1em; font-family: "Manrope-Regular"; font-size: 1.875em; font-weight: normal; line-height: 1; }
+	section.location div.inner.food div.on_map > h3 { border: 1px solid #242005; background: #e5e1a2; }
+	section.location div.inner.fash div.on_map > h3 { border: 1px solid #0e181e; background: #d4e4f3; }
+	section.location div.inner.cosm div.on_map > h3 { border: 1px solid #231806; background: #e7d6c2; }
+
+	section.location div.inner div.on_map > div.map_bbl { position: absolute; right: 30%; bottom: 30%; width: 30%; height: 25%; border-radius: 10px 0 10px 10px; }
+	section.location div.inner.food div.on_map > div.map_bbl { background: url("../images/logo/img_logo_food_menu_on.png")no-repeat center center; background-color: #fff; background-size: 80%; border: 1px solid #242005; }
+	section.location div.inner.fash div.on_map > div.map_bbl { background: url("../images/logo/img_logo_fashion_menu_on.png")no-repeat center center; background-color: #fff; background-size: 80%; border: 1px solid #0e181e; }
+	section.location div.inner.cosm div.on_map > div.map_bbl { background: url("../images/logo/img_logo_cosmetic_menu_on.png")no-repeat center center; background-color: #fff; background-size: 80%; border: 1px solid #231806; }
+
+		/*====================== map on button ======================*/
+
+		button.btn_ofl_switch { position: absolute; right: 20px; bottom: 20px; z-index: 10; width: 42px; height: 22px; border-radius: 2431432143px; transition: transform 0.2s; }
+		section.location div.inner.food button.btn_ofl_switch { border: 1px solid #242005; }
+		section.location div.inner.fash button.btn_ofl_switch { border: 1px solid #0e181e; }
+		section.location div.inner.cosm button.btn_ofl_switch { border: 1px solid #231806; }
+
+		button.btn_ofl_switch > span.circle { display: inline-block; width: 18px; height: 18px; border-radius: 3243241134%; transform: translate(6%, 0); transition: transform 0.2s; }
+		section.location div.inner.food button.btn_ofl_switch > span.circle { background: #242005; }
+		section.location div.inner.fash button.btn_ofl_switch > span.circle { background: #0e181e; }
+		section.location div.inner.cosm button.btn_ofl_switch > span.circle { background: #231806; }
+
+		section.location div.inner button.btn_ofl_switch[class ~= "active"] > span.circle { transform: translate(116%, 2%); }
+
+/*#####################################################################
+#################### T #### section_location ##########################
+#################### T #### section_location ##########################
+#################### T #### section_location ##########################
+#####################################################################*/
+
+/*#####################################################################
+#################### T #### section_footer#############################
+#################### T #### section_footer#############################
+#################### T #### section_footer#############################
+#####################################################################*/
+
+footer { clear: both; overflow: hidden; margin-top: 100px; width: 100%; height: 32.2266vh; }
+footer[class ~= "food"] { background: #242005; }
+footer[class ~= "fash"] { background: #0e181e; }
+footer[class ~= "cosm"] { background: #231806; }
+
+footer div.inner { width: 568px; padding: 40px 0; height: 100%; }
+
+footer div.img { position: relative; height: 50%; margin-bottom: 40px;}
+
+footer div.img::after { position: absolute; left: 0; bottom: -40px; content: ""; width: 100%; height: 1px; }
+footer[class ~= "food"] div.img::after { background: rgba(205, 199, 79, 0.1); }
+footer[class ~= "fash"] div.img::after { background: #619cd4; }
+footer[class ~= "cosm"] div.img::after { background: rgba(231, 214, 194, 0.1); }
+
+footer div.img > img { display: block; width: 20%; }
+footer div.img > img:first-child { float: left; }
+footer div.img > img:nth-child(2) { position: absolute; left: 50%; transform: translateX(-50%); }
+footer div.img > img:last-child { float: right; }
+
+footer div.footer_wrap { clear: both; text-align: center; margin-top: 80px; height: 50%; }
+footer div.footer_wrap > h1 > a { font-family: "Manrope-ExtraBold"; margin-bottom: 20px; font-size: 1.5em; line-height: 1; }
+footer[class ~= "food"] div.footer_wrap > h1 > a { color: #e5e1a2; }
+footer[class ~= "fash"] div.footer_wrap > h1 > a { color: #d4e4f3; }
+footer[class ~= "cosm"] div.footer_wrap > h1 > a { color: #e7d6c2; }
+
+footer div.footer_wrap > p { font-family: "Manrope-Regular"; font-size: 0.8125em; }
+
+/*#####################################################################
+#################### T #### section_footer#############################
+#################### T #### section_footer#############################
+#################### T #### section_footer#############################
+#####################################################################*/
+
+
+/*--------------------------------------------------------*/
+}
+/*##################### tablet_end #######################*/
+/*##########################################################
+############################################################
+###################               ##########################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+##########################  ################################
+############################################################
+##########################################################*/
+/*##########################################################
+############################################################
+#####################         ##############################
+#####################  #######  ############################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #########  ##########################
+#####################  #######  ############################
+#####################         ##############################
+############################################################
+##########################################################*/
+/*######################desktop_start#####################*/
+@media screen and (min-width: 1025px) {
+/*--------------------------------------------------------*/
+
+	section:not(.visual) { position: relative; margin-top: 100px; width: 100%; text-align: center; }
+
+	h2.title { font-size: 2.083vw; margin-top: 20px; }
+	h2.title::before { top: -20px; height: 4px}
+
+	p.title_desc { margin: 20px auto 50px auto; font-size: 0.9375em; }
+
+	.none { display: none; }
+
+/*#####################################################################
+##################### D ##### header ##################################
+##################### D ##### header ##################################
+##################### D ##### header ##################################
+######################################################################*/
+
+/*		********* header logo */
+
+	header { overflow: hidden; position: fixed; top: 0; z-index: 110; width: 100%; height: 100px; }
+	header > h1 { position: absolute; top: 50%; left: 20px; width: 154px; height: 60px; transform: translateY(-50%); }
+	header > h1 > a { display: block; width: 100%; height: 100%; }
+	header > h1[class ~= "food"] > a { background: url("../images/logo/img_logo_food_normal.png") no-repeat center center; background-size: cover; }
+	header > h1[class ~= "fash"] > a { background: url("../images/logo/img_logo_fashion_normal.png") no-repeat center center; background-size: cover; }
+	header > h1[class ~= "cosm"] > a { background: url("../images/logo/img_logo_cosmetic_normal.png") no-repeat center center; background-size: cover; }
+
+	header.on > h1 { z-index: 110; }
+	header.on > h1[class ~= "food"] > a { background: url("../images/logo/img_logo_food_menu_on.png") no-repeat center center; background-size: cover; }
+	header.on > h1[class ~= "fash"] > a { background: url("../images/logo/img_logo_fashion_menu_on.png") no-repeat center center; background-size: cover; }
+	header.on > h1[class ~= "cosm"] > a { background: url("../images/logo/img_logo_cosmetic_menu_on.png") no-repeat center center; background-size: cover; }
+
+	header.down { box-shadow: 0 0 5px rgba(0, 0, 0, 0.7); }
+
+/*		********* header menu_icon */
+
+	header > button { position: absolute; top: 50%; right: 20px; z-index: 110; display: block; width: 32px; height: 32px; transform: translateY(-50%); transition: transform 0.3s; }
+	header > button::before { position: absolute; display: inline-block; content: ""; left: 5%; top: 20%; width: 90%; height: 2px; transform-origin: center center; transform: rotateZ(0deg); transition: background 0.3s, transform 0.3s; }
+	header > button.food::before { background: #cdc74f; }
+	header > button.fash::before { background: #619cd4; }
+	header > button.cosm::before { background: #c18749; }
+
+	header > button::after { position: absolute; display: inline-block; content: ""; right: 5%; bottom: 20%; width: 90%; height: 2px; transform-origin: center center; transform: rotateZ(0deg); transition: background 0.3s, transform 0.3s; }
+	header > button.food::after { background: #cdc74f; }
+	header > button.fash::after { background: #619cd4; }
+	header > button.cosm::after { background: #c18749; }
+
+	header.on > button::before { left: 1%; top: 48%; width: 100%; transform: rotateZ(45deg); }
+	header.on > button.food::before { background: #242005; }
+	header.on > button.fash::before { background: #0e181e; }
+	header.on > button.cosm::before { background: #231806; }
+
+	header.on > button::after { right: -1%; bottom: 48%; width: 100%; transform: rotateZ(-45deg); }
+	header.on > button.food::after { background: #242005; }
+	header.on > button.fash::after { background: #0e181e; }
+	header.on > button.cosm::after { background: #231806; }
+
+	header > button:hover::before { left: 1%; top: 48%; width: 100%; transform: rotateZ(45deg); }
+	header > button:hover::after { right: -1%; bottom: 48%; width: 100%; transform: rotateZ(-45deg); }
+
+/*		********* header menu_icon */
+
+
+/*		******** header_wrap_bg */
+
+	header > div.header_wrap { overflow: hidden; position: fixed; top: 0; padding-top: 100px; z-index: 101; width: 100%; height: 60vh; transform: translateY(-100%); transition: transform 0.5s; }
+	header.on > div.header_wrap { transform: translateY(0%); }
+
+/*		******** header_info */
+
+/*		******** header_info */
+
+/***************************************************
+************** header 메뉴 열었을 때 ***************
+****************************************************/
+
+/*		============== header_form */
+
+	header > form { opacity: 0; position: absolute; top: 50%; right: 72px; z-index: 110; height: 32px; width: 200px; transform: translateY(-50%); vertical-align: middle; transition: opacity 0.4s; }
+	header > form > input#search { padding-top: 15px; }
+	header[class ~= "food"] > form > input#search { border-bottom: 1px solid #242005; }
+	header[class ~= "fash"] > form > input#search { border-bottom: 1px solid #0e181e; }
+	header[class ~= "cosm"] > form > input#search { border-bottom: 1px solid #231806; }
+
+	header > form > input#submit { position: absolute; right: 0; bottom: 0; display: inline-block; margin: 0 1px 1px 0; width: 28px; height: 28px; background: url("../images/icons/img_ico_serch.png")no-repeat center center; background-size: cover; }
+
+	header.on > form { opacity: 1; z-index: 110; }
+
+/*		******** header_inner */
+
+	header > div.header_wrap div.inner { position: relative; top: 40px; width: 1168px; height: calc(100% - 100px); margin: 0 auto; }
+	header > div.header_wrap div.inner > div.my_page { position: relative; width: calc(40% - 88px); height: 20%; }
+	header > div.header_wrap div.inner > div.my_page::after { content: ""; position: absolute; left: 0; bottom: -70%;  width: 100%; height: 1px; }
+	header[class ~= "food"] > div.header_wrap div.inner > div.my_page::after { background: rgba(36, 32, 5, 0.2); }
+	header[class ~= "fash"] > div.header_wrap div.inner > div.my_page::after { background: rgba(14, 24, 30, 0.2); }
+	header[class ~= "cosm"] > div.header_wrap div.inner > div.my_page::after { background: rgba(35, 24, 6, 0.2); }
+
+/*		============== header_info --my */
+
+
+	header > div.header_wrap div.inner div.my_page > a { float: left; display: block; margin-right: 93px; width: 24px; height: 24px; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(1) { background: url("../images/icons/img_ico_info_food_recent.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(2) { background: url("../images/icons/img_ico_info_food_heart.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(3) { background: url("../images/icons/img_ico_info_food_cart.png") no-repeat center center; background-size: contain; }
+	header > div.header_wrap div.inner div.my_page > a:nth-child(4) { background: url("../images/icons/img_ico_info_food_my.png") no-repeat center center; background-size: contain; margin-right: 0; }
+
+/*		============== info  */
+
+	header > div.header_wrap div.inner div.info { position: absolute; width: calc(40% - 88px); height: 40%; left: 0; bottom: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div { position: absolute; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(1) { left: 0; top: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(2) { right: 0; top: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(3) { left: 0; bottom: 0; }
+	header > div.header_wrap div.inner div.info > div.rel > div:nth-child(4) { right: 0; bottom: 0; }
+
+/*		============== info --num */
+
+	header > div.header_wrap div.inner div.num p.title { font-family: "NotoSansKR-Regular"; font-size: 0.75em; }
+	header > div.header_wrap div.inner div.num p.desc { font-family: "NotoSansKR-Bold"; font-size: 0.75em; }
+
+/*		============== info --time */
+
+	header > div.header_wrap div.inner div.time p.title { font-family: "NotoSansKR-Regular"; font-size: 0.75em; }
+	header > div.header_wrap div.inner div.time p.desc { font-family: "NotoSansKR-Bold"; font-size: 0.75em; }
+
+/*		============== info --qna */
+
+	header > div.header_wrap div.inner div.qna p { font-family: "NotoSansKR-Bold"; font-size: 0.75em; }
+
+/*		============== info --sns */
+
+	header > div.header_wrap div.inner div.sns > a { display: inline-block; margin-left: 10px; width: 30px; height: 30px; background: url("../images/icons/img_ico_sns_20.png") no-repeat; background-size: cover; font-size: 0; vertical-align: bottom; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(1) { background-position: 0 0; margin-left: 0; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(2) { background-position: -30px 0; }
+	header > div.header_wrap div.inner div.sns > a:nth-child(3) { background-position: -60px 0; }
+
+/*=================================
+=============== nav ===============
+=================================*/
+
+	header > div.header_wrap div.inner > nav { height: 100%; }
+
+	header > div.header_wrap div.inner > nav { position: relative; position: absolute; right: 0; top: 0; padding-left: 88px; width: 60%; }
+	header > div.header_wrap div.inner > nav::before { display: block; content: ""; position: absolute; left: 0%; top: 0; content: ""; width: 1px; height: 100%; background: rgba(36, 32, 5, 0.2); }
+
+	header > div.header_wrap div.inner > nav > ul.main { overflow: hidden; width: 100%; }
+
+	header > div.header_wrap div.inner > nav > ul.main > li { display: block; font-family: 'Manrope-ExtraBold'; position: relative; float: left; width: 50%; }
+	header[class ~= "food"] > div.header_wrap div.inner > nav > ul.main > li { height: 170px; }
+	header[class ~= "fash"] > div.header_wrap div.inner > nav > ul.main > li { height: 150px; }
+	header[class ~= "cosm"] > div.header_wrap div.inner > nav > ul.main > li { height: 160px; }
+
+	header > div.header_wrap div.inner > nav > ul.main > li > button { display: block; float: left; margin-bottom: 30px; width: 50%; font-family: "NotoSansKR-Bold", "Manrope-ExtraBold"; font-size: 1em; line-height: 1; color: inherit; }
+	header > div.header_wrap div.inner > nav > ul.main > li > a { font-family: "NotoSansKR-Bold", "Manrope-ExtraBold"; color: inherit; }
+	header > div.header_wrap div.inner > nav > ul.main > li:last-child { margin-bottom: 0; }
+
+	header > div.header_wrap div.inner > nav ul.sub { float: left; width: 50%; }
+	header > div.header_wrap div.inner > nav ul.sub > li { display: block; float: right; width: 100%; }
+	header > div.header_wrap div.inner > nav ul.sub > li > a { display: block; font-family: "Manrope-Regular", "NotoSansKR-Regular"; width: 100%; font-size: 0.875em; line-height: 1; padding-bottom: 1em; color: inherit; }
+
+	header > div.header_wrap div.inner > nav ul.main > li:hover > a { opacity: 0.4; }
+	header > div.header_wrap div.inner > nav ul.sub > li:hover > a { font-weight: bold; opacity: 0.4; }
+
+
+/*####################################################################
+##################### D ##### header #################################
+##################### D ##### header #################################
+##################### D ##### header #################################
+####################################################################*/
+
+/*#####################################################################
+##################### D ### section_visual ############################
+##################### D ### section_visual ############################
+##################### D ### section_visual ############################
+#####################################################################*/
+
+/* visual *********/
+
+	section.visual { overflow: hidden; position: relative; top: 0; left: 0; width: 100%; height: 100vh; }
+	section.visual > div.visual_img { position: absolute; width: 100%; height: 100%; }
+
+	section.visual > div[class ~= "bg_with"] { opacity: 1; background: url("../images/img_food_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_lead"] { opacity: 1; background: url("../images/img_fash_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_make"] { opacity: 1; background: url("../images/img_D_cos_main_visual_bg_01.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_ours"] { opacity: 0; background: url("../images/img_main_visual_bg_02.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_new"] { opacity: 0; background: url("../images/img_food_main_visual_bg_03.jpg") no-repeat; background-size: cover; background-position-y: bottom; }
+	section.visual > div[class ~= "bg_again"] { opacity: 0; background: url("../images/img_cos_main_visual_bg_03.jpg") no-repeat; background-size: cover; }
+	section.visual > div[class ~= "bg_zero"] { opacity: 0; background: url("../images/img_fash_main_visual_bg_03.jpg") no-repeat; background-size: cover; }
+
+	section.visual > div.visual_img img { position: absolute; object-fit: cover; }
+	section.visual > div.visual_img.bg_with img { left: 5%; bottom: 0; width: auto; height: 100%; }
+	section.visual > div.visual_img.bg_lead img { left: 0%; bottom: 0; width: 100%; height: 100%; }
+	section.visual > div.visual_img.bg_make img { left: 0%; bottom: 0; width: 100%; height: 100%; }
+	section.visual > div.visual_img.bg_ours img { left: 0%; top: 0; width: 100%; height: 100%; }
+	section.visual > div.visual_img.bg_new img { left: 5%; bottom: 5%; width: 50%; }
+	section.visual > div.visual_img.bg_again img { left: 5%; top: 0; width: auto; height: 100%; }
+	section.visual > div.visual_img.bg_zero img { left: 0%; top: 16%; width: auto; height: 80%; }
+
+/* section_inner_visual *********/
+
+	section.visual div.inner_visual { position: absolute; top: 50%; left: 55%; transform: translateY(-50%); text-align: left; }
+
+	section.visual div.inner_visual h2 { position: relative; font-family: 'NotoSansKR-Thin'; margin-bottom: 30px; font-size: 3.75em; color: #fff; line-height: 1.2em; }
+	section.visual div.inner_visual.make h2 { color: #e7d6c2; }
+	section.visual div.inner_visual.with h2 { color: #cdc74f; }
+	section.visual div.inner_visual.new h2 { color: #e96f94;}
+	section.visual div.inner_visual.lead h2 { color: #619cd4;}
+	section.visual div.inner_visual.zero h2 { color: #d4e4f3;}
+	section.visual div.inner_visual.again h2 { color: #c18749;}
+
+	section.visual div.inner_visual h2::before { position: absolute; left: 0; right: 0; bottom: -13%; display: block; content: ""; width: 90%; height: 1px; background: rgba(255, 255, 255, 1); }
+	section.visual div.inner_visual.make h2::before { background: rgba(231, 214, 194, 1); }
+	section.visual div.inner_visual.with h2::before { background: rgba(205, 199, 79, 1); }
+	section.visual div.inner_visual.new h2::before { background: rgba(233, 111, 148, 1); }
+	section.visual div.inner_visual.lead h2::before { background: rgba(97, 156, 212, 1); }
+	section.visual div.inner_visual.zero h2::before { background: rgba(212, 228, 243, 1); }
+	section.visual div.inner_visual.again h2::before { background: rgba(193, 135, 73, 1); }
+
+	section.visual div.inner_visual h2 > span { font-family: 'NotoSansKR-Bold'; }
+
+	section.visual div.inner_visual > p { font-family: 'Manrope-Regular', 'NotoSansKR-Light'; display: inline-block; font-size: 1.25em; color: #fff; line-height: 1.75; }
+
+	section.visual div.inner_visual.make > p { color: #e7d6c2; }
+	section.visual div.inner_visual.with > p { color: #cdc74f; }
+	section.visual div.inner_visual.new > p { color: #e96f94; }
+	section.visual div.inner_visual.lead > p { color: #619cd4; }
+	section.visual div.inner_visual.zero > p { color: #d4e4f3; }
+	section.visual div.inner_visual.again > p { color: #c18749; }
+
+/* section_visual_pagination_btn *********/
+
+	div.pagination { position: absolute; z-index: 20; left: 55%; bottom: 20px; text-align: center; }
+	div.pagination > button { position: relative; font-family: 'Manrope-ExtraBold'; display: inline-block; font-size: 2em; white-space: nowrap; }
+	div.pagination > button.pn_btn { width: 30%; padding-right: 50px; }
+	div.pagination > button.btn_pause { width: 10%; height: 100%; }
+
+/*#####################################################################
+#################### D #### section_visual ############################
+#################### D #### section_visual ############################
+#################### D #### section_visual ############################
+#####################################################################*/
+
+/*#####################################################################
+#################### D #### section_best ##############################
+#################### D #### section_best ##############################
+#################### D #### section_best ##############################
+#####################################################################*/
+
+	section.best div.wrap_100 { position: relative; width: 100%; }
+	section.best div.view_mask { overflow: hidden; position: relative; width: 100%; }
+
+	section.best ul { width: 150%; }
+	section.best ul > li { float: left; position: relative; width: 16.6666%; padding: 0 10px; }
+	section.best ul > li > a { display: block; width: 100%; }
+
+	section.best div.img_wrap { position: relative; margin: 0 auto; width: 100%; }
+	section.best div.img_wrap > img { display: block; width: 100%; }
+	section.best[class ~="food"] ul > li:hover div.img_wrap { border: 1px solid #8b8726; }
+	section.best[class ~="fash"] ul > li:hover div.img_wrap { border: 1px solid #2d6ba6; }
+	section.best[class ~="cosm"] ul > li:hover div.img_wrap { border: 1px solid #7e5d32; }
+
+
+/* section_best_pd_hover_area *********/
+
+	section.best ul > li > div.pd_hover { position: absolute; overflow: hidden; bottom: 100px; z-index: 3; margin: 0 auto; width: calc(100% - 20px); height: 0; background: rgba(0, 0, 0, 0.1); }
+	section.best ul > li > div.pd_hover > input.check { display: block; height: 24px; }
+	section.best ul > li > div.pd_hover > input.check_like { float: left; width: 26px; margin: 10px 0 10px 10px; background: url("../images/icons/img_ico_pd_heart.png") no-repeat center center; background-size: cover; }
+	section.best ul > li > div.pd_hover > input.check_cart { float: right; width: 24px; margin: 10px 10px 10px 0; background: url("../images/icons/img_ico_pd_cart.png") no-repeat center center; background-size: cover; }
+
+/* section_best_img:hover_pd_hover *********/
+
+	section.best ul > li:hover div.pd_hover { height: 44px; transition: height 0.2s; }
+
+/* section_best_title_area *********/
+
+	section.best ul > li > a > div.info_wrap { width: 100%; height: 100px; padding: 12px 10px; }
+	section.best ul > li > a > div.info_wrap > p.title { font-family: "Manrope-Bold", "NotoSansKR-Bold"; margin-bottom: 15px; font-size: 0.875em; line-height: 1.2; }
+	section.best ul > li > a > div.info_wrap > p.desc { font-family: "Manrope-Medium","NotoSansKR-Medium"; font-size: 0.875em; line-height: 1; }
+	section.best ul > li > a:hover > div.info_wrap > p.title { font-weight: bold; }
+	section.best ul > li > a:hover > div.info_wrap > p.desc { font-weight: bold; }
+
+/* section_best_button_area *********/
+
+	section.best div.wrap_100 > button.btn { position: absolute; top: 0; width: calc((100% - 90vw) / 2); height: 100%; }
+	section.best div.wrap_100 > button[class ~= "prev"] { left: 0; }
+	section.best div.wrap_100 > button[class ~= "next"] { right: 0; }
+
+	section.best div.wrap_100 > button.btn > span { display: block; position: absolute; top: -15%; bottom: 0; margin: auto; width: 21px; height: 42px; }
+	section.best div.wrap_100 > button[class ~= "prev"] > span { right: 0; clip-path: polygon(100% 0, 100% 100%, 0 50%); }
+	section.best div.wrap_100 > button[class ~= "next"] > span { left: 0; clip-path: polygon(0 0, 0 100%, 100% 50%); }
+
+/*#####################################################################
+#################### D #### section_best ##############################
+#################### D #### section_best ##############################
+#################### D #### section_best ##############################
+#####################################################################*/
+
+/*#####################################################################
+#################### D ### section_campain ############################
+#################### D ### section_campain ############################
+#################### D ### section_campain ############################
+#####################################################################*/
+
+	section.campain div.inner { height: 82.8125vh; }
+	section.campain div.inner ul {
+		width: 100%; height: 100%;
+		display: grid;
+		grid-template-columns: 28.767% 42.466% 28.767%;
+		grid-template-rows: 50% 50%;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+		grid-template-areas: "sns_01 brand glo_01" "sns_02 brand glo_02";
+
+		}
+
+	section.campain ul > li.grid_area_01 { grid-area: sns_01; }
+	section.campain ul > li.grid_area_02 { grid-area: sns_02; }
+	section.campain ul > li.grid_area_03 { grid-area: brand; }
+	section.campain ul > li.grid_area_04 { grid-area: glo_01; }
+	section.campain ul > li.grid_area_05 { grid-area: glo_02; }
+
+	section.campain ul a { display: block; position: relative; width: 100%; }
+	section.campain ul a::before { position: absolute; display: block; content: ""; left: 0; bottom: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); transition: transform 0.3s; transform: translateY(200%);}
+
+	section.campain ul a > img { width: 100%; height: 100%; object-fit: cover; }
+	section.campain ul a > div.info_side { position: absolute; right: 20px; bottom: 20px; z-index: 1; text-align: right; }
+
+	section.campain ul a > div.info_side > p.desc { position: relative; font-family: "NotoSansKR-Regular"; font-size: 0.875em; line-height: 1; opacity: 0.5; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); }
+	section.campain ul a > div.info_side > p.food { color: #e5e1a2; }
+	section.campain ul a > div.info_side > p.fash { color: #d4e4f3; }
+	section.campain ul a > div.info_side > p.cosm { color: #e7d6c2; }
+
+	section.campain ul a > div.info_side > h3 { font-family: "Manrope-Bold", "NotoSansKR-Bold"; padding-top: 10px; font-size: 1.875em; font-weight: normal; color: #fff; line-height: 1; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+	section.campain ul a > div.info_side > h3::before { position: absolute; right: 0; top: 15px; content: ""; width: 0%; height: 1px; transition: width 0.5s; }
+	section.campain ul a > div.info_side > h3.food::before { background: #e5e1a2; }
+	section.campain ul a > div.info_side > h3.fash::before { background: #d4e4f3; }
+	section.campain ul a > div.info_side > h3.cosm::before { background: #e7d6c2; }
+
+	section.campain ul a > div.info_center { position: absolute; right: 20px; bottom: 20px; z-index: 1; text-align: right; }
+	section.campain ul a > div.info_center > h3 { position: relative; font-family: "NotoSansKR-Bold"; padding-bottom: 20px; font-size: 3.75em; color: #fff; line-height: 1.2; transition: width 0.5s; text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5); }
+	section.campain ul a > div.info_center > h3::before { position: absolute; right: 0; bottom: 0; content: ""; width: 0%; height: 1px; transition: width 0.5s; }
+	section.campain ul a > div.info_center > h3.food::before { background: #e5e1a2; }
+	section.campain ul a > div.info_center > h3.fash::before { background: #d4e4f3; }
+	section.campain ul a > div.info_center > h3.cosm::before { background: #e7d6c2; }
+
+	section.campain ul a > div.info_center > p { font-family: "NotoSansKR-Thin"; font-size: 1.125em; line-height: 1.5; margin-top: 20px; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+	section.campain ul a > div.info_center > p.food { color: #e5e1a2; }
+	section.campain ul a > div.info_center > p.fash { color: #d4e4f3; }
+	section.campain ul a > div.info_center > p.cosm { color: #e7d6c2; }
+
+	section.campain ul a:hover::before { transform: translateY(0%); }
+	section.campain ul a:hover > div.info_side > p.desc { opacity: 1; }
+	section.campain ul a:hover > div.info_side > h3 { font-weight: bold; }
+	section.campain ul a:hover > div.info_side > h3::before { width: 100%; }
+	section.campain ul a:hover > div.info_center > h3::before { width: 100%; }
+
+	section.campain button.c_btn { display: none; }
+
+
+/*#####################################################################
+#################### D ### section_campain ############################
+#################### D ### section_campain ############################
+#################### D ### section_campain ############################
+#####################################################################*/
+
+/*#####################################################################
+##################### D ### section_slogan ############################
+##################### D ### section_slogan ############################
+##################### D ### section_slogan ############################
+#####################################################################*/
+
+	section.slogan { background: url("../images/img_D_main_slogan.jpg") no-repeat center center; background-size: cover; }
+	section.slogan::before { content: ""; display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+	section.slogan > h2 { font-family: "NotoSansKR-Medium"; position: relative; padding: 1em 0; font-size: 2.5em; color: #fff; line-height: 1.2; }
+
+/*#####################################################################
+##################### D ### section_slogan ############################
+##################### D ### section_slogan ############################
+##################### D ### section_slogan ############################
+#####################################################################*/
+
+/*#####################################################################
+##################### D ### section_location ##########################
+##################### D ### section_location ##########################
+##################### D ### section_location ##########################
+#####################################################################*/
+
+	section.location div.inner > div.inner_wrap { margin: 0 auto; width: 1038px; height: 514px; }
+	section.location div.select_location { display: none; }
+
+		/*---------------------- left ----------------------*/
+
+	section.location div.select_wrap { position: relative; float: left; width: calc(50% - 5px); height: 100%; }
+
+	section.location div.inner ul { float: left; width: 100%; height: calc(100% - 1px); }
+	section.location div.inner ul > li { float: left; margin: 0 -1px -1px 0; width: calc(25% + 1px); height: calc(25% + 1px); }
+	section.location div.inner.food ul > li { border: 1px solid #8b8726; }
+	section.location div.inner.fash ul > li { border: 1px solid #2d6ba6; }
+	section.location div.inner.cosm ul > li { border: 1px solid #7e5d32; }
+
+	section.location div.inner ul > li > button { width: 100%; height: 100%; font-family: "NotoSansKR-Light"; font-size: 1.875em; white-space: nowrap; line-height: 1; text-align: center; transition: all 0.3s ease; }
+	section.location div.inner.food ul > li > button { color: #8b8726; }
+	section.location div.inner.fash ul > li > button { color: #2d6ba6; }
+	section.location div.inner.cosm ul > li > button { color: #7e5d32; }
+
+	section.location div.inner ul > li.active > button { font-family: "NotoSansKR-Bold"; color: #fff; }
+	section.location div.inner.food ul > li.active > button { background: #8b8726; }
+	section.location div.inner.fash ul > li.active > button { background: #2d6ba6; }
+	section.location div.inner.cosm ul > li.active > button { background: #7e5d32; }
+
+	section.location div.inner ul > li:hover > button { font-family: "NotoSansKR-Bold"; transition: all 1s ease; }
+	section.location div.inner.food ul > li:hover > button { color: #242005; }
+	section.location div.inner.fash ul > li:hover > button { color: #0e181e; }
+	section.location div.inner.cosm ul > li:hover > button { color: #230806; }
+
+		/*---------------------- right ----------------------*/
+
+	section.location div.inner div.info { float: right; position: relative; width: calc(50% - 5px); height: 100%; }
+	section.location div.inner.food div.info { border: 1px solid #8b8726; }
+	section.location div.inner.fash div.info { border: 1px solid #2d6ba6; }
+	section.location div.inner.cosm div.info { border: 1px solid #7e5d32; }
+
+		/*====================== on info ======================*/
+
+	section.location div.inner div.info div.on_info { position: absolute; left: 0; top: 0; z-index: 3; width: 100%; height: 100%; }
+	section.location div.inner.food div.info div.on_info { background: #e5e1a2; }
+	section.location div.inner.fash div.info div.on_info { background: #d4e4f3; }
+	section.location div.inner.cosm div.info div.on_info { background: #e7d6c2; }
+
+	section.location div.inner div.info div.on_info > div.info_wrap { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+	section.location div.inner div.info div.on_info h3 { margin-bottom: 1.667em; font-family: "Manrope-Regular", "NotoSansKR-Light"; font-size: 1.875em; line-height: 1; }
+	section.location div.inner div.info div.on_info p { line-height: 1; }
+	section.location div.inner div.info div.on_info p.title { margin-bottom: 0.625em; font-family: "NotoSansKR-Medium"; font-size: 1.125em;}
+	section.location div.inner div.info div.on_info p.desc { margin-bottom: 3.125em; font-family: "NotoSansKR-Regular"; font-size: 1em; }
+	section.location div.inner div.info div.on_info p:last-child { margin-bottom: 0; }
+
+		/*====================== on map ======================*/
+
+	section.location div.inner div.on_map { position: absolute; left: 0; top: 0; z-index: 0; width: 100%; height: 100%; }
+	section.location div.inner div.on_map > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	section.location div.inner div.on_map > svg { position: absolute; top: 29.2%; right: 16%; width: 13.8%; }
+
+	section.location div.inner div.on_map > h3 { position: absolute; left: 10px; top: 10px; padding: 0 0.25em 0.1em; font-family: "Manrope-Regular", "NotoSansKR-Light"; font-size: 1.875em; font-weight: normal; line-height: 1; }
+	section.location div.inner.food div.on_map > h3 { border: 1px solid #242005; background: #e5e1a2; }
+	section.location div.inner.fash div.on_map > h3 { border: 1px solid #0e181e; background: #d4e4f3; }
+	section.location div.inner.cosm div.on_map > h3 { border: 1px solid #231806; background: #e7d6c2; }
+
+	section.location div.inner div.on_map > div.map_bbl { position: absolute; right: 28%; bottom: 44%; width: 30%; height: 16%; border-radius: 10px 0 10px 10px; }
+	section.location div.inner.food div.on_map > div.map_bbl { background: url("../images/logo/img_logo_food_menu_on.png")no-repeat center center; background-color: #fff; background-size: 90%; border: 1px solid #242005; }
+	section.location div.inner.fash div.on_map > div.map_bbl { background: url("../images/logo/img_logo_fashion_menu_on.png")no-repeat center center; background-color: #fff; background-size: 90%; border: 1px solid #0e181e; }
+	section.location div.inner.cosm div.on_map > div.map_bbl { background: url("../images/logo/img_logo_cosmetic_menu_on.png")no-repeat center center; background-color: #fff; background-size: 90%; border: 1px solid #231806; }
+
+	/*====================== map on button ======================*/
+
+		section.location div.inner button.btn_ofl_switch { position: absolute; right: 20px; bottom: 20px; z-index: 10; width: 42px; height: 22px; border-radius: 2431432143px; transition: transform 0.2s; }
+		section.location div.inner.food button.btn_ofl_switch { border: 1px solid #242005; }
+		section.location div.inner.fash button.btn_ofl_switch { border: 1px solid #0e181e; }
+		section.location div.inner.cosm button.btn_ofl_switch { border: 1px solid #231806; }
+
+		section.location div.inner button.btn_ofl_switch > span.circle { display: inline-block; width: 18px; height: 18px; border-radius: 3243241134%; transform: translate(6%, 2%); transition: transform 0.2s; }
+
+		section.location div.inner button.btn_ofl_switch[class ~= "active"] > span.circle { transform: translate(116%, 2%); }
+
+		section.location div.inner.food button.btn_ofl_switch > span.circle { background: #242005; }
+		section.location div.inner.fash button.btn_ofl_switch > span.circle { background: #0e181e; }
+		section.location div.inner.cosm button.btn_ofl_switch > span.circle { background: #231806; }
+
+/*#####################################################################
+#################### D #### section_location ##########################
+#################### D #### section_location ##########################
+#################### D #### section_location ##########################
+#####################################################################*/
+
+/*#####################################################################
+#################### D #### section_footer#############################
+#################### D #### section_footer#############################
+#################### D #### section_footer#############################
+#####################################################################*/
+
+footer { clear: both; overflow: hidden; margin-top: 100px; width: 100%; height: 75.26vh; }
+footer[class ~= "food"] { background: #242005; }
+footer[class ~= "fash"] { background: #0e181e; }
+footer[class ~= "cosm"] { background: #231806; }
+
+footer div.inner { padding: 80px 0; height: 100%; }
+
+footer div.img { position: relative; height: 50%; margin-bottom: 80px;}
+
+footer div.img::after { position: absolute; left: 0; bottom: -40px; content: ""; width: 100%; height: 1px; }
+footer[class ~= "food"] div.img::after { background: rgba(205, 199, 79, 0.1); }
+footer[class ~= "fash"] div.img::after { background: #619cd4; }
+footer[class ~= "cosm"] div.img::after { background: rgba(231, 214, 194, 0.1); }
+
+footer div.img > img { display: block; width: 20%; }
+footer div.img > img:first-child { float: left; }
+footer div.img > img:nth-child(2) { position: absolute; left: 50%; transform: translateX(-50%); }
+footer div.img > img:last-child { float: right; }
+
+footer div.footer_wrap { clear: both; text-align: center; height: 50%; }
+
+footer div.footer_wrap > h1 > a { font-family: "Manrope-ExtraBold"; font-size: 4.625em; line-height: 2; }
+footer[class ~= "food"] div.footer_wrap > h1 > a { color: #e5e1a2; }
+footer[class ~= "fash"] div.footer_wrap > h1 > a { color: #d4e4f3; }
+footer[class ~= "cosm"] div.footer_wrap > h1 > a { color: #e7d6c2; }
+
+footer div.footer_wrap > p { font-family: "Manrope-Regular"; font-size: 0.875em; }
+
+/*#####################################################################
+#################### D #### section_footer#############################
+#################### D #### section_footer#############################
+#################### D #### section_footer#############################
+#####################################################################*/
+
+
+/*--------------------------------------------------------*/
+}
+
+button { color: inherit; }
