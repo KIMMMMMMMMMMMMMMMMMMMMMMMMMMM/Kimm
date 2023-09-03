@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>We' v - food</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="shortcut icon" href="images/logo/favicon (food).ico">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="css/main_01.css" type="text/css">
+	<link rel="stylesheet" href="css/common.css" type="text/css">
+	<link rel="stylesheet" href="css/font.css" type="text/css">
+	<!-- [if lt IE 9]
+		<script src="js/html5shiv.js"></script>
+	<![endif] -->
+	<script src="js/common.js"></script>
+	<script src="js/main_01.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script>
+$(window).ready(function(){
+
+});
+	</script>
+</head>
+
+<body>
+	<header class="clearfix food">
+		<h1 class="logo food"><a href="#" title="we'v logo"><span class="blind">We'v</span></a></h1>
+		<form action="search.jsp" method="post">
+				<input type="search" id="search" placeholder="SEARCH"/>
+				<input type="image" src="images/icons/img_ico_serch.png" id="submit" alt="검색 버튼">
+				<label for="search"><span class="blind">search</span></label>
+				<label for="submit"><span class="blind">submit</span></label>
+		</form>
+		<button id="btn_menu" class="food"><div class="rel"><span class="blind">menu</span></div></button>
+
+		<div class="header_wrap bgColor_01">
+			<div class="inner">
+				<div class="my_page">
+					<a class="my_icon" href="#"><span class="blind">최근 본 상품</span></a><!--
+				 --><a class="my_icon" href="#"><span class="blind">찜한 상품</span></a><!--
+				 --><a class="my_icon" href="#"><span class="blind">장바구니</span></a><!--
+				 --><a class="my_icon" href="#"><span class="blind">내 정보</span></a>
+				</div> <!-- my_page end -->
+
+				<nav class="clearfix"> <!-- 헤더 우측 -->
+					<ul class="main txtColor_01 clearfix">
+						<li><button>ABOUT</button>
+							<ul class="sub">
+								<li><a href="#" class="menu_sub">NO MEAT</a></li>
+								<li><a href="#" class="menu_sub">BRAND</a></li>
+								<li><a href="#" class="menu_sub">CAMPAIN</a></li>
+								<li><a href="#" class="menu_sub">NOTICE</a></li>
+							</ul>
+						</li>
+						<li class=""><button>"V"URGER</button>
+							<ul class="sub">
+								<li class=""><a href="#" class="menu_sub">패티 / 스테이크</a></li>
+								<li><a href="#" class="menu_sub">베지 너겟 / 돈가스</a></li>
+								<li><a href="#" class="menu_sub">떡갈비</a></li>
+								<li><a href="#" class="menu_sub">번</a></li>
+							</ul>
+						</li>
+						<li><button>베지 간편식</button>
+							<ul class="sub">
+								<li><a href="#" class="menu_sub">스프</a></li>
+								<li><a href="#" class="menu_sub">샐러드</a></li>
+							</ul>
+						</li>
+						<li><button>디톡스 주스</button>
+							<ul class="sub">
+								<li><a href="#" class="menu_sub">퓨어</a></li>
+								<li><a href="#" class="menu_sub">스무디</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#" class="sub">정기배송</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="info clearfix">
+					<div class="rel">
+						<div class="num">
+							<p class="title pointColor_01">CS CENTER 본점</p>
+							<p class="desc txtColor_01">1234 - 5678</p>
+						</div>
+
+						<div class="qna">
+							<a href="#" title="1:1 문의"><p class="title txtColor_01">1:1 문의</p></a>
+						</div>
+
+						<div class="time">
+							<p class="title pointColor_01">운영시간</p>
+							<p class="desc txtColor_01">10:00 - 17:30</p>
+						</div>
+
+						<div class="sns">
+							<a href="#" title="facebook"><span class="blind">facebook</span></a>
+							<a href="#" title="instagram"><span class="blind">instagram</span></a>
+							<a href="#" title="mail"><span class="blind">mail</span></a>
+						</div>
+					</div> <!-- rel end -->
+				</div> <!-- info end -->
+			</div> <!-- inner end -->
+		</div> <!-- header_wrap end -->
+	</header>
+
+	<section class="visual top_visual cur">
+		<div class="visual_img bg_with">
+			<picture>
+				<source srcset="images/img_M_food_main_visual_01.jpg" media="(max-width: 767px)">
+				<source srcset="images/img_T_food_main_visual_01.jpg" media="(min-width: 768px) and (max-width: 1024px)">
+				<source srcset="images/img_D_food_main_visual_01.jpg" media="(min-width: 1025px)" />
+				<img src="images/img_D_food_main_visual_01.jpg" alt="햄버거를 들고 있는 남자 사진">
+			</picture>
+
+			<div class="inner_visual with">
+				<h2><span>위브이</span>가<br><span>함께</span>할게요</h2>
+				<p>건강한 한 끼로 시작하는<br>하루, 일주일, 한 달&hellip;<br>그렇게 당신의 모든 순간과.</p>
+			</div>
+		</div>
+
+		<div class="visual_img bg_ours prev">
+			<picture>
+				<source srcset="images/img_main_visual_02.png" media="(max-width: 767px)">
+				<source srcset="images/img_main_visual_02.png" media="(min-width: 768px) and (max-width: 1024px)">
+				<source srcset="images/img_main_visual_02.png" media="(min-width: 1025px)">
+				<img src="images/img_index_main_02.png" alt="산맥이 늘어져있는 풍경 사진">
+			</picture>
+			<div class="inner_visual ours">
+				<h2><span>위브이</span>와<br><span>노력</span>해봐요</h2>
+				<p>우리가 후손으로부터 빌려온<br>사람도, 자연도, <br>고스란히 돌려줄 수 있도록.</p>
+			</div>
+		</div>
+
+		<div class="visual_img bg_new next">
+			<picture>
+				<source srcset="images/img_food_main_visual_03.png" media="(max-width: 767px)">
+				<source srcset="images/img_food_main_visual_03.png" media="(min-width: 768px) and (max-width: 1024px)">
+				<source srcset="images/img_food_main_visual_03.png" media="(min-width: 1025px)">
+				<img src="images/img_food_main_visual_03.png" alt="3가지 맛의 스무디가 나란히 서있는 사진">
+			</picture>
+			<div class="inner_visual new">
+				<h2><span>비트 맛</span><br><span>신메뉴</span>출시</h2>
+				<p><span>비트맛 출시 기념,</span><br><span>스무디 전 메뉴를</span><br><span>5% 세일해요! (기간 한정)</span></p>
+			</div>
+		</div>
+
+		<div id="visual_btn" class="pagination txt_color_0">
+			<button class="pn_btn active">WITH</button><!--
+		 --><button class="pn_btn">OURS</button><!--
+		 --><button class="pn_btn ">NEW</button><!--
+		 --><button id="btn_pause" class="btn_pause"><span class="blind">pause</span>■</button>
+		</div>
+	</section>
+
+	<section class="content best food">
+		<div class="inner">
+			<h2 class="title food">BEST</h2>
+			<p class="title_desc">최근 한 달 동안의 인기상품이에요.</p>
+		</div>
+		<div class="wrap_100">
+			<div class="inner">
+				<div class="view_mask">
+					<ul id="slide_ul"class="clearfix">
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="images/img_food_main_best_01.jpg" alt="배지 스테이크 1개 사진">
+								</div>
+								<div class="info_wrap">
+									<p class="title txtColor_01">베지 스테이크<br>150g</p>
+									<p class="desc">고기보다 맛있는 콩 100%</p>
+								</div>
+							</a>
+							<div class="pd_hover clearfix">
+								<input type="checkbox" class="check check_like" id="like_01">
+								<label for="like_01"><span class="blind">관심상품</span></label>
+								<input type="checkbox" class="check check_cart" id="cart_01">
+								<label for="cart_01"><span class="blind">장바구니</span></label>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="images/img_food_main_best_02.jpg" alt="당근즙 사진">
+								</div>
+								<div class="info_wrap">
+									<p class="title txtColor_01">디톡스 주스 - 퓨어 당근<br>(250ml x 4EA)</p>
+									<p class="desc">당근 98%, 레몬즙 2%</p>
+								</div>
+							</a>
+							<div class="pd_hover clearfix">
+								<input type="checkbox" class="check check_like" id="like_02">
+								<label for="like_02"><span class="blind">관심상품</span></label>
+								<input type="checkbox" class="check check_cart" id="cart_02">
+								<label for="cart_02"><span class="blind">장바구니</span></label>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="images/img_food_main_best_03.jpg" alt="베지 스테이크 7개 사진"/>
+								</div>
+								<div class="info_wrap">
+									<p class="title txtColor_01">베지 스테이크 WEEK SET<br>(150g x 7EA)</p>
+									<p class="desc">베지 스테이크, 7회 분</p>
+								</div>
+							</a>
+							<div class="pd_hover clearfix">
+								<input type="checkbox" class="check check_like" id="like_03">
+								<label for="like_03"><span class="blind">관심상품</span></label>
+								<input type="checkbox" class="check check_cart" id="cart_03">
+								<label for="cart_03"><span class="blind">장바구니</span></label>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="images/img_food_main_best_04.jpg" alt="오렌지 스무디 사진"/>
+								</div>
+								<div class="info_wrap">
+									<p class="title txtColor_01">디톡스 주스 - 스무디 오렌지<br>(300ml x 4EA)</p>
+									<p class="desc">오렌지 100%</p>
+								</div>
+							</a>
+							<div class="pd_hover clearfix">
+								<input type="checkbox" class="check check_like" id="like_04">
+								<label for="like_04"><span class="blind">관심상품</span></label>
+								<input type="checkbox" class="check check_cart" id="cart_04">
+								<label for="cart_04"><span class="blind">장바구니</span></label>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="images/img_food_main_best_03.jpg" alt="오렌지 스무디 사진"/>
+								</div>
+								<div class="info_wrap">
+									<p class="title txtColor_01">디톡스 주스 - 스무디 오렌지<br>(300ml x 4EA)</p>
+									<p class="desc">오렌지 100%</p>
+								</div>
+							</a>
+							<div class="pd_hover clearfix">
+								<input type="checkbox" class="check check_like" id="like_05">
+								<label for="like_05"><span class="blind">관심상품</span></label>
+								<input type="checkbox" class="check check_cart" id="cart_05">
+								<label for="cart_05"><span class="blind">장바구니</span></label>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="images/img_food_main_best_02.jpg" alt="오렌지 스무디 사진"/>
+								</div>
+								<div class="info_wrap">
+									<p class="title txtColor_01">디톡스 주스 - 스무디 오렌지<br>(300ml x 4EA)</p>
+									<p class="desc">오렌지 100%</p>
+								</div>
+							</a>
+							<div class="pd_hover clearfix">
+								<input type="checkbox" class="check check_like" id="like_06">
+								<label for="like_06"><span class="blind">관심상품</span></label>
+								<input type="checkbox" class="check check_cart" id="cart_06">
+								<label for="cart_06"><span class="blind">장바구니</span></label>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div> <!-- inner end -->
+
+			<button id="btn_prev" class="btn prev"><span class="btnColor_01"><span class="blind">이전</span></span></button>
+			<button id="btn_next" class="btn next"><span class="btnColor_01"><span class="blind">다음</span></span></button>
+		</div> <!-- wrap_100 end -->
+	</section> <!-- best end -->
+
+	<section class="content allergy banner w_100">
+		<picture>
+			<source srcset="images/img_M_food_main_allergy.jpg" media="(max-width: 767px)">
+			<source srcset="images/img_T_food_main_allergy.jpg" media="(min-width: 768px) and (max-width: 1024px)">
+			<source srcset="images/img_D_food_main_allergy.jpg" media="(min-width: 1025px)">
+			<img src="images/img_D_food_main_allergy.jpg" alt="알레르기 유발 식품 중 견과류 예시 사진">
+		</picture>
+		<h2><span>알레르기 주의 성분</span>이<br>궁금하다면?</h2>
+	</section>
+
+	<section class="content weekplan">
+		<div class="inner">
+			<h2 class="title food">WEEK PLAN</h2>
+			<p class="title_desc" title="주 단위의 간단하고 포만감있는 세트 구성으로 점심 고민 끝!">주 단위의 간단하고 포만감있는 세트 구성으로<br class="none"> 일주일 점심 고민 끝!</p>
+		</div>
+
+		<div class="content_wrap">
+
+			<!-- 점심 플랜 -->
+
+			<div class="slides prev">
+				<div class="rel">
+					<div class="img_wrap">
+						<img src="images/img_food_main_week_01.jpg" alt="점심 세트 구성 사진">
+					</div>
+
+					<div class="info_wrap clearfix">
+						<div class="rel">
+							<p class="title"><span class="txt_point">일주일 단위</span>로 구성된<br>위브이만의<br>특별한 <span class="txt_point">점심 플랜</span></p>
+							<p class="desc">스프 애피타이저부터 <br>메인의 단백질 콩고기 버거까지<br>든든하게 준비된 완벽 조합</p>
+							<a class="more" href="#" title="more">
+								<div><span>MORE</span></div>
+							</a>
+							<div class="caution" title="caution">
+								<span class="blind">caution</span>
+								<p>※ 버거 완제품은 <br class="none">점심 플랜 상품에서만 제공되며,<br>이외 번 상품으로 <br class="none">개별 구매 가능합니다.</p>
+							</div>
+						</div> <!-- rel end -->
+					</div> <!-- info_wrap end-->
+				</div ><!-- rel end -->
+			</div> <!-- slides end -->
+
+				<!-- 디저트 플랜 -->
+
+			<div class="slides next">
+				<div class="rel">
+					<div class="img_wrap">
+						<img src="images/img_food_main_week_02.jpg" alt="다양한 종류의 과일 주스 사진">
+					</div>
+
+					<div class="info_wrap clearfix">
+						<div class="rel">
+							<p class="title"><span class="txt_point">일주일 단위</span>로 구성된<br>위브이만의<br>특별한 <span class="txt_point">디저트 플랜</span></p>
+							<p class="desc">산뜻한 퓨어 타입부터 가벼운 점심 대용의 스무디 타입, <br>혹시 모를 허전함을 달래 줄 글루텐 프리 쿠키까지 있어요.</p>
+							<a class="more" href="#" title="more">
+								<div><span>MORE</span></div>
+							</a>
+							<div class="caution" title="caution">
+								<span class="blind">caution</span>
+								<p>※ 글루텐 프리 쿠키는<br class="none"> 디저트 플랜에서만 포함된 상품으로,<br>개별판매는 진행하고 있지 않습니다.</p>
+							</div>
+						</div> <!-- rel -->
+					</div> <!-- info_wrap -->
+				</div> <!-- rel end -->
+			</div> <!-- slides end -->
+
+			<button id="btn_prev" class="btn prev"><span><span class="blind">이전</span></span></button><!--
+		 --><button id="btn_next" class="btn next"><span><span class="blind">다음</span></span></button>
+		</div> <!-- content_wrap end-->
+	</section>
+
+	<section class="content sale" title="today_price">
+		<picture>
+			<source srcset="images/img_food_main_sale_M.jpg" media="(max-width: 767px)">
+			<source srcset="images/img_food_main_sale.jpg" media="(min-width: 768px) and (max-width: 1024px)">
+			<source srcset="images/img_food_main_sale.jpg" media="(min-width: 1025px)">
+			<img src="images/img_food_main_sale.jpg">
+		</picture>
+		<div class="inner">
+			<div class="rel">
+				<h2>오늘의<br>가격</h2>
+				<p class="desc">매일 달라지는 할인!<br>무작위 상품을<br class="none"> 최대 30%까지 할인합니다.<br>오늘의 가격에서 만나보세요!</p>
+			</div> <!-- rel end -->
+			<p class="caution">※ 플랜 상품 제외</p>
+		</div> <!-- inner end -->
+	</section>
+
+	<section class="content campain">
+		<h2 class="title food">CAMPAIN</h2>
+		<p class="title_desc">우리의 활동을 비롯하여<br class="none"> 세계적으로 다양한 캠페인까지 둘러보세요.</p>
+
+		<div class="inner">
+			<div class="view_mask">
+				<ul class="grid clearfix">
+					<li class="grid_area_01">
+						<a class="cam" href="#">
+							<img src="images/img_main_campain_sns_01.jpg" alt="임수정">
+
+							<div class="info_side">
+								<p class="desc food">함께해요, 렛츠 제로!</p>
+								<h3 class="food">&num;수정's pick</h3>
+							</div>
+						</a>
+					</li>
+					<li class="grid_area_02">
+						<a class="cam" href="#">
+							<img src="images/img_main_campain_sns_02.jpg" alt="초식마녀">
+
+							<div class="info_side">
+								<p class="desc food">추천해요, 편안한 포만감</p>
+								<h3 class="food">&num;초식마녀's pick</h3>
+							</div>
+						</a>
+					</li>
+					<li class="grid_area_03">
+						<a href="#">
+							<img src="images/img_food_main_campain_brand.jpg" alt="현관 앞에 놓인 배송팩 수거 사진">
+
+							<div class="info_center">
+								<h3 class="food">배송팩<br>수거 서비스</h3>
+								<p class="food">번거롭기만 한 포장지 처리는 이제 끝,<br>배송팩 수거 서비스로<br>제로 웨이스트에 동참하세요.</p>
+							</div>
+						</a>
+					</li>
+					<li class="grid_area_04">
+						<a class="cam" href="#">
+							<img src="images/img_main_campain_global_01.jpg" alt="꽃밭 속에 이 적힌 보드가 있는 사진">
+
+							<div class="info_side">
+								<p class="desc food">매년 4월 22일은</p>
+								<h3 class="food">지구의 날</h3>
+							</div>
+						</a>
+					</li>
+					<li class="grid_area_05">
+						<a class="cam" href="#">
+							<img src="images/img_main_campain_global_02.jpg" alt="빛이 비치는 푸른 바닷속">
+
+							<div class="info_side">
+								<p class="desc food">들어 보셨나요?</p>
+								<h3 class="food">바다 식목일</h3>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div><!-- view_mask end -->
+
+			<button class="btn prev"><span class="btnColor_01"><span class="blind">prev</span></span></button><!--
+		 --><button class="btn next"><span class="btnColor_01"><span class="blind">next</span></span></button>
+		</div>
+	</section>
+
+	<section class="slogan content">
+		<h2>가치를 소비하는 당신을<br>응원합니다.</h2>
+	</section>
+
+	<section class="location content">
+		<h2 class="title food">OFFLINE</h2>
+		<p class="title_desc">각 지역의 매장을 확인하세요.</p>
+
+		<div class="inner food clearfix">
+			<div class="inner_wrap">
+				<div id="selectWrap" class="select_wrap">
+					<div id="location_btnWrap" class="select_location bgColor_01"><button id="location_btn">지역을 선택하세요.</button></div>
+					<ul id="location_ul"class="clearfix active">
+						<li><button>서울</button></li>
+						<li class="active"><button>인천</button></li>
+						<li><button>대전</button></li>
+						<li><button>대구</button></li>
+						<li><button>광주</button></li>
+						<li><button>부산</button></li>
+						<li><button>울산</button></li>
+						<li><button>경기</button></li>
+						<li><button>강원</button></li>
+						<li><button>충남</button></li>
+						<li><button>충북</button></li>
+						<li><button>전남</button></li>
+						<li><button>전북</button></li>
+						<li><button>경남</button></li>
+						<li><button>경북</button></li>
+						<li><button>제주</button></li>
+					</ul>
+				</div> <!-- select_wrap end-->
+
+				<div class="info">
+					<div class="on_info bgColor_01">
+						<div class="info_wrap"> <!-- txt inner -->
+							<h3 class="txtColor_01">We'v <br class="none">인천점</h3>
+							<p class="title pointColor_01">주소</p>
+							<p class="desc txtColor_01">인천광역시 서구 서곶로 <br class="none">1층</p>
+							<p class="title pointColor_01">전화번호</p>
+							<p class="desc txtColor_01">000) 000-0000</p>
+							<p class="title pointColor_01">운영시간</p>
+							<p class="desc txtColor_01">A.M. 10:20 - P.M. 8:00</p>
+						</div>
+					</div> <!-- info 종료 -->
+
+					<div class="on_map">
+						<img src="images/img_main_local_map.jpg" alt="인천점 위치를 강조한 지도 사진"/>
+						<svg xmlns="http://www.w3.org/2000/svg" id="Layer_5" data-name="Layer 5" viewBox="0 0 140.68 168.55">
+							<title class="blind">img_local_map</title>
+							<g id="Image_4" data-name="Image 4">
+								<path d="M68.23,164.1l2.65-30.51-13.29-1.33,1.33-27.85-18.57-2.65,1.26-17.65H60.16l1.32-9.29h9.36V68.51H57.46l-1.32-5.28-55.62-4L3.13.52,119.35,5.8a32,32,0,0,1,20.83,23.43L133.57,168Z" transform="translate(0 0)" fill="#e5e1a2"/></path>
+								<path d="M3.61,1,119.25,6.3a31.46,31.46,0,0,1,20.42,23l-6.58,138.23-64.32-3.86,2.56-29.5.09-1-1-.09-12.33-1.24,1.28-26.92,0-.91-.9-.13-17.66-2.52,1.19-16.72H60.59l.12-.86,1.21-8.43h9.42V68H57.85l-1.14-4.55-.18-.7-.72,0L1,58.79,3.61,1m-1-1L0,59.72l55.74,4L57.07,69H70.34v5.31H61.05l-1.33,9.29H41.14l-1.33,18.58,18.58,2.65-1.32,27.87L70.34,134l-2.66,30.53,66.36,4L140.68,29.2A32.21,32.21,0,0,0,119.44,5.31L2.65,0Z" transform="translate(0 0)" fill="#242005"/></path>
+							</g>
+						</svg>
+
+						<h3>We'v 인천점</h3>
+
+						<div class="map_bbl"><span class="blind">We'v 인천점</span></div>
+
+					</div> <!-- on_map 종료 -->
+
+					<button id="btn_switch" class="btn_ofl_switch">
+						<span class="circle"><span class="blind">switch</span></span>
+					</button>
+				</div> <!-- on_info 종료 -->
+			</div> <!-- inner_wrap -->
+		</div> <!-- inner 종료 -->
+	</section>
+
+	<footer class="footer food">
+		<div class="inner clearfix">
+			<div class="img">
+				<img src="images/img_main_footer_01.png" alt="vegan logo">
+				<img src="images/img_main_footer_02.png" alt="save the earth logo">
+				<img src="images/img_main_footer_03.png" alt="not tested on animal logo">
+			</div>
+
+			<div class="footer_wrap">
+				<h1 class="footer_logo food"><a href="#">We'v</a></h1>
+				<p class="pointColor_01">&copy;2022 WE'VE Int.Co. ,Ltd. All Rights Reserved</p>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+
+</body>
+
+</html>
