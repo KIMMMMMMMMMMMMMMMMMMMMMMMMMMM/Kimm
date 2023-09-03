@@ -38,12 +38,12 @@
 	button, a { cursor: pointer; color: #141414; }
 
 	p { font-family: "IBMPlexSansKR-Light"; color: #141414; }
-	div.titleWrap h2 { position: relative; width: 100%; height: 100%; font-family: "IBMPlexSerif-Regular"; color: #141414; font-size: 3em; text-shadow: 
-	-0.01em 0.01em #ffffee, 
-	-0.02em 0.02em #ffffee, 
-	-0.03em 0.03em #ffffee, 
-	-0.04em 0.04em #ffffee, 
-	-0.05em 0.05em #ffffee, 
+	div.titleWrap h2 { position: relative; width: 100%; height: 100%; font-family: "IBMPlexSerif-Regular"; color: #141414; font-size: 3em; text-shadow:
+	-0.01em 0.01em #ffffee,
+	-0.02em 0.02em #ffffee,
+	-0.03em 0.03em #ffffee,
+	-0.04em 0.04em #ffffee,
+	-0.05em 0.05em #ffffee,
 	-0.06em 0.06em #ffffee; }
 
 	div.titleWrap p { float: right; font-family: "IBMPlexSansKR-Regular"; }
@@ -464,7 +464,7 @@ section.behind div.inner_wrap { position: absolute; left: 50%; top: 50%; height:
 
 section.behind div.inner_wrap h3 { font-family: "IBMPlexSerif-Regular"; margin-bottom: 20px; font-size: 1.5em; }
 
-section.behind div.inner_wrap p { margin-bottom: 20px; } 
+section.behind div.inner_wrap p { margin-bottom: 20px; }
 
 /*#####################################################################
 #################### M #### section_device_TM #########################
@@ -779,7 +779,7 @@ section.behind div.inner_wrap { position: absolute; left: 50%; top: 50%; height:
 
 section.behind div.inner_wrap h3 { font-family: "IBMPlexSerif-Regular"; margin-bottom: 20px; font-size: 1.75em;}
 
-section.behind div.inner_wrap p { margin-bottom: 20px; } 
+section.behind div.inner_wrap p { margin-bottom: 20px; }
 
 /*#####################################################################
 #################### T #### section_device_TM #########################
@@ -1020,7 +1020,7 @@ section.responsive > div.inner_wrap > div { position: relative; height: 100%; }
 
 section.responsive div.pageBtnsWrap { float: left; width: 25%; height: 100%; text-align: center; }
 section.responsive div.pageBtnsWrap > button.btns { position: relative; z-index: 20; display: inline-block; width: 50%; height: 33.333%; text-align: center; }
-section.responsive div.pageBtnsWrap > button.btns::before { position: absolute; left: -10%; top: 20%; z-index: -1; content: ""; display: block; width: 100px; height: 100px; transform: rotate(-45deg); border: 1px solid rgba(0, 0, 0, 0.4); transition: border 0.3s, background 0.3s; }
+section.responsive div.pageBtnsWrap > button.btns::before { position: absolute; left: -10%; top: 50%; z-index: -1; content: ""; display: block; width: 100px; height: 100px; transform: translateY(-50%) rotate(-45deg); border: 1px solid rgba(0, 0, 0, 0.4); transition: border 0.3s, background 0.3s; }
 	section.responsive div.pageBtnsWrap > button.btns:hover::before { border: 1px solid transparent; }
 	section.responsive div.pageBtnsWrap > button.btns[class ~= "main01"]:hover::before { background: #cdc74f; }
 	section.responsive div.pageBtnsWrap > button.btns[class ~= "main02"]:hover::before { background: #619cd4; }
@@ -1096,7 +1096,7 @@ section.behind div.inner_wrap { position: absolute; left: 50%; top: 50%; height:
 
 section.behind div.inner_wrap h3 { font-family: "IBMPlexSerif-Regular"; margin-bottom: 20px; font-size: 2em; }
 
-section.behind div.inner_wrap p { margin-bottom: 20px; } 
+section.behind div.inner_wrap p { margin-bottom: 20px; }
 
 /*#####################################################################
 #################### D #### section_device_TM #########################
