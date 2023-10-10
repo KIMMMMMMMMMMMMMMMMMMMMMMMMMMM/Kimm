@@ -85,7 +85,35 @@ window.addEventListener("load", () => {
 	header_style();
 
 
+	// 장식 생성
 
+	const $section_title = document.getElementsByClassName("section_title");
+	const $shapeBox = "<div class='shapeBox'></div>";
+	const colors = ["#849bd1", "#ebc9fb", "#8a85ab", "#d7d4ee", "#e6e8fd", "#d2bbd5", "#f7d2d8"];
+	let cnt = Math.floor(Math.random() * 10);
+	let $seq;
+	let $si;
+
+	for (var i = 0; i < $section_title.length; i++){
+		$section_title[i].insertAdjacentHTML("beforeend", $shapeBox);
+	}
+
+	// 장식 배경색 랜덤 변경
+
+	function auto_bg (){
+		cnt++;
+		if (cnt >= colors.length){
+			cnt = 0;
+		}
+
+		var sb = document.getElementsByClassName("shapeBox");
+
+		for (var i = 0; i < sb.length; i++){
+			sb[i].style.borderTopColor = colors[cnt];
+		}
+	}
+
+	$si = setInterval(auto_bg, 1000);
 
 
 
