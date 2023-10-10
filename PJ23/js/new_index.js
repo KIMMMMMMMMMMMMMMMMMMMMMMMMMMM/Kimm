@@ -72,9 +72,14 @@ window.addEventListener("load", () => {
 	// 스크롤시 상단 fixed
 
 	function header_style (){
-		window.addEventListener("mousewheel", e => {
+		window.addEventListener("scroll", e => {
 			const scrollY = window.scrollY;
-			const direction = lastScrollY == 0 ? $welcome.classList.remove(a) : $welcome.classList.add(a);
+			//const direction = lastScrollY == 0 ? $welcome.classList.remove(a) : $welcome.classList.add(a);
+			if (lastScrollY < 30){
+				$welcome.classList.remove(a);
+			} else if (lastScrollY > 0){
+				$welcome.classList.add(a);
+			}
 
 			lastScrollY = scrollY;
 
@@ -117,8 +122,24 @@ window.addEventListener("load", () => {
 
 
 
+	/* mobile start */
+
+	//if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) || //(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.platform))) {
+		// mobile only code
+		//function header_style (){
+		//	window.addEventListener("touchstart", e => {
+		//		const scrollY = window.scrollY;
+		//		const direction = lastScrollY == 0 ? $welcome.classList.remove(a) : $welcome.classList.add(a);
+		//
+		//		lastScrollY = scrollY;
+		//
+		//	});
+		//}
 
 
+	/* mobile end */
+	//}
+	/* mobile end */
 
 
 
