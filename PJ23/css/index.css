@@ -42,7 +42,7 @@ section:last-child { /* margin-bottom: 0px; */ }
 .loading_wrap { overflow: hidden; position: relative; z-index: 100; display: flex; justify-content: center; align-items: center; width: 100%; height: var(--vh); max-height: 100vh; transition: height ease-in 0.5s, opacity 2s; opacity: 0; }
 .loading_wrap .inner { position: relative; z-index: 101; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.2); background: var(--light-yellow); transition: height ease-in 0.5s; }
 
-.loading_wrap svg { position: relative; display: block; /* width: 100%; height: 100%; */ fill: none; overflow: hidden; transition: all 0.3s; }
+.loading_wrap svg { position: relative; display: block; width: 100%; height: 100%; fill: none; overflow: hidden; transition: all 0.3s; }
 .loading_wrap svg path {
 	fill: none;
 	stroke: var(--main-blue);
